@@ -14,6 +14,7 @@
 		A217DC1A2AD4A00F0069A55B /* Odyssey.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A217DC182AD4A00F0069A55B /* Odyssey.xcdatamodeld */; };
 		A217DC1C2AD4A0110069A55B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A217DC1B2AD4A0110069A55B /* Assets.xcassets */; };
 		A217DC1F2AD4A0110069A55B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A217DC1D2AD4A0110069A55B /* LaunchScreen.storyboard */; };
+		A217DC2A2AD4A8500069A55B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A217DC292AD4A8500069A55B /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		A217DC1B2AD4A0110069A55B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A217DC1E2AD4A0110069A55B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A217DC202AD4A0110069A55B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A217DC292AD4A8500069A55B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +60,33 @@
 		A217DC0E2AD4A00F0069A55B /* Odyssey */ = {
 			isa = PBXGroup;
 			children = (
+				A217DC262AD4A7D20069A55B /* DataModel */,
 				A217DC0F2AD4A00F0069A55B /* AppDelegate.swift */,
 				A217DC112AD4A00F0069A55B /* SceneDelegate.swift */,
-				A217DC132AD4A00F0069A55B /* ViewController.swift */,
-				A217DC152AD4A00F0069A55B /* Main.storyboard */,
 				A217DC1B2AD4A0110069A55B /* Assets.xcassets */,
+				A217DC282AD4A80A0069A55B /* User */,
 				A217DC1D2AD4A0110069A55B /* LaunchScreen.storyboard */,
 				A217DC202AD4A0110069A55B /* Info.plist */,
 				A217DC182AD4A00F0069A55B /* Odyssey.xcdatamodeld */,
 			);
 			path = Odyssey;
+			sourceTree = "<group>";
+		};
+		A217DC262AD4A7D20069A55B /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				A217DC292AD4A8500069A55B /* User.swift */,
+			);
+			path = DataModel;
+			sourceTree = "<group>";
+		};
+		A217DC282AD4A80A0069A55B /* User */ = {
+			isa = PBXGroup;
+			children = (
+				A217DC132AD4A00F0069A55B /* ViewController.swift */,
+				A217DC152AD4A00F0069A55B /* Main.storyboard */,
+			);
+			path = User;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,6 +163,7 @@
 				A217DC1A2AD4A00F0069A55B /* Odyssey.xcdatamodeld in Sources */,
 				A217DC142AD4A00F0069A55B /* ViewController.swift in Sources */,
 				A217DC102AD4A00F0069A55B /* AppDelegate.swift in Sources */,
+				A217DC2A2AD4A8500069A55B /* User.swift in Sources */,
 				A217DC122AD4A00F0069A55B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
