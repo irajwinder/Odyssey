@@ -7,9 +7,8 @@
 
 import Foundation
 
-struct TicketInfo {
-    var location: String
-    var country: String
-    var state: String
-    var city: String
+struct Address: Codable {
+        let Country: String
+        let State: String
+        let City: String
 }
