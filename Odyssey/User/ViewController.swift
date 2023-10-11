@@ -12,9 +12,14 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     @IBOutlet weak var countryTextField: UITextField!
     @IBOutlet weak var stateTextField: UITextField!
     @IBOutlet weak var cityTextField: UILabel!
+    
     @IBOutlet weak var countryPicker: UIPickerView!
     
     var countries: [String] = []
+    var usaStates: [String] = []
+    var usaCities: [String] = []
+    var canadaProvinces: [String] = []
+    var canadaCities: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,36 +28,50 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         countryPicker.delegate = self
         countryPicker.dataSource = self
         
-        // Load the list of countries from your plist file
+        // Load the list of countries from plist file
         if let path = Bundle.main.path(forResource: "Countries", ofType: "plist"),
            let plistData = FileManager.default.contents(atPath: path),
            let plistDictionary = try? PropertyListSerialization.propertyList(from: plistData, options: [], format: nil) as? [[String: Any]] {
             
-            for countryInfo in plistDictionary {
-                if let countryName = countryInfo["name"] as? String {
+            //Stores countries info
+            for Countires in plistDictionary {
+                if let countryName = Countires["name"] as? String {
                     countries.append(countryName)
+                }
+
+                if let UnitedStates = Countires["states"] as? [[String: Any]] {
+                    for state in UnitedStates {
+                        //stores states name into usaStates array
+                        if let stateName = state["name"] as? String {
+                            usaStates.append(stateName)
+                        }
+                        //stores cities name into usaCities array
+                        if let citiesInfo = state["cities"] as? [String] {
+                            usaCities.append(contentsOf: citiesInfo)
+                        }
+                    }
+                }
+                
+                if let Canada = Countires["provinces"] as? [[String: Any]] {
+                    for province in Canada {
+                        //stores provinces name into canadaProvinces array
+                        if let provinceName = province["name"] as? String {
+                            canadaProvinces.append(provinceName)
+                        }
+                        //stores cities name into canadaCities array
+                        if let citiesInfo = province["cities"] as? [String] {
+                            canadaCities.append(contentsOf: citiesInfo)
+                        }
+                        
+                    }
                 }
             }
         }
-        
     }
     
     
     @IBAction func submitButton(_ sender: Any) {
-        // Create a dictionary with user input
-        if let path = Bundle.main.path(forResource: "Countries", ofType: "plist"),
-           let plistData = FileManager.default.contents(atPath: path),
-           let plistDictionary = try? PropertyListSerialization.propertyList(from: plistData, format: nil) as? [[String: Any]] {
-            
-            // Extract country names from the plist data
-            var countryNames = [String]()
-            for countryInfo in plistDictionary {
-                if let name = countryInfo["name"] as? String {
-                    countryNames.append(name)
-                }
-            }
-            
-        }
+        //On submit
     }
     
     //UIPickerViewDelegate and UIPickerViewDataSource methods
