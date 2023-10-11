@@ -125,15 +125,14 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         switch pickerView.tag {
             case 1:
                 countryTextField.text = countries[row]
-                countryTextField.resignFirstResponder()
             case 2:
                 stateTextField.text = usaStates[row]
-                stateTextField.resignFirstResponder()
             case 3:
                 cityTextField.text = usaCities[row]
-                cityTextField.resignFirstResponder()
             default:
                 return
             }
+            // Hide the picker view
+            pickerView.resignFirstResponder()
     }
 }
