@@ -30,6 +30,16 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         super.viewDidLoad()
         title = "Pick Location"
         
+        // Check the current view controller's identifier
+        if let currentIdentifier = restorationIdentifier {
+            if currentIdentifier == "SignUpForm" {
+                // If the current view controller is "SignUpForm"
+                self.navigationItem.rightBarButtonItem = UIBarButtonItem(
+                    barButtonSystemItem: .save, target: self, action: nil)
+            }
+        }
+        
+        
         userCountry.inputView = countriesPickerView
         userState.inputView = usaStatePickerView
         userCity.inputView = usaCitiesPickerView
@@ -84,11 +94,6 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
                 }
             }
         }
-    }
-    
-    
-    @IBAction func submitButton(_ sender: Any) {
-        //On submit
     }
     
     //UIPickerViewDelegate and UIPickerViewDataSource methods
