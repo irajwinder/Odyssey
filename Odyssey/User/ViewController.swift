@@ -35,7 +35,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             if currentIdentifier == "SignUpForm" {
                 // If the current view controller is "SignUpForm"
                 self.navigationItem.rightBarButtonItem = UIBarButtonItem(
-                    barButtonSystemItem: .save, target: self, action: nil)
+                    barButtonSystemItem: .save, target: self, action: #selector(saveButton))
             }
         }
         
@@ -95,6 +95,10 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             }
         }
     }
+    
+    @objc func saveButton() {
+            performSegue(withIdentifier: "goToHome", sender: nil)
+        }
     
     //UIPickerViewDelegate and UIPickerViewDataSource methods
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
