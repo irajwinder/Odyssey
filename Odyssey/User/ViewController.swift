@@ -11,7 +11,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     @IBOutlet weak var countryTextField: UITextField!
     @IBOutlet weak var stateTextField: UITextField!
-    @IBOutlet weak var cityTextField: UILabel!
+    @IBOutlet weak var cityTextField: UITextField!
     
     @IBOutlet weak var countryPicker: UIPickerView!
     
@@ -76,19 +76,47 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     //UIPickerViewDelegate and UIPickerViewDataSource methods
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1 // Number of components in the picker (just one, the list of countries)
+        return 3 // Number of components in the picker
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return countries.count
+        switch component {
+            case 0:
+                return countries.count
+            case 1:
+                return usaStates.count
+            case 2:
+                return usaCities.count
+            default:
+                return 0
+            }
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return countries[row] // Display the country names in the picker
+        // Display the country names in the picker
+        switch component {
+            case 0:
+                return countries[row]
+            case 1:
+                return usaStates[row]
+            case 2:
+                return usaCities[row]
+            default:
+                return nil
+            }
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         // Set the selected country in the text field when a row is selected
-        countryTextField.text = countries[row]
+        switch component {
+            case 0:
+                countryTextField.text = countries[row]
+            case 1:
+                stateTextField.text = usaStates[row]
+            case 2:
+                cityTextField.text = usaCities[row]
+            default:
+                break
+            }
     }
 }

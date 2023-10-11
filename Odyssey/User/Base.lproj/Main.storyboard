@@ -94,7 +94,7 @@
                         <color key="backgroundColor" name="launch-screen-background"/>
                     </view>
                     <connections>
-                        <outlet property="cityTextField" destination="GYM-DK-9wx" id="QTx-ez-Cu8"/>
+                        <outlet property="cityTextField" destination="SAW-Os-7m6" id="DRy-fj-Icv"/>
                         <outlet property="countryPicker" destination="Ih9-e6-HYg" id="r8D-eo-8P4"/>
                         <outlet property="countryTextField" destination="7xn-kE-Z5v" id="d5P-4c-0kb"/>
                         <outlet property="stateTextField" destination="zvo-WY-y9U" id="3kc-no-qgd"/>
