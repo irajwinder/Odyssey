@@ -13,20 +13,34 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     @IBOutlet weak var stateTextField: UITextField!
     @IBOutlet weak var cityTextField: UITextField!
     
-    @IBOutlet weak var countryPicker: UIPickerView!
-    
     var countries: [String] = []
     var usaStates: [String] = []
     var usaCities: [String] = []
     var canadaProvinces: [String] = []
     var canadaCities: [String] = []
     
+    var countriesPickerView = UIPickerView()
+    var usaStatePickerView =  UIPickerView()
+    var usaCitiesPickerView =  UIPickerView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Pick Location"
         
-        countryPicker.delegate = self
-        countryPicker.dataSource = self
+        countryTextField.inputView = countriesPickerView
+        stateTextField.inputView = usaStatePickerView
+        cityTextField.inputView = usaCitiesPickerView
+        
+        countriesPickerView.delegate = self
+        countriesPickerView.dataSource = self
+        usaStatePickerView.delegate = self
+        usaStatePickerView.dataSource = self
+        usaCitiesPickerView.delegate = self
+        usaCitiesPickerView.dataSource = self
+        
+        countriesPickerView.tag = 1
+        usaStatePickerView.tag =  2
+        usaCitiesPickerView.tag =  3
         
         // Load the list of countries from plist file
         if let path = Bundle.main.path(forResource: "Countries", ofType: "plist"),
@@ -76,16 +90,16 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     //UIPickerViewDelegate and UIPickerViewDataSource methods
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 3 // Number of components in the picker
+        return 1 // Number of components in the picker
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        switch component {
-            case 0:
-                return countries.count
+        switch pickerView.tag {
             case 1:
-                return usaStates.count
+                return countries.count
             case 2:
+                return usaStates.count
+            case 3:
                 return usaCities.count
             default:
                 return 0
@@ -94,29 +108,32 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         // Display the country names in the picker
-        switch component {
-            case 0:
-                return countries[row]
+        switch pickerView.tag {
             case 1:
-                return usaStates[row]
+                return countries[row]
             case 2:
+                return usaStates[row]
+            case 3:
                 return usaCities[row]
             default:
-                return nil
+                return "Data not Found"
             }
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         // Set the selected country in the text field when a row is selected
-        switch component {
-            case 0:
-                countryTextField.text = countries[row]
+        switch pickerView.tag {
             case 1:
-                stateTextField.text = usaStates[row]
+                countryTextField.text = countries[row]
+                countryTextField.resignFirstResponder()
             case 2:
+                stateTextField.text = usaStates[row]
+                stateTextField.resignFirstResponder()
+            case 3:
                 cityTextField.text = usaCities[row]
+                cityTextField.resignFirstResponder()
             default:
-                break
+                return
             }
     }
 }
