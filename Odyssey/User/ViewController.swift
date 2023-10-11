@@ -9,9 +9,12 @@ import UIKit
 
 class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
-    @IBOutlet weak var countryTextField: UITextField!
-    @IBOutlet weak var stateTextField: UITextField!
-    @IBOutlet weak var cityTextField: UITextField!
+    @IBOutlet weak var userName: UITextField!
+    @IBOutlet weak var userEmail: UITextField!
+    @IBOutlet weak var userDOB: UITextField!
+    @IBOutlet weak var userCountry: UITextField!
+    @IBOutlet weak var userState: UITextField!
+    @IBOutlet weak var userCity: UITextField!
     
     var countries: [String] = []
     var usaStates: [String] = []
@@ -27,9 +30,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         super.viewDidLoad()
         title = "Pick Location"
         
-        countryTextField.inputView = countriesPickerView
-        stateTextField.inputView = usaStatePickerView
-        cityTextField.inputView = usaCitiesPickerView
+        userCountry.inputView = countriesPickerView
+        userState.inputView = usaStatePickerView
+        userCity.inputView = usaCitiesPickerView
         
         countriesPickerView.delegate = self
         countriesPickerView.dataSource = self
@@ -124,11 +127,11 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         // Set the selected country in the text field when a row is selected
         switch pickerView.tag {
             case 1:
-                countryTextField.text = countries[row]
+                userCountry.text = countries[row]
             case 2:
-                stateTextField.text = usaStates[row]
+                userState.text = usaStates[row]
             case 3:
-                cityTextField.text = usaCities[row]
+                userCity.text = usaCities[row]
             default:
                 return
             }
