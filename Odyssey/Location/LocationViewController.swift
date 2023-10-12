@@ -22,6 +22,8 @@ class LocationViewController: UIViewController, UITableViewDelegate, UITableView
     //Filtered data
     var filteredData = [String]()
     
+    var selectedTextfield: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Pick a location"
@@ -69,6 +71,8 @@ class LocationViewController: UIViewController, UITableViewDelegate, UITableView
         countryTableView.delegate = self
         countryTableView.dataSource = self
         searchBar.delegate = self
+        
+        print(selectedTextfield!)
     }
     
     // UISearchBarDelegate method to filter data based on search text
@@ -89,69 +93,59 @@ class LocationViewController: UIViewController, UITableViewDelegate, UITableView
         if !searchBar.text!.isEmpty {
             return filteredData.count
         }
-        
-        switch section {
-        case 0:
+
+        switch selectedTextfield {
+        case "country":
             return countries.count
-        case 1:
+        case "state":
             return usaStates.count
-        case 2:
+        case "city":
             return usaCities.count
-        case 3:
-            return canadaProvinces.count
-        case 4:
-            return canadaCities.count
         default:
             return 0
         }
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CountryCell", for: indexPath) as! TableViewCell
         var data: String?
-        
+
         if !searchBar.text!.isEmpty {
             data = filteredData[indexPath.row]
         } else {
-            let section = indexPath.section
-            switch section {
-            case 0:
+            switch selectedTextfield {
+            case "country":
                 data = countries[indexPath.row]
-            case 1:
+            case "state":
                 data = usaStates[indexPath.row]
-            case 2:
-                data = usaCities[indexPath.row]
-            case 3:
-                data = canadaProvinces[indexPath.row]
-            case 4:
-                data = canadaCities[indexPath.row]
+            case "city":
+                data = usaCities[indexPath.row] // Modify this to return city data as needed.
             default:
                 break
             }
         }
-        
+
         cell.countriesName?.text = data
         return cell
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-            let section = indexPath.section
             var selectedData: String?
 
             if !searchBar.text!.isEmpty {
             selectedData = filteredData[indexPath.row]
             } else {
-                switch section {
-                case 0:
+                switch selectedTextfield {
+                case "country":
                     selectedData = countries[indexPath.row]
-                case 1:
+                case "state":
                     selectedData = usaStates[indexPath.row]
-                case 2:
+                case "city":
                     selectedData = usaCities[indexPath.row]
-                case 3:
-                    selectedData = canadaProvinces[indexPath.row]
-                case 4:
-                    selectedData = canadaCities[indexPath.row]
+//                case 3:
+//                    selectedData = canadaProvinces[indexPath.row]
+//                case 4:
+//                    selectedData = canadaCities[indexPath.row]
                 default:
                     break
                 }

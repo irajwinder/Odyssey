@@ -56,6 +56,7 @@ class ViewController: UIViewController, LocationSelectionDelegate {
     @objc func userCountryTapped() {
         if let locationVC = storyboard?.instantiateViewController(withIdentifier: "LocationViewController") as? LocationViewController {
             locationVC.delegate = self
+            locationVC.selectedTextfield = "country"
             navigationController?.pushViewController(locationVC, animated: true)
         }
     }
@@ -63,6 +64,7 @@ class ViewController: UIViewController, LocationSelectionDelegate {
     @objc func userStateTapped() {
         if let locationVC = storyboard?.instantiateViewController(withIdentifier: "LocationViewController") as? LocationViewController {
             locationVC.delegate = self
+            locationVC.selectedTextfield = "state"
             navigationController?.pushViewController(locationVC, animated: true)
         }
     }
@@ -70,6 +72,7 @@ class ViewController: UIViewController, LocationSelectionDelegate {
     @objc func userCityTapped() {
         if let locationVC = storyboard?.instantiateViewController(withIdentifier: "LocationViewController") as? LocationViewController {
             locationVC.delegate = self
+            locationVC.selectedTextfield = "city"
             navigationController?.pushViewController(locationVC, animated: true)
         }
     }
