@@ -12,3 +12,9 @@ struct Address: Codable {
         let State: String
         let City: String
 }
+
+var countries: [String] = []
+var usaStates: [String] = []
+var usaCities: [String] = []
+var canadaProvinces: [String] = []
+var canadaCities: [String] = []
