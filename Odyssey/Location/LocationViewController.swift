@@ -71,69 +71,68 @@ class LocationViewController: UIViewController, UITableViewDelegate, UITableView
         searchBar.delegate = self
     }
     
-    
-        // UISearchBarDelegate method to filter data based on search text
-        func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-            filteredData.removeAll()
-            
-            if !searchText.isEmpty {
-                // Filter the original data based on the search text
-                filteredData = countries.filter { $0.lowercased().contains(searchText.lowercased()) }
-            }
-            
-            // Reload the table view to reflect the filtered results
-            countryTableView.reloadData()
+    // UISearchBarDelegate method to filter data based on search text
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        filteredData.removeAll()
+        
+        if !searchText.isEmpty {
+            // Filter the original data based on the search text
+            filteredData = countries.filter { $0.lowercased().contains(searchText.lowercased()) }
         }
+        
+        // Reload the table view to reflect the filtered results
+        countryTableView.reloadData()
+    }
 
-        // Update the tableView data source methods to use filteredData when searching
-        func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            if !searchBar.text!.isEmpty {
-                return filteredData.count
-            }
-            
+    // filtered Data when searching
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if !searchBar.text!.isEmpty {
+            return filteredData.count
+        }
+        
+        switch section {
+        case 0:
+            return countries.count
+        case 1:
+            return usaStates.count
+        case 2:
+            return usaCities.count
+        case 3:
+            return canadaProvinces.count
+        case 4:
+            return canadaCities.count
+        default:
+            return 0
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CountryCell", for: indexPath) as! TableViewCell
+        var data: String?
+        
+        if !searchBar.text!.isEmpty {
+            data = filteredData[indexPath.row]
+        } else {
+            let section = indexPath.section
             switch section {
             case 0:
-                return countries.count
+                data = countries[indexPath.row]
             case 1:
-                return usaStates.count
+                data = usaStates[indexPath.row]
             case 2:
-                return usaCities.count
+                data = usaCities[indexPath.row]
             case 3:
-                return canadaProvinces.count
+                data = canadaProvinces[indexPath.row]
             case 4:
-                return canadaCities.count
+                data = canadaCities[indexPath.row]
             default:
-                return 0
+                break
             }
         }
         
-        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "CountryCell", for: indexPath) as! TableViewCell
-            var data: String?
-            
-            if !searchBar.text!.isEmpty {
-                data = filteredData[indexPath.row]
-            } else {
-                let section = indexPath.section
-                switch section {
-                case 0:
-                    data = countries[indexPath.row]
-                case 1:
-                    data = usaStates[indexPath.row]
-                case 2:
-                    data = usaCities[indexPath.row]
-                case 3:
-                    data = canadaProvinces[indexPath.row]
-                case 4:
-                    data = canadaCities[indexPath.row]
-                default:
-                    break
-                }
-            }
-            
-            cell.countriesName?.text = data
-            return cell
-        }
+        cell.countriesName?.text = data
+        return cell
+    }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
             let section = indexPath.section
