@@ -11,7 +11,7 @@ class UserViewController: UIViewController, LocationSelectionDelegate {
     
     func didSelectLocation(_ location: String) {
         // Handle the location selection and update the userCountry text field.
-        userCountry.text = location
+        //userCountry.text = location
        }
     
     
@@ -35,10 +35,21 @@ class UserViewController: UIViewController, LocationSelectionDelegate {
     
     
     @IBAction func userCountry(_ sender: Any) {
+        openLocationViewController(with: "country")
     }
     @IBAction func userState(_ sender: Any) {
+        openLocationViewController(with: "state")
     }
     @IBAction func userCity(_ sender: Any) {
+        openLocationViewController(with: "city")
     }
     
+    func openLocationViewController(with selectedTextfield: String) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil) 
+        if let locationVC = storyboard.instantiateViewController(withIdentifier: "LocationViewController") as? LocationViewController {
+            locationVC.selectedTextfield = selectedTextfield
+            locationVC.delegate = self
+            self.navigationController?.pushViewController(locationVC, animated: true)
+        }
+    }
 }
