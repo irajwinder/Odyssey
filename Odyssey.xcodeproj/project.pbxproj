@@ -17,10 +17,6 @@
 		A217DC2A2AD4A8500069A55B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A217DC292AD4A8500069A55B /* User.swift */; };
 		A24AD7FB2AD89F8E00CAFC30 /* TicketsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24AD7FA2AD89F8E00CAFC30 /* TicketsViewController.swift */; };
 		A24AD7FD2AD89FA000CAFC30 /* FlightsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24AD7FC2AD89FA000CAFC30 /* FlightsViewController.swift */; };
-		A26953852AD9822C003647B9 /* Flight+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26953812AD9822C003647B9 /* Flight+CoreDataClass.swift */; };
-		A26953862AD9822C003647B9 /* Flight+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26953822AD9822C003647B9 /* Flight+CoreDataProperties.swift */; };
-		A26953872AD9822C003647B9 /* UserInfo+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26953832AD9822C003647B9 /* UserInfo+CoreDataClass.swift */; };
-		A26953882AD9822C003647B9 /* UserInfo+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26953842AD9822C003647B9 /* UserInfo+CoreDataProperties.swift */; };
 		A28C29F42AD710A700D5B028 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28C29F32AD710A700D5B028 /* LocationViewController.swift */; };
 		A28C29F62AD7641C00D5B028 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28C29F52AD7641C00D5B028 /* TableViewCell.swift */; };
 		A28C40D12AD8986200BD2ABF /* Countries.plist in Resources */ = {isa = PBXBuildFile; fileRef = A28C40D02AD8986200BD2ABF /* Countries.plist */; };
@@ -39,10 +35,6 @@
 		A217DC292AD4A8500069A55B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		A24AD7FA2AD89F8E00CAFC30 /* TicketsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketsViewController.swift; sourceTree = "<group>"; };
 		A24AD7FC2AD89FA000CAFC30 /* FlightsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsViewController.swift; sourceTree = "<group>"; };
-		A26953812AD9822C003647B9 /* Flight+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Flight+CoreDataClass.swift"; sourceTree = "<group>"; };
-		A26953822AD9822C003647B9 /* Flight+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Flight+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		A26953832AD9822C003647B9 /* UserInfo+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserInfo+CoreDataClass.swift"; sourceTree = "<group>"; };
-		A26953842AD9822C003647B9 /* UserInfo+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserInfo+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		A28C29F32AD710A700D5B028 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		A28C29F52AD7641C00D5B028 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		A28C40D02AD8986200BD2ABF /* Countries.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Countries.plist; sourceTree = "<group>"; };
@@ -62,10 +54,6 @@
 		A217DC032AD4A00F0069A55B = {
 			isa = PBXGroup;
 			children = (
-				A26953812AD9822C003647B9 /* Flight+CoreDataClass.swift */,
-				A26953822AD9822C003647B9 /* Flight+CoreDataProperties.swift */,
-				A26953832AD9822C003647B9 /* UserInfo+CoreDataClass.swift */,
-				A26953842AD9822C003647B9 /* UserInfo+CoreDataProperties.swift */,
 				A217DC0E2AD4A00F0069A55B /* Odyssey */,
 				A217DC0D2AD4A00F0069A55B /* Products */,
 			);
@@ -90,10 +78,10 @@
 				A217DC0F2AD4A00F0069A55B /* AppDelegate.swift */,
 				A217DC112AD4A00F0069A55B /* SceneDelegate.swift */,
 				A28C40D02AD8986200BD2ABF /* Countries.plist */,
+				A217DC182AD4A00F0069A55B /* Odyssey.xcdatamodeld */,
 				A217DC1B2AD4A0110069A55B /* Assets.xcassets */,
 				A217DC1D2AD4A0110069A55B /* LaunchScreen.storyboard */,
 				A217DC202AD4A0110069A55B /* Info.plist */,
-				A217DC182AD4A00F0069A55B /* Odyssey.xcdatamodeld */,
 			);
 			path = Odyssey;
 			sourceTree = "<group>";
@@ -214,13 +202,9 @@
 			files = (
 				A24AD7FD2AD89FA000CAFC30 /* FlightsViewController.swift in Sources */,
 				A217DC1A2AD4A00F0069A55B /* Odyssey.xcdatamodeld in Sources */,
-				A26953872AD9822C003647B9 /* UserInfo+CoreDataClass.swift in Sources */,
-				A26953862AD9822C003647B9 /* Flight+CoreDataProperties.swift in Sources */,
 				A217DC142AD4A00F0069A55B /* UserViewController.swift in Sources */,
 				A217DC102AD4A00F0069A55B /* AppDelegate.swift in Sources */,
 				A28C29F42AD710A700D5B028 /* LocationViewController.swift in Sources */,
-				A26953882AD9822C003647B9 /* UserInfo+CoreDataProperties.swift in Sources */,
-				A26953852AD9822C003647B9 /* Flight+CoreDataClass.swift in Sources */,
 				A24AD7FB2AD89F8E00CAFC30 /* TicketsViewController.swift in Sources */,
 				A217DC2A2AD4A8500069A55B /* User.swift in Sources */,
 				A28C29F62AD7641C00D5B028 /* TableViewCell.swift in Sources */,
