@@ -4,2169 +4,1029 @@
 	<array>
 		<dict>
 			<key>name</key>
-			<string>Afghanistan</string>
-			<key>code</key>
-			<string>AF</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Åland Islands</string>
-			<key>code</key>
-			<string>AX</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Albania</string>
-			<key>code</key>
-			<string>AL</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Algeria</string>
-			<key>code</key>
-			<string>DZ</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>American Samoa</string>
-			<key>code</key>
-			<string>AS</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>AndorrA</string>
-			<key>code</key>
-			<string>AD</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Angola</string>
-			<key>code</key>
-			<string>AO</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Anguilla</string>
-			<key>code</key>
-			<string>AI</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Antarctica</string>
-			<key>code</key>
-			<string>AQ</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Antigua and Barbuda</string>
-			<key>code</key>
-			<string>AG</string>
-		</dict>
-		<dict>
-			<key>name</key>
 			<string>Argentina</string>
-			<key>code</key>
-			<string>AR</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Armenia</string>
-			<key>code</key>
-			<string>AM</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Aruba</string>
-			<key>code</key>
-			<string>AW</string>
 		</dict>
 		<dict>
 			<key>name</key>
 			<string>Australia</string>
-			<key>code</key>
-			<string>AU</string>
 		</dict>
 		<dict>
 			<key>name</key>
 			<string>Austria</string>
-			<key>code</key>
-			<string>AT</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Azerbaijan</string>
-			<key>code</key>
-			<string>AZ</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Bahamas</string>
-			<key>code</key>
-			<string>BS</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Bahrain</string>
-			<key>code</key>
-			<string>BH</string>
 		</dict>
 		<dict>
 			<key>name</key>
 			<string>Bangladesh</string>
-			<key>code</key>
-			<string>BD</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Barbados</string>
-			<key>code</key>
-			<string>BB</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Belarus</string>
-			<key>code</key>
-			<string>BY</string>
 		</dict>
 		<dict>
 			<key>name</key>
 			<string>Belgium</string>
-			<key>code</key>
-			<string>BE</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Belize</string>
-			<key>code</key>
-			<string>BZ</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Benin</string>
-			<key>code</key>
-			<string>BJ</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Bermuda</string>
-			<key>code</key>
-			<string>BM</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Bhutan</string>
-			<key>code</key>
-			<string>BT</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Bolivia</string>
-			<key>code</key>
-			<string>BO</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Bosnia and Herzegovina</string>
-			<key>code</key>
-			<string>BA</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Botswana</string>
-			<key>code</key>
-			<string>BW</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Bouvet Island</string>
-			<key>code</key>
-			<string>BV</string>
 		</dict>
 		<dict>
 			<key>name</key>
 			<string>Brazil</string>
-			<key>code</key>
-			<string>BR</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>British Indian Ocean Territory</string>
-			<key>code</key>
-			<string>IO</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Brunei Darussalam</string>
-			<key>code</key>
-			<string>BN</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Bulgaria</string>
-			<key>code</key>
-			<string>BG</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Burkina Faso</string>
-			<key>code</key>
-			<string>BF</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Burundi</string>
-			<key>code</key>
-			<string>BI</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Cambodia</string>
-			<key>code</key>
-			<string>KH</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Cameroon</string>
-			<key>code</key>
-			<string>CM</string>
 		</dict>
 		<dict>
 			<key>name</key>
 			<string>Canada</string>
-			<key>code</key>
-			<string>CA</string>
 			<key>provinces</key>
 			<array>
 				<dict>
 					<key>name</key>
 					<string>Alberta</string>
-					<key>code</key>
-					<string>AB</string>
 					<key>cities</key>
 					<array>
 						<string>Calgary</string>
 						<string>Edmonton</string>
 						<string>Red Deer</string>
+						<string>Lethbridge</string>
+						<string>Medicine Hat</string>
+						<string>Fort McMurray</string>
 					</array>
 				</dict>
 				<dict>
 					<key>name</key>
 					<string>British Columbia</string>
-					<key>code</key>
-					<string>BC</string>
 					<key>cities</key>
 					<array>
 						<string>Vancouver</string>
-						<string>Victoria</string>
+						<string>Surrey</string>
+						<string>Burnaby</string>
+						<string>Richmond</string>
 						<string>Kelowna</string>
+						<string>Kamloops</string>
 					</array>
 				</dict>
 				<dict>
 					<key>name</key>
 					<string>Manitoba</string>
-					<key>code</key>
-					<string>MB</string>
 					<key>cities</key>
 					<array>
 						<string>Winnipeg</string>
 						<string>Brandon</string>
+						<string>Steinbach</string>
 						<string>Thompson</string>
+						<string>Portage la Prairie</string>
+						<string>Selkirk</string>
 					</array>
 				</dict>
 				<dict>
 					<key>name</key>
 					<string>New Brunswick</string>
-					<key>code</key>
-					<string>NB</string>
 					<key>cities</key>
 					<array>
-						<string>Fredericton</string>
 						<string>Saint John</string>
 						<string>Moncton</string>
+						<string>Fredericton</string>
+						<string>Miramichi</string>
+						<string>Bathurst</string>
 					</array>
 				</dict>
 				<dict>
 					<key>name</key>
 					<string>Newfoundland and Labrador</string>
-					<key>code</key>
-					<string>NL</string>
 					<key>cities</key>
 					<array>
 						<string>St. John's</string>
 						<string>Mount Pearl</string>
 						<string>Corner Brook</string>
+						<string>Conception Bay South</string>
+						<string>Grand Falls-Windsor</string>
 					</array>
 				</dict>
 				<dict>
 					<key>name</key>
 					<string>Nova Scotia</string>
-					<key>code</key>
-					<string>NS</string>
 					<key>cities</key>
 					<array>
 						<string>Halifax</string>
 						<string>Dartmouth</string>
 						<string>Sydney</string>
+						<string>Truro</string>
+						<string>New Glasgow</string>
 					</array>
 				</dict>
 				<dict>
 					<key>name</key>
 					<string>Ontario</string>
-					<key>code</key>
-					<string>ON</string>
 					<key>cities</key>
 					<array>
 						<string>Toronto</string>
 						<string>Ottawa</string>
+						<string>Mississauga</string>
 						<string>Hamilton</string>
+						<string>Brampton</string>
+						<string>London</string>
 					</array>
 				</dict>
 				<dict>
 					<key>name</key>
 					<string>Prince Edward Island</string>
-					<key>code</key>
-					<string>PE</string>
 					<key>cities</key>
 					<array>
 						<string>Charlottetown</string>
 						<string>Summerside</string>
 						<string>Stratford</string>
+						<string>Cornwall</string>
+						<string>Montague</string>
 					</array>
 				</dict>
 				<dict>
 					<key>name</key>
 					<string>Quebec</string>
-					<key>code</key>
-					<string>QC</string>
 					<key>cities</key>
 					<array>
 						<string>Montreal</string>
 						<string>Quebec City</string>
 						<string>Laval</string>
+						<string>Gatineau</string>
+						<string>Longueuil</string>
 					</array>
 				</dict>
 				<dict>
 					<key>name</key>
 					<string>Saskatchewan</string>
-					<key>code</key>
-					<string>SK</string>
 					<key>cities</key>
 					<array>
 						<string>Saskatoon</string>
 						<string>Regina</string>
 						<string>Prince Albert</string>
+						<string>Moose Jaw</string>
+						<string>Swift Current</string>
 					</array>
 				</dict>
 			</array>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string>Cape Verde</string>
-			<key>code</key>
-			<string>CV</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Cayman Islands</string>
-			<key>code</key>
-			<string>KY</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Central African Republic</string>
-			<key>code</key>
-			<string>CF</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Chad</string>
-			<key>code</key>
-			<string>TD</string>
-		</dict>
-		<dict>
-			<key>name</key>
 			<string>Chile</string>
-			<key>code</key>
-			<string>CL</string>
 		</dict>
 		<dict>
 			<key>name</key>
 			<string>China</string>
-			<key>code</key>
-			<string>CN</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Christmas Island</string>
-			<key>code</key>
-			<string>CX</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Cocos (Keeling) Islands</string>
-			<key>code</key>
-			<string>CC</string>
 		</dict>
 		<dict>
 			<key>name</key>
 			<string>Colombia</string>
-			<key>code</key>
-			<string>CO</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Comoros</string>
-			<key>code</key>
-			<string>KM</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Congo</string>
-			<key>code</key>
-			<string>CG</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Congo, The Democratic Republic of the</string>
-			<key>code</key>
-			<string>CD</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Cook Islands</string>
-			<key>code</key>
-			<string>CK</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Costa Rica</string>
-			<key>code</key>
-			<string>CR</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Croatia</string>
-			<key>code</key>
-			<string>HR</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Cuba</string>
-			<key>code</key>
-			<string>CU</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Cyprus</string>
-			<key>code</key>
-			<string>CY</string>
 		</dict>
 		<dict>
 			<key>name</key>
 			<string>Czech Republic</string>
-			<key>code</key>
-			<string>CZ</string>
 		</dict>
 		<dict>
 			<key>name</key>
 			<string>Denmark</string>
-			<key>code</key>
-			<string>DK</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Djibouti</string>
-			<key>code</key>
-			<string>DJ</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Dominica</string>
-			<key>code</key>
-			<string>DM</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Dominican Republic</string>
-			<key>code</key>
-			<string>DO</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Ecuador</string>
-			<key>code</key>
-			<string>EC</string>
 		</dict>
 		<dict>
 			<key>name</key>
 			<string>Egypt</string>
-			<key>code</key>
-			<string>EG</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>El Salvador</string>
-			<key>code</key>
-			<string>SV</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Equatorial Guinea</string>
-			<key>code</key>
-			<string>GQ</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Eritrea</string>
-			<key>code</key>
-			<string>ER</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Estonia</string>
-			<key>code</key>
-			<string>EE</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Ethiopia</string>
-			<key>code</key>
-			<string>ET</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Falkland Islands (Malvinas)</string>
-			<key>code</key>
-			<string>FK</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Faroe Islands</string>
-			<key>code</key>
-			<string>FO</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Fiji</string>
-			<key>code</key>
-			<string>FJ</string>
 		</dict>
 		<dict>
 			<key>name</key>
 			<string>Finland</string>
-			<key>code</key>
-			<string>FI</string>
 		</dict>
 		<dict>
 			<key>name</key>
 			<string>France</string>
-			<key>code</key>
-			<string>FR</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>French Guiana</string>
-			<key>code</key>
-			<string>GF</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>French Polynesia</string>
-			<key>code</key>
-			<string>PF</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>French Southern Territories</string>
-			<key>code</key>
-			<string>TF</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Gabon</string>
-			<key>code</key>
-			<string>GA</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Gambia</string>
-			<key>code</key>
-			<string>GM</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Georgia</string>
-			<key>code</key>
-			<string>GE</string>
 		</dict>
 		<dict>
 			<key>name</key>
 			<string>Germany</string>
-			<key>code</key>
-			<string>DE</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Ghana</string>
-			<key>code</key>
-			<string>GH</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Gibraltar</string>
-			<key>code</key>
-			<string>GI</string>
 		</dict>
 		<dict>
 			<key>name</key>
 			<string>Greece</string>
-			<key>code</key>
-			<string>GR</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Greenland</string>
-			<key>code</key>
-			<string>GL</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Grenada</string>
-			<key>code</key>
-			<string>GD</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Guadeloupe</string>
-			<key>code</key>
-			<string>GP</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Guam</string>
-			<key>code</key>
-			<string>GU</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Guatemala</string>
-			<key>code</key>
-			<string>GT</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Guernsey</string>
-			<key>code</key>
-			<string>GG</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Guinea</string>
-			<key>code</key>
-			<string>GN</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Guinea-Bissau</string>
-			<key>code</key>
-			<string>GW</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Guyana</string>
-			<key>code</key>
-			<string>GY</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Haiti</string>
-			<key>code</key>
-			<string>HT</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Heard Island and Mcdonald Islands</string>
-			<key>code</key>
-			<string>HM</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Holy See (Vatican City State)</string>
-			<key>code</key>
-			<string>VA</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Honduras</string>
-			<key>code</key>
-			<string>HN</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Hong Kong</string>
-			<key>code</key>
-			<string>HK</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Hungary</string>
-			<key>code</key>
-			<string>HU</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Iceland</string>
-			<key>code</key>
-			<string>IS</string>
 		</dict>
 		<dict>
 			<key>name</key>
 			<string>India</string>
-			<key>code</key>
-			<string>IN</string>
 		</dict>
 		<dict>
 			<key>name</key>
 			<string>Indonesia</string>
-			<key>code</key>
-			<string>ID</string>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string>Iran, Islamic Republic Of</string>
-			<key>code</key>
-			<string>IR</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Iraq</string>
-			<key>code</key>
-			<string>IQ</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Ireland</string>
-			<key>code</key>
-			<string>IE</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Isle of Man</string>
-			<key>code</key>
-			<string>IM</string>
+			<string>Iran</string>
 		</dict>
 		<dict>
 			<key>name</key>
 			<string>Israel</string>
-			<key>code</key>
-			<string>IL</string>
 		</dict>
 		<dict>
 			<key>name</key>
 			<string>Italy</string>
-			<key>code</key>
-			<string>IT</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Jamaica</string>
-			<key>code</key>
-			<string>JM</string>
 		</dict>
 		<dict>
 			<key>name</key>
 			<string>Japan</string>
-			<key>code</key>
-			<string>JP</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Jersey</string>
-			<key>code</key>
-			<string>JE</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Jordan</string>
-			<key>code</key>
-			<string>JO</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Kazakhstan</string>
-			<key>code</key>
-			<string>KZ</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Kenya</string>
-			<key>code</key>
-			<string>KE</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Kiribati</string>
-			<key>code</key>
-			<string>KI</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Korea, Republic of</string>
-			<key>code</key>
-			<string>KR</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Kuwait</string>
-			<key>code</key>
-			<string>KW</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Kyrgyzstan</string>
-			<key>code</key>
-			<string>KG</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Latvia</string>
-			<key>code</key>
-			<string>LV</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Lebanon</string>
-			<key>code</key>
-			<string>LB</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Lesotho</string>
-			<key>code</key>
-			<string>LS</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Liberia</string>
-			<key>code</key>
-			<string>LR</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Libyan Arab Jamahiriya</string>
-			<key>code</key>
-			<string>LY</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Liechtenstein</string>
-			<key>code</key>
-			<string>LI</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Lithuania</string>
-			<key>code</key>
-			<string>LT</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Luxembourg</string>
-			<key>code</key>
-			<string>LU</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Macao</string>
-			<key>code</key>
-			<string>MO</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>North Macedonia</string>
-			<key>code</key>
-			<string>MK</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Madagascar</string>
-			<key>code</key>
-			<string>MG</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Malawi</string>
-			<key>code</key>
-			<string>MW</string>
 		</dict>
 		<dict>
 			<key>name</key>
 			<string>Malaysia</string>
-			<key>code</key>
-			<string>MY</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Maldives</string>
-			<key>code</key>
-			<string>MV</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Mali</string>
-			<key>code</key>
-			<string>ML</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Malta</string>
-			<key>code</key>
-			<string>MT</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Marshall Islands</string>
-			<key>code</key>
-			<string>MH</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Martinique</string>
-			<key>code</key>
-			<string>MQ</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Mauritania</string>
-			<key>code</key>
-			<string>MR</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Mauritius</string>
-			<key>code</key>
-			<string>MU</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Mayotte</string>
-			<key>code</key>
-			<string>YT</string>
 		</dict>
 		<dict>
 			<key>name</key>
 			<string>Mexico</string>
-			<key>code</key>
-			<string>MX</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Micronesia, Federated States of</string>
-			<key>code</key>
-			<string>FM</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Moldova, Republic of</string>
-			<key>code</key>
-			<string>MD</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Monaco</string>
-			<key>code</key>
-			<string>MC</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Mongolia</string>
-			<key>code</key>
-			<string>MN</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Montserrat</string>
-			<key>code</key>
-			<string>MS</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Morocco</string>
-			<key>code</key>
-			<string>MA</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Mozambique</string>
-			<key>code</key>
-			<string>MZ</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Myanmar</string>
-			<key>code</key>
-			<string>MM</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Namibia</string>
-			<key>code</key>
-			<string>NA</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Nauru</string>
-			<key>code</key>
-			<string>NR</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Nepal</string>
-			<key>code</key>
-			<string>NP</string>
 		</dict>
 		<dict>
 			<key>name</key>
 			<string>Netherlands</string>
-			<key>code</key>
-			<string>NL</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Netherlands Antilles</string>
-			<key>code</key>
-			<string>AN</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>New Caledonia</string>
-			<key>code</key>
-			<string>NC</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>New Zealand</string>
-			<key>code</key>
-			<string>NZ</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Nicaragua</string>
-			<key>code</key>
-			<string>NI</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Niger</string>
-			<key>code</key>
-			<string>NE</string>
 		</dict>
 		<dict>
 			<key>name</key>
 			<string>Nigeria</string>
-			<key>code</key>
-			<string>NG</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Niue</string>
-			<key>code</key>
-			<string>NU</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Norfolk Island</string>
-			<key>code</key>
-			<string>NF</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Northern Mariana Islands</string>
-			<key>code</key>
-			<string>MP</string>
 		</dict>
 		<dict>
 			<key>name</key>
 			<string>Norway</string>
-			<key>code</key>
-			<string>NO</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Oman</string>
-			<key>code</key>
-			<string>OM</string>
 		</dict>
 		<dict>
 			<key>name</key>
 			<string>Pakistan</string>
-			<key>code</key>
-			<string>PK</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Palau</string>
-			<key>code</key>
-			<string>PW</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Palestinian Territory, Occupied</string>
-			<key>code</key>
-			<string>PS</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Panama</string>
-			<key>code</key>
-			<string>PA</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Papua New Guinea</string>
-			<key>code</key>
-			<string>PG</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Paraguay</string>
-			<key>code</key>
-			<string>PY</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Peru</string>
-			<key>code</key>
-			<string>PE</string>
 		</dict>
 		<dict>
 			<key>name</key>
 			<string>Philippines</string>
-			<key>code</key>
-			<string>PH</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Pitcairn Islands</string>
-			<key>code</key>
-			<string>PN</string>
 		</dict>
 		<dict>
 			<key>name</key>
 			<string>Poland</string>
-			<key>code</key>
-			<string>PL</string>
 		</dict>
 		<dict>
 			<key>name</key>
 			<string>Portugal</string>
-			<key>code</key>
-			<string>PT</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Puerto Rico</string>
-			<key>code</key>
-			<string>PR</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Qatar</string>
-			<key>code</key>
-			<string>QA</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Reunion</string>
-			<key>code</key>
-			<string>RE</string>
 		</dict>
 		<dict>
 			<key>name</key>
 			<string>Romania</string>
-			<key>code</key>
-			<string>RO</string>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string>Russian Federation</string>
-			<key>code</key>
-			<string>RU</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Rwanda</string>
-			<key>code</key>
-			<string>RW</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Saint Helena</string>
-			<key>code</key>
-			<string>SH</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Saint Kitts and Nevis</string>
-			<key>code</key>
-			<string>KN</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Saint Lucia</string>
-			<key>code</key>
-			<string>LC</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Saint Pierre and Miquelon</string>
-			<key>code</key>
-			<string>PM</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Saint Vincent and the Grenadines</string>
-			<key>code</key>
-			<string>VC</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Samoa</string>
-			<key>code</key>
-			<string>WS</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>San Marino</string>
-			<key>code</key>
-			<string>SM</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Sao Tome and Principe</string>
-			<key>code</key>
-			<string>ST</string>
+			<string>Russia</string>
 		</dict>
 		<dict>
 			<key>name</key>
 			<string>Saudi Arabia</string>
-			<key>code</key>
-			<string>SA</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Senegal</string>
-			<key>code</key>
-			<string>SN</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Serbia and Montenegro</string>
-			<key>code</key>
-			<string>CS</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Seychelles</string>
-			<key>code</key>
-			<string>SC</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Sierra Leone</string>
-			<key>code</key>
-			<string>SL</string>
 		</dict>
 		<dict>
 			<key>name</key>
 			<string>Singapore</string>
-			<key>code</key>
-			<string>SG</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Slovakia</string>
-			<key>code</key>
-			<string>SK</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Slovenia</string>
-			<key>code</key>
-			<string>SI</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Solomon Islands</string>
-			<key>code</key>
-			<string>SB</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Somalia</string>
-			<key>code</key>
-			<string>SO</string>
 		</dict>
 		<dict>
 			<key>name</key>
 			<string>South Africa</string>
-			<key>code</key>
-			<string>ZA</string>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string>South Georgia and the South Sandwich Islands</string>
-			<key>code</key>
-			<string>GS</string>
+			<string>South Korea</string>
 		</dict>
 		<dict>
 			<key>name</key>
 			<string>Spain</string>
-			<key>code</key>
-			<string>ES</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Sri Lanka</string>
-			<key>code</key>
-			<string>LK</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Sudan</string>
-			<key>code</key>
-			<string>SD</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Suriname</string>
-			<key>code</key>
-			<string>SR</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Svalbard and Jan Mayen</string>
-			<key>code</key>
-			<string>SJ</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Swaziland</string>
-			<key>code</key>
-			<string>SZ</string>
 		</dict>
 		<dict>
 			<key>name</key>
 			<string>Sweden</string>
-			<key>code</key>
-			<string>SE</string>
 		</dict>
 		<dict>
 			<key>name</key>
 			<string>Switzerland</string>
-			<key>code</key>
-			<string>CH</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Syrian Arab Republic</string>
-			<key>code</key>
-			<string>SY</string>
 		</dict>
 		<dict>
 			<key>name</key>
 			<string>Taiwan</string>
-			<key>code</key>
-			<string>TW</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Tajikistan</string>
-			<key>code</key>
-			<string>TJ</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Tanzania, United Republic of</string>
-			<key>code</key>
-			<string>TZ</string>
 		</dict>
 		<dict>
 			<key>name</key>
 			<string>Thailand</string>
-			<key>code</key>
-			<string>TH</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Timor-Leste</string>
-			<key>code</key>
-			<string>TL</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Togo</string>
-			<key>code</key>
-			<string>TG</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Tokelau</string>
-			<key>code</key>
-			<string>TK</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Tonga</string>
-			<key>code</key>
-			<string>TO</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Trinidad and Tobago</string>
-			<key>code</key>
-			<string>TT</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Tunisia</string>
-			<key>code</key>
-			<string>TN</string>
 		</dict>
 		<dict>
 			<key>name</key>
 			<string>Turkey</string>
-			<key>code</key>
-			<string>TR</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Turkmenistan</string>
-			<key>code</key>
-			<string>TM</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Turks and Caicos Islands</string>
-			<key>code</key>
-			<string>TC</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Tuvalu</string>
-			<key>code</key>
-			<string>TV</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Uganda</string>
-			<key>code</key>
-			<string>UG</string>
 		</dict>
 		<dict>
 			<key>name</key>
 			<string>Ukraine</string>
-			<key>code</key>
-			<string>UA</string>
 		</dict>
 		<dict>
 			<key>name</key>
 			<string>United Arab Emirates</string>
-			<key>code</key>
-			<string>AE</string>
 		</dict>
 		<dict>
 			<key>name</key>
 			<string>United Kingdom</string>
-			<key>code</key>
-			<string>GB</string>
 		</dict>
 		<dict>
 			<key>name</key>
 			<string>United States</string>
-			<key>code</key>
-			<string>US</string>
 			<key>states</key>
 			<array>
 				<dict>
 					<key>name</key>
 					<string>Alabama</string>
-					<key>code</key>
-					<string>AL</string>
 					<key>cities</key>
 					<array>
 						<string>Birmingham</string>
 						<string>Montgomery</string>
 						<string>Mobile</string>
+						<string>Huntsville</string>
+						<string>Tuscaloosa</string>
+						<string>Hoover</string>
+						<string>Dothan</string>
 					</array>
 				</dict>
 				<dict>
 					<key>name</key>
 					<string>Alaska</string>
-					<key>code</key>
-					<string>AK</string>
 					<key>cities</key>
 					<array>
 						<string>Anchorage</string>
 						<string>Fairbanks</string>
 						<string>Juneau</string>
+						<string>Sitka</string>
+						<string>Ketchikan</string>
+						<string>Wasilla</string>
+						<string>Kenai</string>
 					</array>
 				</dict>
 				<dict>
 					<key>name</key>
 					<string>Arizona</string>
-					<key>code</key>
-					<string>AZ</string>
 					<key>cities</key>
 					<array>
 						<string>Phoenix</string>
 						<string>Tucson</string>
 						<string>Mesa</string>
+						<string>Chandler</string>
+						<string>Glendale</string>
+						<string>Scottsdale</string>
+						<string>Gilbert</string>
 					</array>
 				</dict>
 				<dict>
 					<key>name</key>
 					<string>Arkansas</string>
-					<key>code</key>
-					<string>AR</string>
 					<key>cities</key>
 					<array>
 						<string>Little Rock</string>
 						<string>Fort Smith</string>
 						<string>Fayetteville</string>
+						<string>Springdale</string>
+						<string>Jonesboro</string>
+						<string>North Little Rock</string>
+						<string>Conway</string>
 					</array>
 				</dict>
 				<dict>
 					<key>name</key>
 					<string>California</string>
-					<key>code</key>
-					<string>CA</string>
 					<key>cities</key>
 					<array>
 						<string>Los Angeles</string>
-						<string>San Francisco</string>
 						<string>San Diego</string>
+						<string>San Jose</string>
+						<string>San Francisco</string>
+						<string>Fresno</string>
+						<string>Sacramento</string>
+						<string>Long Beach</string>
 					</array>
 				</dict>
 				<dict>
 					<key>name</key>
 					<string>Colorado</string>
-					<key>code</key>
-					<string>CO</string>
 					<key>cities</key>
 					<array>
 						<string>Denver</string>
 						<string>Colorado Springs</string>
 						<string>Aurora</string>
+						<string>Fort Collins</string>
+						<string>Lakewood</string>
+						<string>Thornton</string>
+						<string>Arvada</string>
 					</array>
 				</dict>
 				<dict>
 					<key>name</key>
 					<string>Connecticut</string>
-					<key>code</key>
-					<string>CT</string>
 					<key>cities</key>
 					<array>
 						<string>Bridgeport</string>
-						<string>Hartford</string>
 						<string>New Haven</string>
+						<string>Hartford</string>
+						<string>Stamford</string>
+						<string>Waterbury</string>
+						<string>Norwalk</string>
+						<string>Danbury</string>
 					</array>
 				</dict>
 				<dict>
 					<key>name</key>
 					<string>Delaware</string>
-					<key>code</key>
-					<string>DE</string>
 					<key>cities</key>
 					<array>
 						<string>Wilmington</string>
 						<string>Dover</string>
 						<string>Newark</string>
+						<string>Middletown</string>
+						<string>Smyrna</string>
+						<string>Milford</string>
+						<string>Seaford</string>
 					</array>
 				</dict>
 				<dict>
 					<key>name</key>
 					<string>Florida</string>
-					<key>code</key>
-					<string>FL</string>
 					<key>cities</key>
 					<array>
+						<string>Jacksonville</string>
 						<string>Miami</string>
-						<string>Orlando</string>
 						<string>Tampa</string>
+						<string>Orlando</string>
+						<string>St. Petersburg</string>
+						<string>Hialeah</string>
+						<string>Tallahassee</string>
 					</array>
 				</dict>
 				<dict>
 					<key>name</key>
 					<string>Georgia</string>
-					<key>code</key>
-					<string>GA</string>
 					<key>cities</key>
 					<array>
 						<string>Atlanta</string>
+						<string>Columbus</string>
+						<string>Augusta</string>
 						<string>Savannah</string>
+						<string>Athens</string>
+						<string>Sandy Springs</string>
 						<string>Macon</string>
 					</array>
 				</dict>
 				<dict>
 					<key>name</key>
 					<string>Hawaii</string>
-					<key>code</key>
-					<string>HI</string>
 					<key>cities</key>
 					<array>
 						<string>Honolulu</string>
+						<string>Pearl City</string>
 						<string>Hilo</string>
 						<string>Kailua</string>
+						<string>Waipahu</string>
+						<string>Kaneohe</string>
+						<string>Mililani</string>
 					</array>
 				</dict>
 				<dict>
 					<key>name</key>
 					<string>Idaho</string>
-					<key>code</key>
-					<string>ID</string>
 					<key>cities</key>
 					<array>
 						<string>Boise</string>
-						<string>Idaho Falls</string>
 						<string>Nampa</string>
+						<string>Meridian</string>
+						<string>Idaho Falls</string>
+						<string>Pocatello</string>
+						<string>Caldwell</string>
+						<string>Coeur d'Alene</string>
 					</array>
 				</dict>
 				<dict>
 					<key>name</key>
 					<string>Illinois</string>
-					<key>code</key>
-					<string>IL</string>
 					<key>cities</key>
 					<array>
 						<string>Chicago</string>
 						<string>Aurora</string>
 						<string>Rockford</string>
+						<string>Joliet</string>
+						<string>Naperville</string>
+						<string>Springfield</string>
+						<string>Peoria</string>
 					</array>
 				</dict>
 				<dict>
 					<key>name</key>
 					<string>Indiana</string>
-					<key>code</key>
-					<string>IN</string>
 					<key>cities</key>
 					<array>
 						<string>Indianapolis</string>
 						<string>Fort Wayne</string>
 						<string>Evansville</string>
+						<string>South Bend</string>
+						<string>Carmel</string>
+						<string>Bloomington</string>
+						<string>Fishers</string>
 					</array>
 				</dict>
 				<dict>
 					<key>name</key>
 					<string>Iowa</string>
-					<key>code</key>
-					<string>IA</string>
 					<key>cities</key>
 					<array>
 						<string>Des Moines</string>
 						<string>Cedar Rapids</string>
 						<string>Davenport</string>
+						<string>Sioux City</string>
+						<string>Iowa City</string>
+						<string>Waterloo</string>
+						<string>Ames</string>
 					</array>
 				</dict>
 				<dict>
 					<key>name</key>
 					<string>Kansas</string>
-					<key>code</key>
-					<string>KS</string>
 					<key>cities</key>
 					<array>
 						<string>Wichita</string>
 						<string>Overland Park</string>
 						<string>Kansas City</string>
+						<string>Topeka</string>
+						<string>Olathe</string>
+						<string>Lawrence</string>
+						<string>Shawnee</string>
 					</array>
 				</dict>
 				<dict>
 					<key>name</key>
 					<string>Kentucky</string>
-					<key>code</key>
-					<string>KY</string>
 					<key>cities</key>
 					<array>
 						<string>Louisville</string>
 						<string>Lexington</string>
 						<string>Bowling Green</string>
-					</array>
-				</dict>
-				<dict>
-					<key>name</key>
-					<string>Louisiana</string>
-					<key>code</key>
-					<string>LA</string>
-					<key>cities</key>
-					<array>
-						<string>New Orleans</string>
-						<string>Baton Rouge</string>
-						<string>Shreveport</string>
-					</array>
-				</dict>
-				<dict>
-					<key>name</key>
-					<string>Maine</string>
-					<key>code</key>
-					<string>ME</string>
-					<key>cities</key>
-					<array>
-						<string>Portland</string>
-						<string>Lewiston</string>
-						<string>Bangor</string>
-					</array>
-				</dict>
-				<dict>
-					<key>name</key>
-					<string>Maryland</string>
-					<key>code</key>
-					<string>MD</string>
-					<key>cities</key>
-					<array>
-						<string>Baltimore</string>
-						<string>Frederick</string>
-						<string>Rockville</string>
-					</array>
-				</dict>
-				<dict>
-					<key>name</key>
-					<string>Massachusetts</string>
-					<key>code</key>
-					<string>MA</string>
-					<key>cities</key>
-					<array>
-						<string>Boston</string>
-						<string>Worcester</string>
-						<string>Springfield</string>
-					</array>
-				</dict>
-				<dict>
-					<key>name</key>
-					<string>Michigan</string>
-					<key>code</key>
-					<string>MI</string>
-					<key>cities</key>
-					<array>
-						<string>Detroit</string>
-						<string>Grand Rapids</string>
-						<string>Warren</string>
-					</array>
-				</dict>
-				<dict>
-					<key>name</key>
-					<string>Minnesota</string>
-					<key>code</key>
-					<string>MN</string>
-					<key>cities</key>
-					<array>
-						<string>Minneapolis</string>
-						<string>St. Paul</string>
-						<string>Rochester</string>
-					</array>
-				</dict>
-				<dict>
-					<key>name</key>
-					<string>Mississippi</string>
-					<key>code</key>
-					<string>MS</string>
-					<key>cities</key>
-					<array>
-						<string>Jackson</string>
-						<string>Gulfport</string>
-						<string>Hattiesburg</string>
-					</array>
-				</dict>
-				<dict>
-					<key>name</key>
-					<string>Missouri</string>
-					<key>code</key>
-					<string>MO</string>
-					<key>cities</key>
-					<array>
-						<string>Kansas City</string>
-						<string>St. Louis</string>
-						<string>Springfield</string>
-					</array>
-				</dict>
-				<dict>
-					<key>name</key>
-					<string>Montana</string>
-					<key>code</key>
-					<string>MT</string>
-					<key>cities</key>
-					<array>
-						<string>Billings</string>
-						<string>Missoula</string>
-						<string>Great Falls</string>
-					</array>
-				</dict>
-				<dict>
-					<key>name</key>
-					<string>Nebraska</string>
-					<key>code</key>
-					<string>NE</string>
-					<key>cities</key>
-					<array>
-						<string>Omaha</string>
-						<string>Lincoln</string>
-						<string>Bellevue</string>
-					</array>
-				</dict>
-				<dict>
-					<key>name</key>
-					<string>Nevada</string>
-					<key>code</key>
-					<string>NV</string>
-					<key>cities</key>
-					<array>
-						<string>Las Vegas</string>
-						<string>Henderson</string>
-						<string>Reno</string>
-					</array>
-				</dict>
-				<dict>
-					<key>name</key>
-					<string>New Hampshire</string>
-					<key>code</key>
-					<string>NH</string>
-					<key>cities</key>
-					<array>
-						<string>Manchester</string>
-						<string>Nashua</string>
-						<string>Concord</string>
-					</array>
-				</dict>
-				<dict>
-					<key>name</key>
-					<string>New Jersey</string>
-					<key>code</key>
-					<string>NJ</string>
-					<key>cities</key>
-					<array>
-						<string>Newark</string>
-						<string>Jersey City</string>
-						<string>Paterson</string>
-					</array>
-				</dict>
-				<dict>
-					<key>name</key>
-					<string>New Mexico</string>
-					<key>code</key>
-					<string>NM</string>
-					<key>cities</key>
-					<array>
-						<string>Albuquerque</string>
-						<string>Las Cruces</string>
-						<string>Rio Rancho</string>
-					</array>
-				</dict>
-				<dict>
-					<key>name</key>
-					<string>New York</string>
-					<key>code</key>
-					<string>NY</string>
-					<key>cities</key>
-					<array>
-						<string>New York City</string>
-						<string>Buffalo</string>
-						<string>Rochester</string>
-					</array>
-				</dict>
-				<dict>
-					<key>name</key>
-					<string>North Carolina</string>
-					<key>code</key>
-					<string>NC</string>
-					<key>cities</key>
-					<array>
-						<string>Charlotte</string>
-						<string>Raleigh</string>
-						<string>Greensboro</string>
-					</array>
-				</dict>
-				<dict>
-					<key>name</key>
-					<string>North Dakota</string>
-					<key>code</key>
-					<string>ND</string>
-					<key>cities</key>
-					<array>
-						<string>Fargo</string>
-						<string>Bismarck</string>
-						<string>Grand Forks</string>
-					</array>
-				</dict>
-				<dict>
-					<key>name</key>
-					<string>Ohio</string>
-					<key>code</key>
-					<string>OH</string>
-					<key>cities</key>
-					<array>
-						<string>Columbus</string>
-						<string>Cleveland</string>
-						<string>Cincinnati</string>
-					</array>
-				</dict>
-				<dict>
-					<key>name</key>
-					<string>Oklahoma</string>
-					<key>code</key>
-					<string>OK</string>
-					<key>cities</key>
-					<array>
-						<string>Oklahoma City</string>
-						<string>Tulsa</string>
-						<string>Norman</string>
-					</array>
-				</dict>
-				<dict>
-					<key>name</key>
-					<string>Oregon</string>
-					<key>code</key>
-					<string>OR</string>
-					<key>cities</key>
-					<array>
-						<string>Portland</string>
-						<string>Salem</string>
-						<string>Eugene</string>
-					</array>
-				</dict>
-				<dict>
-					<key>name</key>
-					<string>Pennsylvania</string>
-					<key>code</key>
-					<string>PA</string>
-					<key>cities</key>
-					<array>
-						<string>Philadelphia</string>
-						<string>Pittsburgh</string>
-						<string>Allentown</string>
-					</array>
-				</dict>
-				<dict>
-					<key>name</key>
-					<string>Rhode Island</string>
-					<key>code</key>
-					<string>RI</string>
-					<key>cities</key>
-					<array>
-						<string>Providence</string>
-						<string>Warwick</string>
-						<string>Cranston</string>
-					</array>
-				</dict>
-				<dict>
-					<key>name</key>
-					<string>South Carolina</string>
-					<key>code</key>
-					<string>SC</string>
-					<key>cities</key>
-					<array>
-						<string>Columbia</string>
-						<string>Charleston</string>
-						<string>North Charleston</string>
-					</array>
-				</dict>
-				<dict>
-					<key>name</key>
-					<string>South Dakota</string>
-					<key>code</key>
-					<string>SD</string>
-					<key>cities</key>
-					<array>
-						<string>Sioux Falls</string>
-						<string>Rapid City</string>
-						<string>Aberdeen</string>
-					</array>
-				</dict>
-				<dict>
-					<key>name</key>
-					<string>Tennessee</string>
-					<key>code</key>
-					<string>TN</string>
-					<key>cities</key>
-					<array>
-						<string>Nashville</string>
-						<string>Memphis</string>
-						<string>Knoxville</string>
-					</array>
-				</dict>
-				<dict>
-					<key>name</key>
-					<string>Texas</string>
-					<key>code</key>
-					<string>TX</string>
-					<key>cities</key>
-					<array>
-						<string>Houston</string>
-						<string>San Antonio</string>
-						<string>Dallas</string>
-					</array>
-				</dict>
-				<dict>
-					<key>name</key>
-					<string>Utah</string>
-					<key>code</key>
-					<string>UT</string>
-					<key>cities</key>
-					<array>
-						<string>Salt Lake City</string>
-						<string>West Valley City</string>
-						<string>Provo</string>
-					</array>
-				</dict>
-				<dict>
-					<key>name</key>
-					<string>Vermont</string>
-					<key>code</key>
-					<string>VT</string>
-					<key>cities</key>
-					<array>
-						<string>Burlington</string>
-						<string>South Burlington</string>
-						<string>Rutland</string>
-					</array>
-				</dict>
-				<dict>
-					<key>name</key>
-					<string>Virginia</string>
-					<key>code</key>
-					<string>VA</string>
-					<key>cities</key>
-					<array>
-						<string>Virginia Beach</string>
-						<string>Norfolk</string>
+						<string>Owensboro</string>
+						<string>Covington</string>
+						<string>Hopkinsville</string>
 						<string>Richmond</string>
 					</array>
 				</dict>
 				<dict>
 					<key>name</key>
+					<string>Louisiana</string>
+					<key>cities</key>
+					<array>
+						<string>New Orleans</string>
+						<string>Baton Rouge</string>
+						<string>Shreveport</string>
+						<string>Lafayette</string>
+						<string>Lake Charles</string>
+						<string>Kenner</string>
+						<string>Bossier City</string>
+					</array>
+				</dict>
+				<dict>
+					<key>name</key>
+					<string>Maine</string>
+					<key>cities</key>
+					<array>
+						<string>Portland</string>
+						<string>Lewiston</string>
+						<string>Bangor</string>
+						<string>South Portland</string>
+						<string>Auburn</string>
+						<string>Biddeford</string>
+						<string>Sanford</string>
+					</array>
+				</dict>
+				<dict>
+					<key>name</key>
+					<string>Maryland</string>
+					<key>cities</key>
+					<array>
+						<string>Baltimore</string>
+						<string>Frederick</string>
+						<string>Rockville</string>
+						<string>Gaithersburg</string>
+						<string>Bowie</string>
+						<string>Hagerstown</string>
+						<string>Annapolis</string>
+					</array>
+				</dict>
+				<dict>
+					<key>name</key>
+					<string>Massachusetts</string>
+					<key>cities</key>
+					<array>
+						<string>Boston</string>
+						<string>Worcester</string>
+						<string>Springfield</string>
+						<string>Lowell</string>
+						<string>Cambridge</string>
+						<string>New Bedford</string>
+						<string>Brockton</string>
+					</array>
+				</dict>
+				<dict>
+					<key>name</key>
+					<string>Michigan</string>
+					<key>cities</key>
+					<array>
+						<string>Detroit</string>
+						<string>Grand Rapids</string>
+						<string>Warren</string>
+						<string>Sterling Heights</string>
+						<string>Lansing</string>
+						<string>Ann Arbor</string>
+						<string>Flint</string>
+					</array>
+				</dict>
+				<dict>
+					<key>name</key>
+					<string>Minnesota</string>
+					<key>cities</key>
+					<array>
+						<string>Minneapolis</string>
+						<string>St. Paul</string>
+						<string>Rochester</string>
+						<string>Bloomington</string>
+						<string>Duluth</string>
+						<string>Brooklyn Park</string>
+						<string>Plymouth</string>
+					</array>
+				</dict>
+				<dict>
+					<key>name</key>
+					<string>Mississippi</string>
+					<key>cities</key>
+					<array>
+						<string>Jackson</string>
+						<string>Gulfport</string>
+						<string>Southaven</string>
+						<string>Hattiesburg</string>
+						<string>Biloxi</string>
+						<string>Meridian</string>
+						<string>Tupelo</string>
+					</array>
+				</dict>
+				<dict>
+					<key>name</key>
+					<string>Missouri</string>
+					<key>cities</key>
+					<array>
+						<string>Kansas City</string>
+						<string>St. Louis</string>
+						<string>Springfield</string>
+						<string>Columbia</string>
+						<string>Independence</string>
+						<string>Lee's Summit</string>
+						<string>O'Fallon</string>
+					</array>
+				</dict>
+				<dict>
+					<key>name</key>
+					<string>Montana</string>
+					<key>cities</key>
+					<array>
+						<string>Billings</string>
+						<string>Missoula</string>
+						<string>Great Falls</string>
+						<string>Bozeman</string>
+						<string>Butte</string>
+						<string>Helena</string>
+						<string>Kalispell</string>
+					</array>
+				</dict>
+				<dict>
+					<key>name</key>
+					<string>Nebraska</string>
+					<key>cities</key>
+					<array>
+						<string>Omaha</string>
+						<string>Lincoln</string>
+						<string>Bellevue</string>
+						<string>Grand Island</string>
+						<string>Kearney</string>
+						<string>Fremont</string>
+						<string>Hastings</string>
+					</array>
+				</dict>
+				<dict>
+					<key>name</key>
+					<string>Nevada</string>
+					<key>cities</key>
+					<array>
+						<string>Las Vegas</string>
+						<string>Henderson</string>
+						<string>Reno</string>
+						<string>North Las Vegas</string>
+						<string>Sparks</string>
+						<string>Carson City</string>
+						<string>Elko</string>
+					</array>
+				</dict>
+				<dict>
+					<key>name</key>
+					<string>New Hampshire</string>
+					<key>cities</key>
+					<array>
+						<string>Manchester</string>
+						<string>Nashua</string>
+						<string>Concord</string>
+						<string>Derry</string>
+						<string>Dover</string>
+						<string>Rochester</string>
+						<string>Salem</string>
+					</array>
+				</dict>
+				<dict>
+					<key>name</key>
+					<string>New Jersey</string>
+					<key>cities</key>
+					<array>
+						<string>Newark</string>
+						<string>Jersey City</string>
+						<string>Paterson</string>
+						<string>Elizabeth</string>
+						<string>Edison</string>
+						<string>Woodbridge</string>
+						<string>Lakewood</string>
+					</array>
+				</dict>
+				<dict>
+					<key>name</key>
+					<string>New Mexico</string>
+					<key>cities</key>
+					<array>
+						<string>Albuquerque</string>
+						<string>Las Cruces</string>
+						<string>Rio Rancho</string>
+						<string>Santa Fe</string>
+						<string>Roswell</string>
+						<string>Farmington</string>
+						<string>Clovis</string>
+					</array>
+				</dict>
+				<dict>
+					<key>name</key>
+					<string>New York</string>
+					<key>cities</key>
+					<array>
+						<string>New York City</string>
+						<string>Buffalo</string>
+						<string>Rochester</string>
+						<string>Yonkers</string>
+						<string>Syracuse</string>
+						<string>Albany</string>
+						<string>New Rochelle</string>
+					</array>
+				</dict>
+				<dict>
+					<key>name</key>
+					<string>North Carolina</string>
+					<key>cities</key>
+					<array>
+						<string>Charlotte</string>
+						<string>Raleigh</string>
+						<string>Greensboro</string>
+						<string>Durham</string>
+						<string>Winston-Salem</string>
+						<string>Fayetteville</string>
+						<string>Cary</string>
+					</array>
+				</dict>
+				<dict>
+					<key>name</key>
+					<string>North Dakota</string>
+					<key>cities</key>
+					<array>
+						<string>Fargo</string>
+						<string>Bismarck</string>
+						<string>Grand Forks</string>
+						<string>Minot</string>
+						<string>West Fargo</string>
+						<string>Mandan</string>
+						<string>Dickinson</string>
+					</array>
+				</dict>
+				<dict>
+					<key>name</key>
+					<string>Ohio</string>
+					<key>cities</key>
+					<array>
+						<string>Columbus</string>
+						<string>Cleveland</string>
+						<string>Cincinnati</string>
+						<string>Toledo</string>
+						<string>Akron</string>
+						<string>Dayton</string>
+						<string>Parma</string>
+					</array>
+				</dict>
+				<dict>
+					<key>name</key>
+					<string>Oklahoma</string>
+					<key>cities</key>
+					<array>
+						<string>Oklahoma City</string>
+						<string>Tulsa</string>
+						<string>Norman</string>
+						<string>Broken Arrow</string>
+						<string>Lawton</string>
+						<string>Edmond</string>
+						<string>Moore</string>
+					</array>
+				</dict>
+				<dict>
+					<key>name</key>
+					<string>Oregon</string>
+					<key>cities</key>
+					<array>
+						<string>Portland</string>
+						<string>Eugene</string>
+						<string>Salem</string>
+						<string>Gresham</string>
+						<string>Hillsboro</string>
+						<string>Beaverton</string>
+						<string>Bend</string>
+					</array>
+				</dict>
+				<dict>
+					<key>name</key>
+					<string>Pennsylvania</string>
+					<key>cities</key>
+					<array>
+						<string>Philadelphia</string>
+						<string>Pittsburgh</string>
+						<string>Allentown</string>
+						<string>Erie</string>
+						<string>Reading</string>
+						<string>Scranton</string>
+						<string>Bethlehem</string>
+					</array>
+				</dict>
+				<dict>
+					<key>name</key>
+					<string>Rhode Island</string>
+					<key>cities</key>
+					<array>
+						<string>Providence</string>
+						<string>Warwick</string>
+						<string>Cranston</string>
+						<string>Pawtucket</string>
+						<string>East Providence</string>
+						<string>Woonsocket</string>
+						<string>Coventry</string>
+					</array>
+				</dict>
+				<dict>
+					<key>name</key>
+					<string>South Carolina</string>
+					<key>cities</key>
+					<array>
+						<string>Columbia</string>
+						<string>Charleston</string>
+						<string>North Charleston</string>
+						<string>Mount Pleasant</string>
+						<string>Rock Hill</string>
+						<string>Greenville</string>
+						<string>Summerville</string>
+					</array>
+				</dict>
+				<dict>
+					<key>name</key>
+					<string>South Dakota</string>
+					<key>cities</key>
+					<array>
+						<string>Sioux Falls</string>
+						<string>Rapid City</string>
+						<string>Aberdeen</string>
+						<string>Brookings</string>
+						<string>Watertown</string>
+						<string>Mitchell</string>
+						<string>Yankton</string>
+					</array>
+				</dict>
+				<dict>
+					<key>name</key>
+					<string>Tennessee</string>
+					<key>cities</key>
+					<array>
+						<string>Nashville</string>
+						<string>Memphis</string>
+						<string>Knoxville</string>
+						<string>Chattanooga</string>
+						<string>Clarksville</string>
+						<string>Murfreesboro</string>
+						<string>Franklin</string>
+					</array>
+				</dict>
+				<dict>
+					<key>name</key>
+					<string>Texas</string>
+					<key>cities</key>
+					<array>
+						<string>Houston</string>
+						<string>San Antonio</string>
+						<string>Dallas</string>
+						<string>Austin</string>
+						<string>Fort Worth</string>
+						<string>El Paso</string>
+						<string>Arlington</string>
+					</array>
+				</dict>
+				<dict>
+					<key>name</key>
+					<string>Utah</string>
+					<key>cities</key>
+					<array>
+						<string>Salt Lake City</string>
+						<string>West Valley City</string>
+						<string>Provo</string>
+						<string>West Jordan</string>
+						<string>Orem</string>
+						<string>Sandy</string>
+						<string>Ogden</string>
+					</array>
+				</dict>
+				<dict>
+					<key>name</key>
+					<string>Vermont</string>
+					<key>cities</key>
+					<array>
+						<string>Burlington</string>
+						<string>South Burlington</string>
+						<string>Rutland</string>
+						<string>Essex</string>
+						<string>Colchester</string>
+						<string>Bennington</string>
+						<string>Brattleboro</string>
+					</array>
+				</dict>
+				<dict>
+					<key>name</key>
+					<string>Virginia</string>
+					<key>cities</key>
+					<array>
+						<string>Virginia Beach</string>
+						<string>Norfolk</string>
+						<string>Chesapeake</string>
+						<string>Richmond</string>
+						<string>Newport News</string>
+						<string>Alexandria</string>
+						<string>Hampton</string>
+					</array>
+				</dict>
+				<dict>
+					<key>name</key>
 					<string>Washington</string>
-					<key>code</key>
-					<string>WA</string>
 					<key>cities</key>
 					<array>
 						<string>Seattle</string>
 						<string>Spokane</string>
 						<string>Tacoma</string>
+						<string>Vancouver</string>
+						<string>Bellevue</string>
+						<string>Kent</string>
+						<string>Everett</string>
 					</array>
 				</dict>
 				<dict>
 					<key>name</key>
 					<string>West Virginia</string>
-					<key>code</key>
-					<string>WV</string>
 					<key>cities</key>
 					<array>
 						<string>Charleston</string>
 						<string>Huntington</string>
+						<string>Parkersburg</string>
 						<string>Morgantown</string>
+						<string>Wheeling</string>
+						<string>Weirton</string>
+						<string>Fairmont</string>
 					</array>
 				</dict>
 				<dict>
 					<key>name</key>
 					<string>Wisconsin</string>
-					<key>code</key>
-					<string>WI</string>
 					<key>cities</key>
 					<array>
 						<string>Milwaukee</string>
 						<string>Madison</string>
 						<string>Green Bay</string>
+						<string>Kenosha</string>
+						<string>Racine</string>
+						<string>Appleton</string>
+						<string>Waukesha</string>
 					</array>
 				</dict>
 				<dict>
 					<key>name</key>
 					<string>Wyoming</string>
-					<key>code</key>
-					<string>WY</string>
 					<key>cities</key>
 					<array>
 						<string>Cheyenne</string>
 						<string>Casper</string>
 						<string>Laramie</string>
+						<string>Gillette</string>
+						<string>Rock Springs</string>
+						<string>Sheridan</string>
+						<string>Green River</string>
 					</array>
 				</dict>
 			</array>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string>United States Minor Outlying Islands</string>
-			<key>code</key>
-			<string>UM</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Uruguay</string>
-			<key>code</key>
-			<string>UY</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Uzbekistan</string>
-			<key>code</key>
-			<string>UZ</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Vanuatu</string>
-			<key>code</key>
-			<string>VU</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Venezuela</string>
-			<key>code</key>
-			<string>VE</string>
-		</dict>
-		<dict>
-			<key>name</key>
 			<string>Vietnam</string>
-			<key>code</key>
-			<string>VN</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Virgin Islands, British</string>
-			<key>code</key>
-			<string>VG</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Virgin Islands, U.S.</string>
-			<key>code</key>
-			<string>VI</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Wallis and Futuna</string>
-			<key>code</key>
-			<string>WF</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Western Sahara</string>
-			<key>code</key>
-			<string>EH</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Yemen</string>
-			<key>code</key>
-			<string>YE</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Zambia</string>
-			<key>code</key>
-			<string>ZM</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Zimbabwe</string>
-			<key>code</key>
-			<string>ZN</string>
 		</dict>
 	</array>
 </plist>

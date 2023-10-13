@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol LocationSelectionDelegate: class {
+protocol LocationSelectionDelegate: AnyObject {
     func didSelectLocation(_ location: String)
 }
 
@@ -150,6 +150,8 @@ class LocationViewController: UIViewController, UITableViewDelegate, UITableView
                     break
                 }
         }
+        
+        print(selectedData)
 
         // Calls the delegate method to pass the selected data back to ViewController
         delegate?.didSelectLocation(selectedData ?? "nil")
