@@ -18,12 +18,8 @@ class UserViewController: UIViewController, LocationSelectionDelegate {
     @IBOutlet weak var userName: UITextField!
     @IBOutlet weak var userEmail: UITextField!
     @IBOutlet weak var userDOB: UITextField!
-    @IBOutlet weak var userCountry: UITextField!
-    @IBOutlet weak var userState: UITextField!
-    @IBOutlet weak var userCity: UITextField!
-
-    
-    override func viewDidLoad() {
+ 
+        override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "User Form"
         
@@ -35,7 +31,14 @@ class UserViewController: UIViewController, LocationSelectionDelegate {
                     barButtonSystemItem: .save, target: self, action: nil)
             }
         }
-
-        
     }
+    
+    
+    @IBAction func userCountry(_ sender: Any) {
+    }
+    @IBAction func userState(_ sender: Any) {
+    }
+    @IBAction func userCity(_ sender: Any) {
+    }
+    
 }

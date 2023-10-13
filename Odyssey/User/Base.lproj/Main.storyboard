@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Ngl-gJ-R1U">
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Ngl-gJ-R1U">
                                 <rect key="frame" x="7" y="108" width="416" height="556"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BCq-XW-r9C">
@@ -99,77 +99,73 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="901-Lh-fSX">
                                         <rect key="frame" x="0.0" y="282" width="416" height="86"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Select Country" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UoF-2B-6T8">
-                                                <rect key="frame" x="8" y="31.333333333333314" width="387" height="34"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qrc-ro-s4p">
                                                 <rect key="frame" x="8" y="7.9999999999999982" width="387" height="20.333333333333329"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="shy-dG-Uu6">
+                                                <rect key="frame" x="8" y="31.333333333333332" width="387" height="34"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Select State"/>
+                                                <connections>
+                                                    <action selector="userCountry:" destination="m85-F1-3vc" eventType="touchUpInside" id="FR5-nN-9pM"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="Qrc-ro-s4p" firstAttribute="trailing" secondItem="UoF-2B-6T8" secondAttribute="trailing" id="HLi-Eo-yvn"/>
                                             <constraint firstAttribute="trailing" secondItem="Qrc-ro-s4p" secondAttribute="trailing" constant="21" id="JAq-ac-osl"/>
-                                            <constraint firstItem="Qrc-ro-s4p" firstAttribute="leading" secondItem="UoF-2B-6T8" secondAttribute="leading" id="U37-ic-wRQ"/>
                                             <constraint firstItem="Qrc-ro-s4p" firstAttribute="top" secondItem="901-Lh-fSX" secondAttribute="topMargin" id="ap2-JC-fOQ"/>
-                                            <constraint firstItem="UoF-2B-6T8" firstAttribute="top" secondItem="Qrc-ro-s4p" secondAttribute="bottom" constant="3" id="cis-SW-kc3"/>
                                             <constraint firstItem="Qrc-ro-s4p" firstAttribute="leading" secondItem="901-Lh-fSX" secondAttribute="leadingMargin" id="uwz-o4-BvX"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lQM-5b-Mb2">
                                         <rect key="frame" x="0.0" y="376" width="416" height="86"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Select State" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sKr-uL-J6b">
-                                                <rect key="frame" x="8" y="32" width="387" height="34"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="State" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iBU-3j-R5Q">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="State" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iBU-3j-R5Q">
                                                 <rect key="frame" x="8" y="8.6666666666666838" width="387" height="20.333333333333329"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fun-gD-w1s">
+                                                <rect key="frame" x="8" y="31.333333333333332" width="387" height="34"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Select State"/>
+                                                <connections>
+                                                    <action selector="userState:" destination="m85-F1-3vc" eventType="touchUpInside" id="yJ1-QO-u7d"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstItem="sKr-uL-J6b" firstAttribute="leading" secondItem="iBU-3j-R5Q" secondAttribute="leading" id="Car-A1-VPr"/>
-                                            <constraint firstItem="sKr-uL-J6b" firstAttribute="top" secondItem="iBU-3j-R5Q" secondAttribute="bottom" constant="3" id="Jek-b3-TfW"/>
-                                            <constraint firstAttribute="bottom" secondItem="sKr-uL-J6b" secondAttribute="bottom" constant="20" id="L0L-TJ-sWA"/>
-                                            <constraint firstItem="sKr-uL-J6b" firstAttribute="leading" secondItem="lQM-5b-Mb2" secondAttribute="leadingMargin" id="OMQ-it-fiP"/>
-                                            <constraint firstItem="sKr-uL-J6b" firstAttribute="trailing" secondItem="iBU-3j-R5Q" secondAttribute="trailing" id="fv6-aJ-v67"/>
-                                            <constraint firstAttribute="trailing" secondItem="sKr-uL-J6b" secondAttribute="trailing" constant="21" id="v0M-k5-fL7"/>
-                                        </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WE5-H4-b94">
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WE5-H4-b94">
                                         <rect key="frame" x="0.0" y="470" width="416" height="86"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Select City" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Oqr-hV-6sa">
-                                                <rect key="frame" x="8" y="32" width="387" height="34"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zqr-by-1Ks">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="City" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zqr-by-1Ks">
                                                 <rect key="frame" x="8" y="8.666666666666627" width="387" height="20.333333333333329"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kke-gB-rUy">
+                                                <rect key="frame" x="8" y="31.333333333333332" width="387" height="34"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Select City"/>
+                                                <connections>
+                                                    <action selector="userCity:" destination="m85-F1-3vc" eventType="touchUpInside" id="UCa-Tq-MYI"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="Oqr-hV-6sa" firstAttribute="top" secondItem="zqr-by-1Ks" secondAttribute="bottom" constant="3" id="9y4-hB-laz"/>
                                             <constraint firstItem="zqr-by-1Ks" firstAttribute="top" secondItem="WE5-H4-b94" secondAttribute="top" constant="8.5" id="Aqm-EP-Jfz"/>
-                                            <constraint firstAttribute="bottom" secondItem="Oqr-hV-6sa" secondAttribute="bottom" constant="20" id="LG8-9y-OkX"/>
-                                            <constraint firstItem="Oqr-hV-6sa" firstAttribute="leading" secondItem="WE5-H4-b94" secondAttribute="leadingMargin" id="MWr-ff-O4Q"/>
-                                            <constraint firstItem="Oqr-hV-6sa" firstAttribute="trailing" secondItem="zqr-by-1Ks" secondAttribute="trailing" id="Tef-vS-w6c"/>
-                                            <constraint firstAttribute="trailing" secondItem="Oqr-hV-6sa" secondAttribute="trailing" constant="21" id="ozg-vD-pDN"/>
-                                            <constraint firstItem="Oqr-hV-6sa" firstAttribute="leading" secondItem="zqr-by-1Ks" secondAttribute="leading" id="tXJ-Dw-cxx"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -192,18 +188,15 @@
                     </view>
                     <navigationItem key="navigationItem" id="9bE-rI-Opi"/>
                     <connections>
-                        <outlet property="userCity" destination="Oqr-hV-6sa" id="wQs-of-ZOo"/>
-                        <outlet property="userCountry" destination="UoF-2B-6T8" id="vC4-je-05s"/>
                         <outlet property="userDOB" destination="MeL-ti-Fn8" id="NTe-MU-eJq"/>
                         <outlet property="userEmail" destination="GNn-tM-XOc" id="88j-5S-YZt"/>
                         <outlet property="userName" destination="v8g-rI-X2y" id="LEA-ic-6bY"/>
-                        <outlet property="userState" destination="sKr-uL-J6b" id="rLA-RG-JdT"/>
                         <segue destination="GcA-8w-VdV" kind="show" identifier="SelectLocation" id="bw4-Lq-qQ5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HBM-rd-zex" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1461" y="-125"/>
+            <point key="canvasLocation" x="1460.9302325581396" y="-125.53648068669528"/>
         </scene>
         <!--Location View Controller-->
         <scene sceneID="YP1-pe-qtb">
