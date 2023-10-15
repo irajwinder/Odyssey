@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22222" systemVersion="23A344" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Flight" representedClassName=".Flight" syncable="YES">
-        <attribute name="departDate" optional="YES" attributeType="String"/>
+        <attribute name="departureDate" optional="YES" attributeType="String"/>
         <attribute name="destination" optional="YES" attributeType="String"/>
-        <attribute name="flightNumber" optional="YES" attributeType="String"/>
-        <attribute name="flightType" optional="YES" attributeType="String"/>
+        <attribute name="flightNumber" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="seatNumber" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="source" optional="YES" attributeType="String"/>
-        <relationship name="passengers" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="User" inverseName="flights" inverseEntity="User"/>
+        <relationship name="passengers" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="flights" inverseEntity="User"/>
+    </entity>
+    <entity name="Ticket" representedClassName=".Ticket" syncable="YES">
+        <attribute name="ticketNumber" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="ticketPrice" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
     </entity>
     <entity name="User" representedClassName=".UserInfo" syncable="YES">
-        <attribute name="city" optional="YES" attributeType="String"/>
-        <attribute name="country" optional="YES" attributeType="String"/>
-        <attribute name="dateOfBirth" optional="YES" attributeType="String"/>
-        <attribute name="email" optional="YES" attributeType="String"/>
-        <attribute name="state" optional="YES" attributeType="String"/>
+        <attribute name="userCity" optional="YES" attributeType="String"/>
+        <attribute name="userCountry" optional="YES" attributeType="String"/>
+        <attribute name="userDOB" optional="YES" attributeType="String"/>
+        <attribute name="userEmail" optional="YES" attributeType="String"/>
         <attribute name="userName" optional="YES" attributeType="String" spotlightIndexingEnabled="YES"/>
-        <relationship name="flights" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Flight" inverseName="passengers" inverseEntity="Flight"/>
+        <attribute name="userState" optional="YES" attributeType="String"/>
+        <relationship name="flights" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Flight" inverseName="passengers" inverseEntity="Flight"/>
     </entity>
 </model>

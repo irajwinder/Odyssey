@@ -1,22 +1,22 @@
 //
-//  TicketsViewController.swift
+//  TicketViewController.swift
 //  Odyssey
 //
-//  Created by Rajwinder Singh on 10/12/23.
+//  Created by Rajwinder Singh on 10/15/23.
 //
 
 import UIKit
 
-class TicketsViewController: UIViewController {
+class TicketViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = "Tickets"
+        navigationItem.title = "Review Ticket"
         
         // Check the current view controller's identifier
         if let currentIdentifier = restorationIdentifier {
-            if currentIdentifier == "TicketsViewController" {
-                // If the current view controller is "SignUpForm"
+            if currentIdentifier == "TicketViewController" {
+                // If the current view controller is "TicketViewController"
                 self.navigationItem.rightBarButtonItem = UIBarButtonItem(
                     barButtonSystemItem: .save, target: self, action: nil)
             }

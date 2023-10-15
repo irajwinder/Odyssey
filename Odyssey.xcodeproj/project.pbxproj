@@ -15,11 +15,15 @@
 		A217DC1C2AD4A0110069A55B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A217DC1B2AD4A0110069A55B /* Assets.xcassets */; };
 		A217DC1F2AD4A0110069A55B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A217DC1D2AD4A0110069A55B /* LaunchScreen.storyboard */; };
 		A217DC2A2AD4A8500069A55B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A217DC292AD4A8500069A55B /* User.swift */; };
-		A24AD7FB2AD89F8E00CAFC30 /* TicketsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24AD7FA2AD89F8E00CAFC30 /* TicketsViewController.swift */; };
+		A24AD7FB2AD89F8E00CAFC30 /* TicketDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24AD7FA2AD89F8E00CAFC30 /* TicketDetailsViewController.swift */; };
 		A24AD7FD2AD89FA000CAFC30 /* FlightsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24AD7FC2AD89FA000CAFC30 /* FlightsViewController.swift */; };
+		A269539E2ADC61E5003647B9 /* Flight.swift in Sources */ = {isa = PBXBuildFile; fileRef = A269539D2ADC61E5003647B9 /* Flight.swift */; };
+		A26953A02ADC61F5003647B9 /* Ticket.swift in Sources */ = {isa = PBXBuildFile; fileRef = A269539F2ADC61F5003647B9 /* Ticket.swift */; };
 		A28C29F42AD710A700D5B028 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28C29F32AD710A700D5B028 /* LocationViewController.swift */; };
 		A28C29F62AD7641C00D5B028 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28C29F52AD7641C00D5B028 /* TableViewCell.swift */; };
 		A28C40D12AD8986200BD2ABF /* Countries.plist in Resources */ = {isa = PBXBuildFile; fileRef = A28C40D02AD8986200BD2ABF /* Countries.plist */; };
+		A2942D6E2ADC67420086D170 /* TicketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2942D6D2ADC67420086D170 /* TicketViewController.swift */; };
+		A2942D702ADC6C280086D170 /* SeatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2942D6F2ADC6C280086D170 /* SeatsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,11 +37,15 @@
 		A217DC1E2AD4A0110069A55B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A217DC202AD4A0110069A55B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A217DC292AD4A8500069A55B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		A24AD7FA2AD89F8E00CAFC30 /* TicketsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketsViewController.swift; sourceTree = "<group>"; };
+		A24AD7FA2AD89F8E00CAFC30 /* TicketDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketDetailsViewController.swift; sourceTree = "<group>"; };
 		A24AD7FC2AD89FA000CAFC30 /* FlightsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsViewController.swift; sourceTree = "<group>"; };
+		A269539D2ADC61E5003647B9 /* Flight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flight.swift; sourceTree = "<group>"; };
+		A269539F2ADC61F5003647B9 /* Ticket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ticket.swift; sourceTree = "<group>"; };
 		A28C29F32AD710A700D5B028 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		A28C29F52AD7641C00D5B028 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		A28C40D02AD8986200BD2ABF /* Countries.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Countries.plist; sourceTree = "<group>"; };
+		A2942D6D2ADC67420086D170 /* TicketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketViewController.swift; sourceTree = "<group>"; };
+		A2942D6F2ADC6C280086D170 /* SeatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeatsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +98,8 @@
 			isa = PBXGroup;
 			children = (
 				A217DC292AD4A8500069A55B /* User.swift */,
+				A269539D2ADC61E5003647B9 /* Flight.swift */,
+				A269539F2ADC61F5003647B9 /* Ticket.swift */,
 			);
 			path = DataModel;
 			sourceTree = "<group>";
@@ -106,7 +116,7 @@
 		A24AD7F62AD89F1700CAFC30 /* Tickets */ = {
 			isa = PBXGroup;
 			children = (
-				A24AD7FA2AD89F8E00CAFC30 /* TicketsViewController.swift */,
+				A24AD7FA2AD89F8E00CAFC30 /* TicketDetailsViewController.swift */,
 			);
 			path = Tickets;
 			sourceTree = "<group>";
@@ -115,6 +125,8 @@
 			isa = PBXGroup;
 			children = (
 				A24AD7FC2AD89FA000CAFC30 /* FlightsViewController.swift */,
+				A2942D6D2ADC67420086D170 /* TicketViewController.swift */,
+				A2942D6F2ADC6C280086D170 /* SeatsViewController.swift */,
 			);
 			path = Flights;
 			sourceTree = "<group>";
@@ -200,12 +212,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A26953A02ADC61F5003647B9 /* Ticket.swift in Sources */,
 				A24AD7FD2AD89FA000CAFC30 /* FlightsViewController.swift in Sources */,
 				A217DC1A2AD4A00F0069A55B /* Odyssey.xcdatamodeld in Sources */,
 				A217DC142AD4A00F0069A55B /* UserViewController.swift in Sources */,
+				A269539E2ADC61E5003647B9 /* Flight.swift in Sources */,
 				A217DC102AD4A00F0069A55B /* AppDelegate.swift in Sources */,
 				A28C29F42AD710A700D5B028 /* LocationViewController.swift in Sources */,
-				A24AD7FB2AD89F8E00CAFC30 /* TicketsViewController.swift in Sources */,
+				A2942D702ADC6C280086D170 /* SeatsViewController.swift in Sources */,
+				A24AD7FB2AD89F8E00CAFC30 /* TicketDetailsViewController.swift in Sources */,
+				A2942D6E2ADC67420086D170 /* TicketViewController.swift in Sources */,
 				A217DC2A2AD4A8500069A55B /* User.swift in Sources */,
 				A28C29F62AD7641C00D5B028 /* TableViewCell.swift in Sources */,
 				A217DC122AD4A00F0069A55B /* SceneDelegate.swift in Sources */,
