@@ -4,7 +4,8 @@
         <attribute name="departureDate" optional="YES" attributeType="String"/>
         <attribute name="destination" optional="YES" attributeType="String"/>
         <attribute name="flightNumber" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
-        <attribute name="seatNumber" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="isBooked" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="seatNumber" optional="YES" attributeType="String"/>
         <attribute name="source" optional="YES" attributeType="String"/>
         <relationship name="passengers" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="flights" inverseEntity="User"/>
     </entity>

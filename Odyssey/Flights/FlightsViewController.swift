@@ -43,11 +43,15 @@ class FlightsViewController: UIViewController, LocationSelectionDelegate {
             if currentIdentifier == "FlightsViewController" {
                 // If the current view controller is "SignUpForm"
                 self.navigationItem.rightBarButtonItem = UIBarButtonItem(
-                    barButtonSystemItem: .save, target: self, action: nil)
+                    barButtonSystemItem: .save, target: self, action: #selector(saveButtonTapped))
             }
         }
         
         setupViewsFor(pagetype: .oneway)
+    }
+    
+    @objc func saveButtonTapped() {
+        performSegue(withIdentifier: "selectSeat", sender: nil) // Make sure to set the segue identifier in the storyboard
     }
     
     //Hides the return date if segmant name is oneway

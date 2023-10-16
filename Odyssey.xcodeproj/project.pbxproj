@@ -24,6 +24,7 @@
 		A28C40D12AD8986200BD2ABF /* Countries.plist in Resources */ = {isa = PBXBuildFile; fileRef = A28C40D02AD8986200BD2ABF /* Countries.plist */; };
 		A2942D6E2ADC67420086D170 /* TicketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2942D6D2ADC67420086D170 /* TicketViewController.swift */; };
 		A2942D702ADC6C280086D170 /* SeatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2942D6F2ADC6C280086D170 /* SeatsViewController.swift */; };
+		A2A5955B2ADCDF9B002BB550 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A5955A2ADCDF9B002BB550 /* CollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		A28C40D02AD8986200BD2ABF /* Countries.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Countries.plist; sourceTree = "<group>"; };
 		A2942D6D2ADC67420086D170 /* TicketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketViewController.swift; sourceTree = "<group>"; };
 		A2942D6F2ADC6C280086D170 /* SeatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeatsViewController.swift; sourceTree = "<group>"; };
+		A2A5955A2ADCDF9B002BB550 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 				A24AD7FC2AD89FA000CAFC30 /* FlightsViewController.swift */,
 				A2942D6D2ADC67420086D170 /* TicketViewController.swift */,
 				A2942D6F2ADC6C280086D170 /* SeatsViewController.swift */,
+				A2A5955A2ADCDF9B002BB550 /* CollectionViewCell.swift */,
 			);
 			path = Flights;
 			sourceTree = "<group>";
@@ -222,6 +225,7 @@
 				A2942D702ADC6C280086D170 /* SeatsViewController.swift in Sources */,
 				A24AD7FB2AD89F8E00CAFC30 /* TicketDetailsViewController.swift in Sources */,
 				A2942D6E2ADC67420086D170 /* TicketViewController.swift in Sources */,
+				A2A5955B2ADCDF9B002BB550 /* CollectionViewCell.swift in Sources */,
 				A217DC2A2AD4A8500069A55B /* User.swift in Sources */,
 				A28C29F62AD7641C00D5B028 /* TableViewCell.swift in Sources */,
 				A217DC122AD4A00F0069A55B /* SceneDelegate.swift in Sources */,

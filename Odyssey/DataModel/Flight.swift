@@ -7,8 +7,12 @@
 
 struct Flight {
     let flightNumber: Int
-    let seatNumber: Int
     let source: String
     let destination: String
     let departureDate: String
+}
+
+struct Seat {
+    let seatNumber: String
+    let isBooked: Bool
 }
