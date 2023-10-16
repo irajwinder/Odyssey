@@ -18,8 +18,11 @@ class UserViewController: UIViewController, LocationSelectionDelegate {
     @IBOutlet weak var userName: UITextField!
     @IBOutlet weak var userEmail: UITextField!
     @IBOutlet weak var userDOB: UITextField!
- 
-        override func viewDidLoad() {
+    @IBOutlet weak var userCountry: UITextField!
+    @IBOutlet weak var userState: UITextField!
+    @IBOutlet weak var userCity: UITextField!
+    
+    override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "User Form"
         
@@ -35,17 +38,18 @@ class UserViewController: UIViewController, LocationSelectionDelegate {
     
     
     @IBAction func userCountry(_ sender: Any) {
-        openLocationViewController(with: "country")
-    }
-    @IBAction func userState(_ sender: Any) {
-        openLocationViewController(with: "state")
-    }
-    @IBAction func userCity(_ sender: Any) {
-        openLocationViewController(with: "city")
+        openLocationViewController("country")
     }
     
-    func openLocationViewController(with selectedTextfield: String) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil) 
+    @IBAction func userState(_ sender: Any) {
+        openLocationViewController("state")
+    }
+    @IBAction func userCity(_ sender: Any) {
+        openLocationViewController("city")
+    }
+    
+    func openLocationViewController(_ selectedTextfield: String) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
         if let locationVC = storyboard.instantiateViewController(withIdentifier: "LocationViewController") as? LocationViewController {
             locationVC.selectedTextfield = selectedTextfield
             locationVC.delegate = self
