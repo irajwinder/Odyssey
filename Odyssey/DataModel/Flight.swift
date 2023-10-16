@@ -14,5 +14,5 @@ struct Flight {
 
 struct Seat {
     let seatNumber: String
-    let isBooked: Bool
+    var isBooked: Bool
 }

@@ -56,11 +56,24 @@ class SeatsViewController: UIViewController, UICollectionViewDataSource, UIColle
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-            let selectedSeat = seats[indexPath.item]
-            if !selectedSeat.isBooked {
-                print("Seat \(selectedSeat.seatNumber) selected.")
-            } else {
-                print("Seat \(selectedSeat.seatNumber) is already booked.")
-            }
+        let selectedSeat = seats[indexPath.item]
+        if !selectedSeat.isBooked {
+            // Perform the booking action
+            let alert = UIAlertController(title: "Seat Booking", message: "Do you want to book seat \(selectedSeat.seatNumber)?", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Book", style: .default, handler: { _ in
+                // Update the seat's status to booked
+                self.seats[indexPath.item].isBooked = true
+                // Reload the collection view to reflect the updated data
+                self.collectionView.reloadData()
+                print("Seat \(selectedSeat.seatNumber) booked.")
+            }))
+            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        } else {
+            let alert = UIAlertController(title: "Seat Booking", message: "Seat \(selectedSeat.seatNumber) is already booked.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
         }
+    }
+
 }
