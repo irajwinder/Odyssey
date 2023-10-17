@@ -25,6 +25,8 @@
 		A2942D6E2ADC67420086D170 /* TicketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2942D6D2ADC67420086D170 /* TicketViewController.swift */; };
 		A2942D702ADC6C280086D170 /* SeatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2942D6F2ADC6C280086D170 /* SeatsViewController.swift */; };
 		A2A5955B2ADCDF9B002BB550 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A5955A2ADCDF9B002BB550 /* CollectionViewCell.swift */; };
+		A2D9FC022ADE942E00A29361 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D9FC012ADE942E00A29361 /* UserTableViewCell.swift */; };
+		A2D9FC062ADE9FB800A29361 /* UserListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D9FC052ADE9FB800A29361 /* UserListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +50,8 @@
 		A2942D6D2ADC67420086D170 /* TicketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketViewController.swift; sourceTree = "<group>"; };
 		A2942D6F2ADC6C280086D170 /* SeatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeatsViewController.swift; sourceTree = "<group>"; };
 		A2A5955A2ADCDF9B002BB550 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		A2D9FC012ADE942E00A29361 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
+		A2D9FC052ADE9FB800A29361 /* UserListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +114,8 @@
 			isa = PBXGroup;
 			children = (
 				A217DC132AD4A00F0069A55B /* UserViewController.swift */,
+				A2D9FC052ADE9FB800A29361 /* UserListViewController.swift */,
+				A2D9FC012ADE942E00A29361 /* UserTableViewCell.swift */,
 				A217DC152AD4A00F0069A55B /* Main.storyboard */,
 			);
 			path = User;
@@ -216,9 +222,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				A26953A02ADC61F5003647B9 /* Ticket.swift in Sources */,
+				A2D9FC062ADE9FB800A29361 /* UserListViewController.swift in Sources */,
 				A24AD7FD2AD89FA000CAFC30 /* FlightsViewController.swift in Sources */,
 				A217DC1A2AD4A00F0069A55B /* Odyssey.xcdatamodeld in Sources */,
 				A217DC142AD4A00F0069A55B /* UserViewController.swift in Sources */,
+				A2D9FC022ADE942E00A29361 /* UserTableViewCell.swift in Sources */,
 				A269539E2ADC61E5003647B9 /* Flight.swift in Sources */,
 				A217DC102AD4A00F0069A55B /* AppDelegate.swift in Sources */,
 				A28C29F42AD710A700D5B028 /* LocationViewController.swift in Sources */,

@@ -6,12 +6,15 @@
 //
 
 import UIKit
+import CoreData
 
 class UserViewController: UIViewController, LocationSelectionDelegate {
     
+    var users: [NSManagedObject] = []
+    
     func didSelectLocation(_ location: String) {
-        // Handle the location selection and update the userCountry text field.
-        //userCountry.text = location
+        //Handle the location selection and update the userCountry text field.
+        userCountry.text = location
        }
     
     
@@ -31,7 +34,7 @@ class UserViewController: UIViewController, LocationSelectionDelegate {
             if currentIdentifier == "UserViewController" {
                 // If the current view controller is "SignUpForm"
                 self.navigationItem.rightBarButtonItem = UIBarButtonItem(
-                    barButtonSystemItem: .save, target: self, action: nil)
+                    barButtonSystemItem: .save, target: self, action: #selector(saveUser))
             }
         }
     }
@@ -56,4 +59,43 @@ class UserViewController: UIViewController, LocationSelectionDelegate {
             self.navigationController?.pushViewController(locationVC, animated: true)
         }
     }
+    
+    //Save the user to Core Data
+    @objc func saveUser() {
+        // Obtains a reference to the AppDelegate
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return
+        }
+        
+        // Accessing the managed context from the persistent container
+        let managedContext = appDelegate.persistentContainer.viewContext
+        // Create an NSEntityDescription instance for the "User" entity
+        let entity = NSEntityDescription.entity(forEntityName: "User", in: managedContext)
+        // Create a new NSManagedObject for the "User" entity
+        let user = NSManagedObject(entity: entity!, insertInto: managedContext)
+
+        // Set the values for various attributes of the user entity
+        user.setValue(userName.text, forKeyPath: "userName")
+        user.setValue(userEmail.text, forKeyPath: "userEmail")
+        user.setValue(userDOB.text, forKeyPath: "userDOB")
+        user.setValue(userCountry.text, forKeyPath: "userCountry")
+        user.setValue(userState.text, forKeyPath: "userState")
+        user.setValue(userCity.text, forKeyPath: "userCity")
+
+        do {
+            // Attempting to save the changes made to the managed context
+            try managedContext.save()
+            print("User data saved successfully.")
+            
+            //Navigate to UserList Screen
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            if let userListVC = storyboard.instantiateViewController(withIdentifier: "UserListViewController") as? UserListViewController {
+                self.navigationController?.pushViewController(userListVC, animated: true)
+            }
+        } catch let error as NSError {
+            // Inform the user that an error occurred while saving the data.
+            print("Could not save. \(error), \(error.userInfo)")
+        }
+    }
+
 }

@@ -51,7 +51,7 @@ class FlightsViewController: UIViewController, LocationSelectionDelegate {
     }
     
     @objc func saveButtonTapped() {
-        performSegue(withIdentifier: "selectSeat", sender: nil) // Make sure to set the segue identifier in the storyboard
+        performSegue(withIdentifier: "selectSeat", sender: nil)
     }
     
     //Hides the return date if segmant name is oneway
