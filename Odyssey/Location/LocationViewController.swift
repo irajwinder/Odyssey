@@ -26,6 +26,8 @@ class LocationViewController: UIViewController, UITableViewDelegate, UITableView
     var filteredData = [String]()
     
     var selectedTextfield: String?
+    var selectedCountry: String?
+    var selectedState: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -75,7 +77,9 @@ class LocationViewController: UIViewController, UITableViewDelegate, UITableView
         countryTableView.dataSource = self
         searchBar.delegate = self
         
-        //print(selectedTextfield!)
+        print(selectedTextfield!)
+        print(selectedCountry!)
+        print(selectedState!)
     }
     
     // UISearchBarDelegate method to filter data based on search text
@@ -83,18 +87,25 @@ class LocationViewController: UIViewController, UITableViewDelegate, UITableView
         filteredData.removeAll()
         
         if !searchText.isEmpty {
-                switch selectedTextfield {
-                case "country":
-                    filteredData = countries.filter { $0.lowercased().contains(searchText.lowercased()) }
-                case "state":
+            switch selectedTextfield {
+            case "country":
+                filteredData = countries.filter { $0.lowercased().contains(searchText.lowercased()) }
+            case "state":
+                if selectedCountry == "United States" {
                     filteredData = usaStates.filter { $0.lowercased().contains(searchText.lowercased()) }
-                case "city":
-                    filteredData = usaCities.filter { $0.lowercased().contains(searchText.lowercased()) }
-                default:
-                    break
+                } else if selectedCountry == "Canada" {
+                    filteredData = canadaProvinces.filter { $0.lowercased().contains(searchText.lowercased()) }
                 }
+            case "city":
+                if selectedCountry == "United States" {
+                    filteredData = usaCities.filter { $0.lowercased().contains(searchText.lowercased()) }
+                } else if selectedCountry == "Canada" {
+                    filteredData = canadaCities.filter { $0.lowercased().contains(searchText.lowercased()) }
+                }
+            default:
+                break
             }
-            
+        }
         
         // Reload the table view to reflect the filtered results
         countryTableView.reloadData()
@@ -105,14 +116,26 @@ class LocationViewController: UIViewController, UITableViewDelegate, UITableView
         if !searchBar.text!.isEmpty {
             return filteredData.count
         }
-
+        
         switch selectedTextfield {
         case "country":
             return countries.count
         case "state":
-            return usaStates.count
+            if selectedCountry == "United States" {
+                return usaStates.count
+            } else if selectedCountry == "Canada" {
+                return canadaProvinces.count
+            } else {
+                return 0
+            }
         case "city":
-            return usaCities.count
+            if selectedCountry == "United States" {
+                return usaCities.count
+            } else if selectedCountry == "Canada" {
+                return canadaCities.count
+            } else {
+                return 0
+            }
         default:
             return 0
         }
@@ -129,14 +152,21 @@ class LocationViewController: UIViewController, UITableViewDelegate, UITableView
             case "country":
                 data = countries[indexPath.row]
             case "state":
-                data = usaStates[indexPath.row]
+                if selectedCountry == "United States" {
+                    data = usaStates[indexPath.row]
+                } else if selectedCountry == "Canada" {
+                    data = canadaProvinces[indexPath.row]
+                }
             case "city":
-                data = usaCities[indexPath.row] // Modify this to return city data as needed.
+                if selectedCountry == "United States" {
+                    data = usaCities[indexPath.row]
+                } else if selectedCountry == "Canada" {
+                    data = canadaCities[indexPath.row]
+                }
             default:
                 break
             }
         }
-
         cell.countriesName?.text = data
         return cell
     }
@@ -158,16 +188,24 @@ class LocationViewController: UIViewController, UITableViewDelegate, UITableView
                     break
                 }
              } else {
-                switch selectedTextfield {
-                case "country":
-                    selectedCountry = countries[indexPath.row]
-                case "state":
-                    selectedState = usaStates[indexPath.row]
-                case "city":
-                    selectedCity = usaCities[indexPath.row]
-                default:
-                    break
-                }
+                 switch selectedTextfield {
+                 case "country":
+                     selectedCountry = countries[indexPath.row]
+                 case "state":
+                     if self.selectedCountry == "United States" {
+                         selectedState = usaStates[indexPath.row]
+                     } else if self.selectedCountry == "Canada" {
+                         selectedState = canadaProvinces[indexPath.row]
+                     }
+                 case "city":
+                     if self.selectedCountry == "United States" {
+                         selectedCity = usaCities[indexPath.row]
+                     } else if self.selectedCountry == "Canada" {
+                         selectedCity = canadaCities[indexPath.row]
+                     }
+                 default:
+                     break
+                 }
         }
 
         // Calls the delegate method to pass the selected data back to ViewController

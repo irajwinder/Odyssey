@@ -61,6 +61,8 @@ class UserViewController: UIViewController, LocationSelectionDelegate {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         if let locationVC = storyboard.instantiateViewController(withIdentifier: "LocationViewController") as? LocationViewController {
             locationVC.selectedTextfield = selectedTextfield
+            locationVC.selectedCountry = userCountry.text
+            locationVC.selectedState = userState.text
             locationVC.delegate = self
             self.navigationController?.pushViewController(locationVC, animated: true)
         }
