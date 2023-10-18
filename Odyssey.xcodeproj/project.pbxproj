@@ -33,6 +33,7 @@
 		A2D9FCBF2ADFEFB500A29361 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D9FCB92ADFEFB500A29361 /* User+CoreDataClass.swift */; };
 		A2D9FCC02ADFEFB500A29361 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D9FCBA2ADFEFB500A29361 /* User+CoreDataProperties.swift */; };
 		A2D9FCC22AE004F500A29361 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D9FCC12AE004F500A29361 /* Validation.swift */; };
+		A2D9FCCA2AE021D400A29361 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D9FCC92AE021D400A29361 /* DataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +65,7 @@
 		A2D9FCB92ADFEFB500A29361 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
 		A2D9FCBA2ADFEFB500A29361 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		A2D9FCC12AE004F500A29361 /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
+		A2D9FCC92AE021D400A29361 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 		A217DC0E2AD4A00F0069A55B /* Odyssey */ = {
 			isa = PBXGroup;
 			children = (
+				A2D9FCC82AE021C300A29361 /* DataManager */,
 				A2D9FC0A2ADF5EDB00A29361 /* Model */,
 				A2D9FC072ADEF83700A29361 /* ValidationManager */,
 				A217DC262AD4A7D20069A55B /* DataModel */,
@@ -183,6 +186,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		A2D9FCC82AE021C300A29361 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				A2D9FCC92AE021D400A29361 /* DataManager.swift */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -260,6 +271,7 @@
 				A2D9FCC22AE004F500A29361 /* Validation.swift in Sources */,
 				A24AD7FD2AD89FA000CAFC30 /* FlightsViewController.swift in Sources */,
 				A217DC1A2AD4A00F0069A55B /* Odyssey.xcdatamodeld in Sources */,
+				A2D9FCCA2AE021D400A29361 /* DataManager.swift in Sources */,
 				A217DC142AD4A00F0069A55B /* UserViewController.swift in Sources */,
 				A2D9FC022ADE942E00A29361 /* UserTableViewCell.swift in Sources */,
 				A217DC102AD4A00F0069A55B /* AppDelegate.swift in Sources */,

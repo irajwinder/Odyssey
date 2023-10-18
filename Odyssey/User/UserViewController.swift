@@ -10,12 +10,18 @@ import CoreData
 
 class UserViewController: UIViewController, LocationSelectionDelegate {
     
-    var users: [User] = []
+    func didSelectCountry(_ country: String) {
+        //Updates the text fields
+        userCountry.text = country
+    }
+    func didSelectState(_ state: String) {
+        userState.text = state
+    }
+    func didSelectCity(_ city: String) {
+        userCity.text = city
+    }
     
-    func didSelectLocation(_ location: String) {
-        //Handle the location selection and update the userCountry text field.
-        userCountry.text = location
-       }
+    var users: [User] = []
     
     
     @IBOutlet weak var userName: UITextField!

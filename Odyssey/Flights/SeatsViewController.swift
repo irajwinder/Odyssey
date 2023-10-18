@@ -12,6 +12,7 @@ class SeatsViewController: UIViewController, UICollectionViewDataSource, UIColle
     @IBOutlet weak var collectionView: UICollectionView!
     
     var seats: [Seat] = []
+    var flightData: [String: Any]?
 
     // Populate the seats array with 50 seats
     func populateSeats() {
@@ -19,7 +20,7 @@ class SeatsViewController: UIViewController, UICollectionViewDataSource, UIColle
         for row in rows {
             for i in 1...10 {
                 let seatNumber = "\(row)\(i)"
-                let isBooked = Bool.random()
+                let isBooked = false
                 seats.append(Seat(seatNumber: seatNumber, isBooked: isBooked))
             }
         }
@@ -41,6 +42,8 @@ class SeatsViewController: UIViewController, UICollectionViewDataSource, UIColle
         populateSeats()
         collectionView.dataSource = self
         collectionView.delegate = self
+        
+        print(flightData!)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

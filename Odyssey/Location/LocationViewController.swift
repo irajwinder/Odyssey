@@ -8,7 +8,10 @@
 import UIKit
 
 protocol LocationSelectionDelegate: AnyObject {
-    func didSelectLocation(_ location: String)
+    func didSelectCountry(_ country: String)
+    func didSelectState(_ state: String)
+    func didSelectCity(_ city: String)
+    
 }
 
 
@@ -72,7 +75,7 @@ class LocationViewController: UIViewController, UITableViewDelegate, UITableView
         countryTableView.dataSource = self
         searchBar.delegate = self
         
-        print(selectedTextfield!)
+        //print(selectedTextfield!)
     }
     
     // UISearchBarDelegate method to filter data based on search text
@@ -80,9 +83,18 @@ class LocationViewController: UIViewController, UITableViewDelegate, UITableView
         filteredData.removeAll()
         
         if !searchText.isEmpty {
-            // Filter the original data based on the search text
-            filteredData = countries.filter { $0.lowercased().contains(searchText.lowercased()) }
-        }
+                switch selectedTextfield {
+                case "country":
+                    filteredData = countries.filter { $0.lowercased().contains(searchText.lowercased()) }
+                case "state":
+                    filteredData = usaStates.filter { $0.lowercased().contains(searchText.lowercased()) }
+                case "city":
+                    filteredData = usaCities.filter { $0.lowercased().contains(searchText.lowercased()) }
+                default:
+                    break
+                }
+            }
+            
         
         // Reload the table view to reflect the filtered results
         countryTableView.reloadData()
@@ -130,31 +142,45 @@ class LocationViewController: UIViewController, UITableViewDelegate, UITableView
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-            var selectedData: String?
+            var selectedCountry: String?
+            var selectedState: String?
+            var selectedCity: String?
 
             if !searchBar.text!.isEmpty {
-            selectedData = filteredData[indexPath.row]
-            } else {
                 switch selectedTextfield {
                 case "country":
-                    selectedData = countries[indexPath.row]
+                    selectedCountry = filteredData[indexPath.row]
                 case "state":
-                    selectedData = usaStates[indexPath.row]
+                    selectedState = filteredData[indexPath.row]
                 case "city":
-                    selectedData = usaCities[indexPath.row]
-//                case 3:
-//                    selectedData = canadaProvinces[indexPath.row]
-//                case 4:
-//                    selectedData = canadaCities[indexPath.row]
+                    selectedCity = filteredData[indexPath.row]
+                default:
+                    break
+                }
+             } else {
+                switch selectedTextfield {
+                case "country":
+                    selectedCountry = countries[indexPath.row]
+                case "state":
+                    selectedState = usaStates[indexPath.row]
+                case "city":
+                    selectedCity = usaCities[indexPath.row]
                 default:
                     break
                 }
         }
-        
-        print(selectedData)
 
         // Calls the delegate method to pass the selected data back to ViewController
-        delegate?.didSelectLocation(selectedData ?? "nil")
+        if let country = selectedCountry {
+            delegate?.didSelectCountry(country)
+        }
+        if let state = selectedState {
+            delegate?.didSelectState(state)
+        }
+        if let city = selectedCity {
+            delegate?.didSelectCity(city)
+        }
+
         // Navigate back to the previous screen
         navigationController?.popViewController(animated: true)
         }

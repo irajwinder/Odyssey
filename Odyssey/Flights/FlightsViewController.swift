@@ -8,11 +8,18 @@
 import UIKit
 
 class FlightsViewController: UIViewController, LocationSelectionDelegate {
+    func didSelectCountry(_ country: String) {
+        //
+    }
     
-    func didSelectLocation(_ location: String) {
-        // Handle the location selection and update the userCountry text field.
-        //userCountry.text = location
-       }
+    func didSelectState(_ state: String) {
+        //
+    }
+    
+    func didSelectCity(_ city: String) {
+        //
+    }
+    
     
     @IBOutlet weak var flightNumber: UITextField!
     @IBOutlet weak var sourceCity: UITextField!
@@ -81,7 +88,25 @@ class FlightsViewController: UIViewController, LocationSelectionDelegate {
             }
         }
         
-        performSegue(withIdentifier: "selectSeat", sender: nil)
+        let data: [String: Any] = [
+            "flightNumber": flightNumberText,
+            "sourceCity": sourceCity,
+            "destinationCity": destinationCity,
+            "departureDate": departureDate,
+            "returnDate": returnDate.date
+        ]
+        
+        performSegue(withIdentifier: "selectSeat", sender: data)
+    }
+    
+    //pass data to Seats
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "selectSeat" {
+            if let destinationVC = segue.destination as? SeatsViewController,
+               let data = sender as? [String: Any] {
+                destinationVC.flightData = data
+            }
+        }
     }
     
     //Hides the return date if segmant name is oneway
