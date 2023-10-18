@@ -54,20 +54,21 @@
                                             </textField>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="6gC-Xe-cId">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="6gC-Xe-cId">
                                         <rect key="frame" x="0.0" y="243.66666666666669" width="350" height="97"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DOB" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GTm-ib-Ow8">
-                                                <rect key="frame" x="0.0" y="0.0" width="350" height="48.333333333333336"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="35.666666666666664" height="48.333333333333336"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4bn-br-JYc">
-                                                <rect key="frame" x="0.0" y="48.333333333333314" width="350" height="48.666666666666657"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
+                                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" datePickerMode="date" style="compact" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ttN-mF-6fi">
+                                                <rect key="frame" x="0.0" y="49" width="350" height="48"/>
+                                                <date key="date" timeIntervalSinceReferenceDate="40204.65177500248">
+                                                    <!--2001-01-01 11:10:04 +0000-->
+                                                </date>
+                                            </datePicker>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Qep-Az-E76">
@@ -173,7 +174,7 @@
                     <connections>
                         <outlet property="userCity" destination="jKG-YO-hZl" id="f6w-c9-Q1U"/>
                         <outlet property="userCountry" destination="FBW-sP-RpH" id="LIL-Ln-O0q"/>
-                        <outlet property="userDOB" destination="4bn-br-JYc" id="wTQ-bh-Y8F"/>
+                        <outlet property="userDOB" destination="ttN-mF-6fi" id="BFA-Wh-1E2"/>
                         <outlet property="userEmail" destination="rqm-dy-SMg" id="gFJ-aV-gII"/>
                         <outlet property="userName" destination="NSL-cG-t2u" id="TkQ-Ge-z4N"/>
                         <outlet property="userState" destination="2sR-no-agO" id="mqz-un-yVE"/>
@@ -277,27 +278,43 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="fqU-Ny-vRn">
-                                <rect key="frame" x="40" y="154.00000000000003" width="350" height="334.66666666666674"/>
+                                <rect key="frame" x="40" y="154" width="350" height="580"/>
                                 <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="YIa-9I-tgP">
+                                        <rect key="frame" x="0.0" y="0.0" width="350" height="100"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flight Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lKm-RI-peS">
+                                                <rect key="frame" x="0.0" y="0.0" width="350" height="50"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Flight Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pxD-nF-c3E">
+                                                <rect key="frame" x="0.0" y="50" width="350" height="50"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Zna-5n-AgI">
-                                        <rect key="frame" x="0.0" y="0.0" width="350" height="68.666666666666671"/>
+                                        <rect key="frame" x="0.0" y="120" width="350" height="100"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Source" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tGW-3E-mmA">
-                                                <rect key="frame" x="0.0" y="0.0" width="350" height="34.333333333333336"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="350" height="50"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="7qh-ln-cOm" userLabel="Horizontal Stack View">
-                                                <rect key="frame" x="0.0" y="34.333333333333343" width="350" height="34.333333333333343"/>
+                                                <rect key="frame" x="0.0" y="50" width="350" height="50"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Select your city" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Ve-Qa-g0A">
-                                                        <rect key="frame" x="0.0" y="0.0" width="175" height="34.333333333333336"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="175" height="50"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CLg-u6-ngA">
-                                                        <rect key="frame" x="175" y="0.0" width="175" height="34.333333333333336"/>
+                                                        <rect key="frame" x="175" y="0.0" width="175" height="50"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Select city"/>
                                                         <connections>
@@ -310,24 +327,24 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="0tf-Z6-97D">
-                                        <rect key="frame" x="0.0" y="88.666666666666657" width="350" height="68.666666666666657"/>
+                                        <rect key="frame" x="0.0" y="240" width="350" height="100"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Destination" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jSh-Gn-6kp">
-                                                <rect key="frame" x="0.0" y="0.0" width="350" height="34.333333333333336"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="350" height="50"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="QrK-Ip-SCC" userLabel="Horizontal Stack View">
-                                                <rect key="frame" x="0.0" y="34.333333333333343" width="350" height="34.333333333333343"/>
+                                                <rect key="frame" x="0.0" y="50" width="350" height="50"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Select your city" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9eY-7G-WcN">
-                                                        <rect key="frame" x="0.0" y="0.0" width="175" height="34.333333333333336"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="175" height="50"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HLv-g7-gsV">
-                                                        <rect key="frame" x="175" y="0.0" width="175" height="34.333333333333336"/>
+                                                        <rect key="frame" x="175" y="0.0" width="175" height="50"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Select city"/>
                                                         <connections>
@@ -339,36 +356,32 @@
                                             </stackView>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Vcp-dc-60Q">
-                                        <rect key="frame" x="0.0" y="177.33333333333331" width="350" height="68.666666666666686"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="Vcp-dc-60Q">
+                                        <rect key="frame" x="0.0" y="360" width="350" height="100"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Departure Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5fJ-FE-ExC">
-                                                <rect key="frame" x="0.0" y="0.0" width="350" height="34.333333333333336"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="117" height="50"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Departure Date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I1f-lY-owv">
-                                                <rect key="frame" x="0.0" y="34.333333333333371" width="350" height="34.333333333333343"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
+                                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" datePickerMode="date" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="Wo0-6q-PSp">
+                                                <rect key="frame" x="0.0" y="50" width="350" height="50"/>
+                                            </datePicker>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="RXT-x7-5gi">
-                                        <rect key="frame" x="0.0" y="266" width="350" height="68.666666666666686"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="RXT-x7-5gi">
+                                        <rect key="frame" x="0.0" y="480" width="350" height="100"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Return Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zi5-WH-8hv">
-                                                <rect key="frame" x="0.0" y="0.0" width="350" height="34.333333333333336"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="91" height="50"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Return Date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o7F-bf-lPm">
-                                                <rect key="frame" x="0.0" y="34.333333333333314" width="350" height="34.333333333333343"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
+                                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" datePickerMode="date" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="lhO-X7-vSI">
+                                                <rect key="frame" x="0.0" y="50" width="350" height="50"/>
+                                            </datePicker>
                                         </subviews>
                                     </stackView>
                                 </subviews>
@@ -387,12 +400,13 @@
                     </view>
                     <navigationItem key="navigationItem" id="7aK-0H-EHg"/>
                     <connections>
-                        <outlet property="departureDate" destination="I1f-lY-owv" id="0uM-YU-FmC"/>
+                        <outlet property="departureDate" destination="Wo0-6q-PSp" id="aQP-ba-ifV"/>
                         <outlet property="destinationCity" destination="9eY-7G-WcN" id="moO-QU-98b"/>
-                        <outlet property="returnDate" destination="o7F-bf-lPm" id="et7-Li-U3N"/>
+                        <outlet property="flightNumber" destination="pxD-nF-c3E" id="GNA-b2-aMo"/>
+                        <outlet property="returnDate" destination="lhO-X7-vSI" id="QZX-E2-KC4"/>
                         <outlet property="returnDateLabel" destination="Zi5-WH-8hv" id="snc-fc-x36"/>
                         <outlet property="segmantControl" destination="S3t-5C-SaV" id="Vkh-il-y1Z"/>
-                        <outlet property="souceCity" destination="3Ve-Qa-g0A" id="D6w-k3-JWN"/>
+                        <outlet property="sourceCity" destination="3Ve-Qa-g0A" id="Bfg-f9-PTT"/>
                         <segue destination="1cL-Da-kTv" kind="show" identifier="selectSeat" id="ehU-nF-tMP"/>
                         <segue destination="GcA-8w-VdV" kind="show" id="oiO-eo-JzV"/>
                     </connections>
@@ -739,7 +753,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="bw4-Lq-qQ5"/>
+        <segue reference="oiO-eo-JzV"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="airplane" catalog="system" width="128" height="115"/>

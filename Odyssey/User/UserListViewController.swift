@@ -10,7 +10,7 @@ import CoreData
 
 class UserListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
   
-    var users: [NSManagedObject] = [] // Store the fetched users
+    var users: [User] = [] // Store the fetched users
     
     @IBOutlet weak var usersTableView: UITableView!
     
@@ -31,12 +31,11 @@ class UserListViewController: UIViewController, UITableViewDelegate, UITableView
         }
         // Access the managed object context from the AppDelegate's persistent container.
         let managedContext = appDelegate.persistentContainer.viewContext
-        // Create a fetch request for the "User" entity
-        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "User")
         
         do {
             //fetch the users based on the fetch request
-            users = try managedContext.fetch(fetchRequest)
+            self.users = try managedContext.fetch(User.fetchRequest())
+            self.usersTableView.reloadData()
         } catch let error as NSError {
             // Handle the error
             print("Could not fetch. \(error), \(error.userInfo)")
@@ -55,16 +54,14 @@ class UserListViewController: UIViewController, UITableViewDelegate, UITableView
         managedContext.delete(users[indexPath.row])
 
         do {
-            // Attempt to save the changes made to the managed context.
+            //save the changes made to the managed context.
             try managedContext.save()
-            // Remove the deleted user from the 'users' array.
-            users.remove(at: indexPath.row)
-            // Delete the corresponding row from the table view with a fade animation.
-            usersTableView.deleteRows(at: [indexPath], with: .fade)
+            print("User deleted successfully.")
         } catch let error as NSError {
             // Handle the error
             print("Could not delete. \(error), \(error.userInfo)")
         }
+        fetchUsers()
     }
 
 

@@ -19,7 +19,7 @@ class SeatsViewController: UIViewController, UICollectionViewDataSource, UIColle
         for row in rows {
             for i in 1...10 {
                 let seatNumber = "\(row)\(i)"
-                let isBooked = Bool.random() //generates random booked status
+                let isBooked = Bool.random()
                 seats.append(Seat(seatNumber: seatNumber, isBooked: isBooked))
             }
         }

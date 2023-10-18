@@ -14,11 +14,11 @@ class FlightsViewController: UIViewController, LocationSelectionDelegate {
         //userCountry.text = location
        }
     
-    
-    @IBOutlet weak var souceCity: UITextField!
+    @IBOutlet weak var flightNumber: UITextField!
+    @IBOutlet weak var sourceCity: UITextField!
     @IBOutlet weak var destinationCity: UITextField!
-    @IBOutlet weak var departureDate: UITextField!
-    @IBOutlet weak var returnDate: UITextField!
+    @IBOutlet weak var departureDate: UIDatePicker!
+    @IBOutlet weak var returnDate: UIDatePicker!
     @IBOutlet weak var returnDateLabel: UILabel!
     @IBOutlet weak var segmantControl: UISegmentedControl!
     
@@ -43,14 +43,44 @@ class FlightsViewController: UIViewController, LocationSelectionDelegate {
             if currentIdentifier == "FlightsViewController" {
                 // If the current view controller is "SignUpForm"
                 self.navigationItem.rightBarButtonItem = UIBarButtonItem(
-                    barButtonSystemItem: .save, target: self, action: #selector(saveButtonTapped))
+                    barButtonSystemItem: .save, target: self, action: #selector(saveButton))
             }
         }
         
         setupViewsFor(pagetype: .oneway)
     }
     
-    @objc func saveButtonTapped() {
+    @objc func saveButton() {
+        //Validate before saving
+        guard let flightNumberText = flightNumber.text, let flightNumber = Int(flightNumberText), Validation.isValidNumber(flightNumber) else {
+            Validation.showAlert(on: self, with: "Invalid Flight Number", message: "Please enter a valid Flight Number.")
+            return
+        }
+        
+        guard let sourceCity = sourceCity.text, Validation.isValidCity(sourceCity) else {
+            Validation.showAlert(on: self, with: "Invalid City", message: "Please enter a valid Source City.")
+            return
+        }
+        
+        guard let destinationCity = destinationCity.text, Validation.isValidState(destinationCity) else {
+            Validation.showAlert(on: self, with: "Invalid City", message: "Please enter a valid Destination City.")
+            return
+        }
+        
+        let departureDate = departureDate.date
+        guard Validation.isValidDepartureDate(departureDate) else {
+            Validation.showAlert(on: self, with: "Invalid Date", message: "Please select a valid Departure Date.")
+            return
+        }
+        
+        if currentPageType == .roundtrip {
+            let returnDate = returnDate.date
+            guard Validation.isValidReturnDate(returnDate, departureDate: departureDate) else {
+                Validation.showAlert(on: self, with: "Invalid Date", message: "Return date must be after departure date")
+                return
+            }
+        }
+        
         performSegue(withIdentifier: "selectSeat", sender: nil)
     }
     

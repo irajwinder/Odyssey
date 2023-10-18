@@ -10,7 +10,7 @@ import CoreData
 
 class UserViewController: UIViewController, LocationSelectionDelegate {
     
-    var users: [NSManagedObject] = []
+    var users: [User] = []
     
     func didSelectLocation(_ location: String) {
         //Handle the location selection and update the userCountry text field.
@@ -20,7 +20,7 @@ class UserViewController: UIViewController, LocationSelectionDelegate {
     
     @IBOutlet weak var userName: UITextField!
     @IBOutlet weak var userEmail: UITextField!
-    @IBOutlet weak var userDOB: UITextField!
+    @IBOutlet weak var userDOB: UIDatePicker!
     @IBOutlet weak var userCountry: UITextField!
     @IBOutlet weak var userState: UITextField!
     @IBOutlet weak var userCity: UITextField!
@@ -62,6 +62,38 @@ class UserViewController: UIViewController, LocationSelectionDelegate {
     
     //Save the user to Core Data
     @objc func saveUser() {
+        //Validate before saving
+        guard let name = userName.text, Validation.isValidName(name) else {
+            Validation.showAlert(on: self, with: "Invalid Name", message: "Please enter a valid name.")
+               return
+           }
+           
+        guard let email = userEmail.text, Validation.isValidEmail(email) else {
+            Validation.showAlert(on: self, with: "Invalid Email", message: "Please enter a valid email address.")
+            return
+        }
+        
+        let dob = userDOB.date
+        guard Validation.isValidDateOfBirth(dob) else {
+            Validation.showAlert(on: self, with: "Invalid Date of Birth", message: "Please select a valid date of birth.")
+            return
+        }
+        
+        guard let country = userCountry.text, Validation.isValidCountry(country) else {
+            Validation.showAlert(on: self, with: "Invalid Country", message: "Please enter a valid country.")
+            return
+        }
+        
+        guard let state = userState.text, Validation.isValidState(state) else {
+            Validation.showAlert(on: self, with: "Invalid State", message: "Please enter a valid state.")
+            return
+        }
+        
+        guard let city = userCity.text, Validation.isValidCity(city) else {
+            Validation.showAlert(on: self, with: "Invalid City", message: "Please enter a valid city.")
+            return
+        }
+        
         // Obtains a reference to the AppDelegate
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
             return
@@ -69,27 +101,30 @@ class UserViewController: UIViewController, LocationSelectionDelegate {
         
         // Accessing the managed context from the persistent container
         let managedContext = appDelegate.persistentContainer.viewContext
-        // Create an NSEntityDescription instance for the "User" entity
-        let entity = NSEntityDescription.entity(forEntityName: "User", in: managedContext)
-        // Create a new NSManagedObject for the "User" entity
-        let user = NSManagedObject(entity: entity!, insertInto: managedContext)
 
+        //Create a newUser Object
+        let newUser = User(context: managedContext)
+        
         // Set the values for various attributes of the user entity
-        user.setValue(userName.text, forKeyPath: "userName")
-        user.setValue(userEmail.text, forKeyPath: "userEmail")
-        user.setValue(userDOB.text, forKeyPath: "userDOB")
-        user.setValue(userCountry.text, forKeyPath: "userCountry")
-        user.setValue(userState.text, forKeyPath: "userState")
-        user.setValue(userCity.text, forKeyPath: "userCity")
+        newUser.userName = self.userName.text
+        newUser.userEmail = self.userEmail.text
+        let dateFormatter = DateFormatter() // Convert Date to String using DateFormatter
+        dateFormatter.dateFormat = "MM/dd/yyyy" // Setdate format
+        let dateString = dateFormatter.string(from: self.userDOB.date)
+        newUser.userDOB = dateString
+        newUser.userCountry = self.userCountry.text
+        newUser.userState = self.userState.text
+        newUser.userCity = self.userCity.text
 
         do {
             // Attempting to save the changes made to the managed context
             try managedContext.save()
             print("User data saved successfully.")
             
-            //Navigate to UserList Screen
+            // Instantiate the UserListViewController from the storyboard
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             if let userListVC = storyboard.instantiateViewController(withIdentifier: "UserListViewController") as? UserListViewController {
+                // Push the UserListViewController onto the navigation stack
                 self.navigationController?.pushViewController(userListVC, animated: true)
             }
         } catch let error as NSError {

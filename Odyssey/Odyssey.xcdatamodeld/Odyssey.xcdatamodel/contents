@@ -3,23 +3,27 @@
     <entity name="Flight" representedClassName=".Flight" syncable="YES">
         <attribute name="departureDate" optional="YES" attributeType="String"/>
         <attribute name="destination" optional="YES" attributeType="String"/>
-        <attribute name="flightNumber" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="flightNumber" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="isBooked" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="seatNumber" optional="YES" attributeType="String"/>
         <attribute name="source" optional="YES" attributeType="String"/>
         <relationship name="passengers" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="flights" inverseEntity="User"/>
+        <relationship name="ticket" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Ticket" inverseName="flight" inverseEntity="Ticket"/>
     </entity>
     <entity name="Ticket" representedClassName=".Ticket" syncable="YES">
-        <attribute name="ticketNumber" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
-        <attribute name="ticketPrice" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="ticketNumber" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="ticketPrice" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="flight" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Flight" inverseName="ticket" inverseEntity="Flight"/>
+        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="tickets" inverseEntity="User"/>
     </entity>
-    <entity name="User" representedClassName=".UserInfo" syncable="YES">
+    <entity name="User" representedClassName=".User" syncable="YES">
         <attribute name="userCity" optional="YES" attributeType="String"/>
         <attribute name="userCountry" optional="YES" attributeType="String"/>
         <attribute name="userDOB" optional="YES" attributeType="String"/>
         <attribute name="userEmail" optional="YES" attributeType="String"/>
         <attribute name="userName" optional="YES" attributeType="String" spotlightIndexingEnabled="YES"/>
         <attribute name="userState" optional="YES" attributeType="String"/>
-        <relationship name="flights" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Flight" inverseName="passengers" inverseEntity="Flight"/>
+        <relationship name="flights" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Flight" inverseName="passengers" inverseEntity="Flight"/>
+        <relationship name="tickets" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Ticket" inverseName="user" inverseEntity="Ticket"/>
     </entity>
 </model>
