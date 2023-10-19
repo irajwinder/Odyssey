@@ -7,10 +7,6 @@
 
 import UIKit
 
-protocol SeatDetails: AnyObject {
-    func seatNumber(_ number: String)
-}
-
 class SeatsViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
     @IBOutlet weak var collectionView: UICollectionView!
@@ -140,10 +136,5 @@ class SeatsViewController: UIViewController, UICollectionViewDataSource, UIColle
             alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
             self.present(alert, animated: true, completion: nil)
         }
-        
-        print(bookedSeats)
     }
-
-
-
 }

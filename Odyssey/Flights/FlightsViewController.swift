@@ -7,17 +7,7 @@
 
 import UIKit
 
-
-protocol FlightDetailsDelegate: AnyObject {
-    func flightNumber(_ number: String)
-    func flightSource(_ source: String)
-    func flightDestination(_ destination: String)
-    func flightDepartureDate(_ departureDate: String)
-    func flightReturnDate(_ returnDate: String)
-}
-
 class FlightsViewController: UIViewController, CitySelectionDelegate {
-    
     func didSelectSourceCity(_ source: String) {
         //Updates the text fields
         sourceCity.text = source
@@ -34,8 +24,7 @@ class FlightsViewController: UIViewController, CitySelectionDelegate {
     @IBOutlet weak var returnDate: UIDatePicker!
     @IBOutlet weak var returnDateLabel: UILabel!
     @IBOutlet weak var segmantControl: UISegmentedControl!
-   
-    weak var delegate: FlightDetailsDelegate?
+    
     
     private enum PageType {
         case oneway
@@ -76,51 +65,49 @@ class FlightsViewController: UIViewController, CitySelectionDelegate {
             return
         }
         
-        guard let sourceCity = sourceCity.text, Validation.isValidCity(sourceCity) else {
+        guard let sourceCityText = sourceCity.text, Validation.isValidCity(sourceCityText) else {
             Validation.showAlert(on: self, with: "Invalid City", message: "Please enter a valid Source City.")
             return
         }
         
-        guard let destinationCity = destinationCity.text, Validation.isValidState(destinationCity) else {
+        guard let destinationCityText = destinationCity.text, Validation.isValidState(destinationCityText) else {
             Validation.showAlert(on: self, with: "Invalid City", message: "Please enter a valid Destination City.")
             return
         }
         
-        let departureDate = departureDate.date
-        guard Validation.isValidDepartureDate(departureDate) else {
+        let departureDateText = departureDate.date
+        guard Validation.isValidDepartureDate(departureDateText) else {
             Validation.showAlert(on: self, with: "Invalid Date", message: "Date must be greater than today's date.")
             return
         }
         
         if currentPageType == .roundtrip {
-            let returnDate = returnDate.date
-            guard Validation.isValidReturnDate(returnDate, departureDate: departureDate) else {
+            let returnDateText = returnDate.date
+            guard Validation.isValidReturnDate(returnDateText, departureDate: departureDateText) else {
                 Validation.showAlert(on: self, with: "Invalid Date", message: "Return date must be after departure date")
                 return
             }
         }
         
-//        let data: [String: Any] = [
-//            "flightNumber": flightNumberText,
-//            "sourceCity": sourceCity,
-//            "destinationCity": destinationCity,
-//            "departureDate": departureDate,
-//            "returnDate": returnDate.date
-//        ]
+        let data: [String: Any] = [
+            "flightNumber": flightNumberText,
+            "sourceCity": sourceCityText,
+            "destinationCity": destinationCityText,
+            "departureDate": departureDateText,
+            "returnDate": returnDate.date
+        ]
         
-        
-        delegate?.flightNumber(flightNumberText)
-        delegate?.flightSource(sourceCity)
-        delegate?.flightDestination(destinationCity)
-        let dateFormatter = DateFormatter() // Convert Date to String using DateFormatter
-        dateFormatter.dateFormat = "MM/dd/yyyy" // Setdate format
-        let departureDateString = dateFormatter.string(from: self.departureDate.date)
-        delegate?.flightDepartureDate(departureDateString)
-        
-        let returnDateString = dateFormatter.string(from: self.returnDate.date)
-        delegate?.flightReturnDate(returnDateString)
-        
-        performSegue(withIdentifier: "selectSeat", sender: nil)
+        performSegue(withIdentifier: "selectSeat", sender: data)
+    }
+    
+    //pass data to Seats
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "selectSeat" {
+            if let destinationVC = segue.destination as? SeatsViewController,
+               let data = sender as? [String: Any] {
+                destinationVC.flightData = data
+            }
+        }
     }
     
     //Hides the return date if segmant name is oneway
@@ -158,5 +145,4 @@ class FlightsViewController: UIViewController, CitySelectionDelegate {
             self.navigationController?.pushViewController(flightVC, animated: true)
         }
     }
-
 }

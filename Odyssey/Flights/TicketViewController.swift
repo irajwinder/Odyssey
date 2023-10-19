@@ -7,27 +7,7 @@
 
 import UIKit
 
-class TicketViewController: UIViewController, FlightDetailsDelegate {
-    func flightNumber(_ number: String) {
-        flightNumber.text = number
-        print(number)
-    }
-    
-    func flightSource(_ source: String) {
-        sourceCity.text = source
-    }
-    
-    func flightDestination(_ destination: String) {
-        destinationCity.text = destination
-    }
-    
-    func flightDepartureDate(_ departureDate: String) {
-        self.departureDate.text = departureDate
-    }
-    
-    func flightReturnDate(_ returnDate: String) {
-        self.returnDate.text = returnDate
-    }
+class TicketViewController: UIViewController {
     
     @IBOutlet weak var userName: UITextField!
     @IBOutlet weak var ticketNumber: UITextField!

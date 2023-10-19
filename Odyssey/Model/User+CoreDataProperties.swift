@@ -2,7 +2,7 @@
 //  User+CoreDataProperties.swift
 //  Odyssey
 //
-//  Created by Rajwinder Singh on 10/18/23.
+//  Created by Rajwinder Singh on 10/19/23.
 //
 //
 
@@ -22,25 +22,7 @@ extension User {
     @NSManaged public var userEmail: String?
     @NSManaged public var userName: String?
     @NSManaged public var userState: String?
-    @NSManaged public var flights: NSSet?
     @NSManaged public var tickets: NSSet?
-
-}
-
-// MARK: Generated accessors for flights
-extension User {
-
-    @objc(addFlightsObject:)
-    @NSManaged public func addToFlights(_ value: Flight)
-
-    @objc(removeFlightsObject:)
-    @NSManaged public func removeFromFlights(_ value: Flight)
-
-    @objc(addFlights:)
-    @NSManaged public func addToFlights(_ values: NSSet)
-
-    @objc(removeFlights:)
-    @NSManaged public func removeFromFlights(_ values: NSSet)
 
 }
 

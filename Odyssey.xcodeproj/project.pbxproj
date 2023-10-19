@@ -26,16 +26,16 @@
 		A2D9FC022ADE942E00A29361 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D9FC012ADE942E00A29361 /* UserTableViewCell.swift */; };
 		A2D9FC062ADE9FB800A29361 /* UserListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D9FC052ADE9FB800A29361 /* UserListViewController.swift */; };
 		A2D9FC842ADF87A700A29361 /* Flight.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D9FC832ADF87A700A29361 /* Flight.swift */; };
-		A2D9FCBB2ADFEFB500A29361 /* Ticket+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D9FCB52ADFEFB500A29361 /* Ticket+CoreDataClass.swift */; };
-		A2D9FCBC2ADFEFB500A29361 /* Ticket+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D9FCB62ADFEFB500A29361 /* Ticket+CoreDataProperties.swift */; };
-		A2D9FCBD2ADFEFB500A29361 /* Flight+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D9FCB72ADFEFB500A29361 /* Flight+CoreDataClass.swift */; };
-		A2D9FCBE2ADFEFB500A29361 /* Flight+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D9FCB82ADFEFB500A29361 /* Flight+CoreDataProperties.swift */; };
-		A2D9FCBF2ADFEFB500A29361 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D9FCB92ADFEFB500A29361 /* User+CoreDataClass.swift */; };
-		A2D9FCC02ADFEFB500A29361 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D9FCBA2ADFEFB500A29361 /* User+CoreDataProperties.swift */; };
 		A2D9FCC22AE004F500A29361 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D9FCC12AE004F500A29361 /* Validation.swift */; };
 		A2D9FCCA2AE021D400A29361 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D9FCC92AE021D400A29361 /* DataManager.swift */; };
 		A2D9FCCF2AE0BFE900A29361 /* FlightTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D9FCCE2AE0BFE900A29361 /* FlightTableViewCell.swift */; };
 		A2D9FCD12AE0C07300A29361 /* FlightTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D9FCD02AE0C07300A29361 /* FlightTableViewController.swift */; };
+		A2D9FCD82AE1822A00A29361 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D9FCD22AE1822A00A29361 /* User+CoreDataClass.swift */; };
+		A2D9FCD92AE1822A00A29361 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D9FCD32AE1822A00A29361 /* User+CoreDataProperties.swift */; };
+		A2D9FCDA2AE1822A00A29361 /* Flight+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D9FCD42AE1822A00A29361 /* Flight+CoreDataClass.swift */; };
+		A2D9FCDB2AE1822A00A29361 /* Flight+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D9FCD52AE1822A00A29361 /* Flight+CoreDataProperties.swift */; };
+		A2D9FCDC2AE1822A00A29361 /* Ticket+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D9FCD62AE1822A00A29361 /* Ticket+CoreDataClass.swift */; };
+		A2D9FCDD2AE1822A00A29361 /* Ticket+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D9FCD72AE1822A00A29361 /* Ticket+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,16 +60,16 @@
 		A2D9FC012ADE942E00A29361 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 		A2D9FC052ADE9FB800A29361 /* UserListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewController.swift; sourceTree = "<group>"; };
 		A2D9FC832ADF87A700A29361 /* Flight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Flight.swift; sourceTree = "<group>"; };
-		A2D9FCB52ADFEFB500A29361 /* Ticket+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ticket+CoreDataClass.swift"; sourceTree = "<group>"; };
-		A2D9FCB62ADFEFB500A29361 /* Ticket+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ticket+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		A2D9FCB72ADFEFB500A29361 /* Flight+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Flight+CoreDataClass.swift"; sourceTree = "<group>"; };
-		A2D9FCB82ADFEFB500A29361 /* Flight+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Flight+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		A2D9FCB92ADFEFB500A29361 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
-		A2D9FCBA2ADFEFB500A29361 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		A2D9FCC12AE004F500A29361 /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
 		A2D9FCC92AE021D400A29361 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		A2D9FCCE2AE0BFE900A29361 /* FlightTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightTableViewCell.swift; sourceTree = "<group>"; };
 		A2D9FCD02AE0C07300A29361 /* FlightTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightTableViewController.swift; sourceTree = "<group>"; };
+		A2D9FCD22AE1822A00A29361 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
+		A2D9FCD32AE1822A00A29361 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		A2D9FCD42AE1822A00A29361 /* Flight+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Flight+CoreDataClass.swift"; sourceTree = "<group>"; };
+		A2D9FCD52AE1822A00A29361 /* Flight+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Flight+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		A2D9FCD62AE1822A00A29361 /* Ticket+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ticket+CoreDataClass.swift"; sourceTree = "<group>"; };
+		A2D9FCD72AE1822A00A29361 /* Ticket+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ticket+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,12 +181,12 @@
 		A2D9FC0A2ADF5EDB00A29361 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				A2D9FCB52ADFEFB500A29361 /* Ticket+CoreDataClass.swift */,
-				A2D9FCB62ADFEFB500A29361 /* Ticket+CoreDataProperties.swift */,
-				A2D9FCB72ADFEFB500A29361 /* Flight+CoreDataClass.swift */,
-				A2D9FCB82ADFEFB500A29361 /* Flight+CoreDataProperties.swift */,
-				A2D9FCB92ADFEFB500A29361 /* User+CoreDataClass.swift */,
-				A2D9FCBA2ADFEFB500A29361 /* User+CoreDataProperties.swift */,
+				A2D9FCD22AE1822A00A29361 /* User+CoreDataClass.swift */,
+				A2D9FCD32AE1822A00A29361 /* User+CoreDataProperties.swift */,
+				A2D9FCD42AE1822A00A29361 /* Flight+CoreDataClass.swift */,
+				A2D9FCD52AE1822A00A29361 /* Flight+CoreDataProperties.swift */,
+				A2D9FCD62AE1822A00A29361 /* Ticket+CoreDataClass.swift */,
+				A2D9FCD72AE1822A00A29361 /* Ticket+CoreDataProperties.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -282,29 +282,29 @@
 			files = (
 				A2D9FC062ADE9FB800A29361 /* UserListViewController.swift in Sources */,
 				A2D9FCD12AE0C07300A29361 /* FlightTableViewController.swift in Sources */,
-				A2D9FCBB2ADFEFB500A29361 /* Ticket+CoreDataClass.swift in Sources */,
 				A2D9FCC22AE004F500A29361 /* Validation.swift in Sources */,
 				A24AD7FD2AD89FA000CAFC30 /* FlightsViewController.swift in Sources */,
 				A217DC1A2AD4A00F0069A55B /* Odyssey.xcdatamodeld in Sources */,
+				A2D9FCDC2AE1822A00A29361 /* Ticket+CoreDataClass.swift in Sources */,
 				A2D9FCCA2AE021D400A29361 /* DataManager.swift in Sources */,
+				A2D9FCDB2AE1822A00A29361 /* Flight+CoreDataProperties.swift in Sources */,
 				A217DC142AD4A00F0069A55B /* UserViewController.swift in Sources */,
 				A2D9FC022ADE942E00A29361 /* UserTableViewCell.swift in Sources */,
 				A217DC102AD4A00F0069A55B /* AppDelegate.swift in Sources */,
-				A2D9FCBE2ADFEFB500A29361 /* Flight+CoreDataProperties.swift in Sources */,
 				A28C29F42AD710A700D5B028 /* LocationViewController.swift in Sources */,
 				A2D9FC842ADF87A700A29361 /* Flight.swift in Sources */,
-				A2D9FCBD2ADFEFB500A29361 /* Flight+CoreDataClass.swift in Sources */,
+				A2D9FCDD2AE1822A00A29361 /* Ticket+CoreDataProperties.swift in Sources */,
 				A2D9FCCF2AE0BFE900A29361 /* FlightTableViewCell.swift in Sources */,
-				A2D9FCBC2ADFEFB500A29361 /* Ticket+CoreDataProperties.swift in Sources */,
 				A2942D702ADC6C280086D170 /* SeatsViewController.swift in Sources */,
+				A2D9FCDA2AE1822A00A29361 /* Flight+CoreDataClass.swift in Sources */,
 				A24AD7FB2AD89F8E00CAFC30 /* TicketDetailsViewController.swift in Sources */,
+				A2D9FCD82AE1822A00A29361 /* User+CoreDataClass.swift in Sources */,
 				A2942D6E2ADC67420086D170 /* TicketViewController.swift in Sources */,
 				A2A5955B2ADCDF9B002BB550 /* CollectionViewCell.swift in Sources */,
+				A2D9FCD92AE1822A00A29361 /* User+CoreDataProperties.swift in Sources */,
 				A217DC2A2AD4A8500069A55B /* User.swift in Sources */,
 				A28C29F62AD7641C00D5B028 /* TableViewCell.swift in Sources */,
-				A2D9FCC02ADFEFB500A29361 /* User+CoreDataProperties.swift in Sources */,
 				A217DC122AD4A00F0069A55B /* SceneDelegate.swift in Sources */,
-				A2D9FCBF2ADFEFB500A29361 /* User+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

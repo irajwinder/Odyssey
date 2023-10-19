@@ -2,7 +2,7 @@
 //  Ticket+CoreDataProperties.swift
 //  Odyssey
 //
-//  Created by Rajwinder Singh on 10/18/23.
+//  Created by Rajwinder Singh on 10/19/23.
 //
 //
 
@@ -19,7 +19,24 @@ extension Ticket {
     @NSManaged public var ticketNumber: Int64
     @NSManaged public var ticketPrice: Int64
     @NSManaged public var flight: Flight?
-    @NSManaged public var user: User?
+    @NSManaged public var user: NSSet?
+
+}
+
+// MARK: Generated accessors for user
+extension Ticket {
+
+    @objc(addUserObject:)
+    @NSManaged public func addToUser(_ value: User)
+
+    @objc(removeUserObject:)
+    @NSManaged public func removeFromUser(_ value: User)
+
+    @objc(addUser:)
+    @NSManaged public func addToUser(_ values: NSSet)
+
+    @objc(removeUser:)
+    @NSManaged public func removeFromUser(_ values: NSSet)
 
 }
 
