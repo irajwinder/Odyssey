@@ -135,10 +135,12 @@ class UserViewController: UIViewController, LocationSelectionDelegate {
         // Set the values for various attributes of the user entity
         newUser.userName = self.userName.text
         newUser.userEmail = self.userEmail.text
+        
         let dateFormatter = DateFormatter() // Convert Date to String using DateFormatter
         dateFormatter.dateFormat = "MM/dd/yyyy" // Setdate format
         let dateString = dateFormatter.string(from: self.userDOB.date)
         newUser.userDOB = dateString
+        
         newUser.userCountry = self.userCountry.text
         newUser.userState = self.userState.text
         newUser.userCity = self.userCity.text

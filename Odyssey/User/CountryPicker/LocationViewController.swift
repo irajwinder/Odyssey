@@ -14,7 +14,6 @@ protocol LocationSelectionDelegate: AnyObject {
     
 }
 
-
 class LocationViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
 
     @IBOutlet weak var searchBar: UISearchBar!

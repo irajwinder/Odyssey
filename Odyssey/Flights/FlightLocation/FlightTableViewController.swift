@@ -11,7 +11,6 @@ import UIKit
 protocol CitySelectionDelegate: AnyObject {
     func didSelectSourceCity(_ source: String)
     func didSelectDestinationCity(_ destination: String)
-    
 }
 
 class FlightTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
@@ -161,5 +160,4 @@ class FlightTableViewController: UIViewController, UITableViewDelegate, UITableV
         // Navigate back to the previous screen
         navigationController?.popViewController(animated: true)
         }
-    
 }

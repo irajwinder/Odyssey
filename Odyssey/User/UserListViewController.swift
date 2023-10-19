@@ -18,6 +18,8 @@ class UserListViewController: UIViewController, UITableViewDelegate, UITableView
         super.viewDidLoad()
         navigationItem.title = "UserList"
         
+        
+        
         fetchUsers()
         usersTableView.delegate = self
         usersTableView.dataSource = self
@@ -85,5 +87,11 @@ class UserListViewController: UIViewController, UITableViewDelegate, UITableView
         if editingStyle == .delete {
             deleteUser(at: indexPath)
         }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //print(indexPath.row)
+        performSegue(withIdentifier: "UserToTicketReview", sender: nil)
+
     }
 }

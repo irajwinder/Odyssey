@@ -202,8 +202,8 @@
 		A2D9FCCB2AE0BEEA00A29361 /* FlightLocation */ = {
 			isa = PBXGroup;
 			children = (
-				A2D9FCCE2AE0BFE900A29361 /* FlightTableViewCell.swift */,
 				A2D9FCD02AE0C07300A29361 /* FlightTableViewController.swift */,
+				A2D9FCCE2AE0BFE900A29361 /* FlightTableViewCell.swift */,
 			);
 			path = FlightLocation;
 			sourceTree = "<group>";

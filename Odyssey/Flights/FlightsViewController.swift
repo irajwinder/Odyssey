@@ -7,7 +7,17 @@
 
 import UIKit
 
+
+protocol FlightDetailsDelegate: AnyObject {
+    func flightNumber(_ number: String)
+    func flightSource(_ source: String)
+    func flightDestination(_ destination: String)
+    func flightDepartureDate(_ departureDate: String)
+    func flightReturnDate(_ returnDate: String)
+}
+
 class FlightsViewController: UIViewController, CitySelectionDelegate {
+    
     func didSelectSourceCity(_ source: String) {
         //Updates the text fields
         sourceCity.text = source
@@ -24,7 +34,8 @@ class FlightsViewController: UIViewController, CitySelectionDelegate {
     @IBOutlet weak var returnDate: UIDatePicker!
     @IBOutlet weak var returnDateLabel: UILabel!
     @IBOutlet weak var segmantControl: UISegmentedControl!
-    
+   
+    weak var delegate: FlightDetailsDelegate?
     
     private enum PageType {
         case oneway
@@ -46,7 +57,7 @@ class FlightsViewController: UIViewController, CitySelectionDelegate {
             if currentIdentifier == "FlightsViewController" {
                 // If the current view controller is "SignUpForm"
                 self.navigationItem.rightBarButtonItem = UIBarButtonItem(
-                    barButtonSystemItem: .save, target: self, action: #selector(saveButton))
+                    barButtonSystemItem: .search, target: self, action: #selector(saveButton))
             }
         }
         
@@ -77,7 +88,7 @@ class FlightsViewController: UIViewController, CitySelectionDelegate {
         
         let departureDate = departureDate.date
         guard Validation.isValidDepartureDate(departureDate) else {
-            Validation.showAlert(on: self, with: "Invalid Date", message: "Please select a valid Departure Date > \(departureDate)")
+            Validation.showAlert(on: self, with: "Invalid Date", message: "Date must be greater than today's date.")
             return
         }
         
@@ -89,25 +100,27 @@ class FlightsViewController: UIViewController, CitySelectionDelegate {
             }
         }
         
-        let data: [String: Any] = [
-            "flightNumber": flightNumberText,
-            "sourceCity": sourceCity,
-            "destinationCity": destinationCity,
-            "departureDate": departureDate,
-            "returnDate": returnDate.date
-        ]
+//        let data: [String: Any] = [
+//            "flightNumber": flightNumberText,
+//            "sourceCity": sourceCity,
+//            "destinationCity": destinationCity,
+//            "departureDate": departureDate,
+//            "returnDate": returnDate.date
+//        ]
         
-        performSegue(withIdentifier: "selectSeat", sender: data)
-    }
-    
-    //pass data to Seats
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "selectSeat" {
-            if let destinationVC = segue.destination as? SeatsViewController,
-               let data = sender as? [String: Any] {
-                destinationVC.flightData = data
-            }
-        }
+        
+        delegate?.flightNumber(flightNumberText)
+        delegate?.flightSource(sourceCity)
+        delegate?.flightDestination(destinationCity)
+        let dateFormatter = DateFormatter() // Convert Date to String using DateFormatter
+        dateFormatter.dateFormat = "MM/dd/yyyy" // Setdate format
+        let departureDateString = dateFormatter.string(from: self.departureDate.date)
+        delegate?.flightDepartureDate(departureDateString)
+        
+        let returnDateString = dateFormatter.string(from: self.returnDate.date)
+        delegate?.flightReturnDate(returnDateString)
+        
+        performSegue(withIdentifier: "selectSeat", sender: nil)
     }
     
     //Hides the return date if segmant name is oneway
