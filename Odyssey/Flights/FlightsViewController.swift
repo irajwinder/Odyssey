@@ -7,19 +7,15 @@
 
 import UIKit
 
-class FlightsViewController: UIViewController, LocationSelectionDelegate {
-    func didSelectCountry(_ country: String) {
-        //
+class FlightsViewController: UIViewController, CitySelectionDelegate {
+    func didSelectSourceCity(_ source: String) {
+        //Updates the text fields
+        sourceCity.text = source
     }
     
-    func didSelectState(_ state: String) {
-        //
+    func didSelectDestinationCity(_ destination: String) {
+        destinationCity.text = destination
     }
-    
-    func didSelectCity(_ city: String) {
-        //
-    }
-    
     
     @IBOutlet weak var flightNumber: UITextField!
     @IBOutlet weak var sourceCity: UITextField!
@@ -54,7 +50,12 @@ class FlightsViewController: UIViewController, LocationSelectionDelegate {
             }
         }
         
+        //By default segmant oneway
         setupViewsFor(pagetype: .oneway)
+        
+        //Disable editing of text fields
+        sourceCity.isEnabled = false
+        destinationCity.isEnabled = false
     }
     
     @objc func saveButton() {
@@ -76,7 +77,7 @@ class FlightsViewController: UIViewController, LocationSelectionDelegate {
         
         let departureDate = departureDate.date
         guard Validation.isValidDepartureDate(departureDate) else {
-            Validation.showAlert(on: self, with: "Invalid Date", message: "Please select a valid Departure Date.")
+            Validation.showAlert(on: self, with: "Invalid Date", message: "Please select a valid Departure Date > \(departureDate)")
             return
         }
         
@@ -117,11 +118,11 @@ class FlightsViewController: UIViewController, LocationSelectionDelegate {
     
     
     @IBAction func selectSourceCity(_ sender: Any) {
-        openLocationViewController("city")
+        openFlightViewController("sourcecity")
     }
     
     @IBAction func selectDestinationCity(_ sender: Any) {
-        openLocationViewController("city")
+        openFlightViewController("destinationcity")
     }
     
     //Handles segment change
@@ -134,12 +135,14 @@ class FlightsViewController: UIViewController, LocationSelectionDelegate {
     }
     
     
-    func openLocationViewController(_ selectedTextfield: String) {
+    func openFlightViewController(_ selectedTextfield: String) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        if let locationVC = storyboard.instantiateViewController(withIdentifier: "LocationViewController") as? LocationViewController {
-            locationVC.selectedTextfield = selectedTextfield
-            locationVC.delegate = self
-            self.navigationController?.pushViewController(locationVC, animated: true)
+        if let flightVC = storyboard.instantiateViewController(withIdentifier: "FlightTableViewController") as? FlightTableViewController {
+            flightVC.selectedTextfield = selectedTextfield
+            flightVC.selectedSourceCity = sourceCity.text
+            flightVC.selectedDestinationCity = destinationCity.text
+            flightVC.delegate = self
+            self.navigationController?.pushViewController(flightVC, animated: true)
         }
     }
 

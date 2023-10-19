@@ -76,10 +76,6 @@ class LocationViewController: UIViewController, UITableViewDelegate, UITableView
         countryTableView.delegate = self
         countryTableView.dataSource = self
         searchBar.delegate = self
-        
-        print(selectedTextfield!)
-        print(selectedCountry!)
-        print(selectedState!)
     }
     
     // UISearchBarDelegate method to filter data based on search text

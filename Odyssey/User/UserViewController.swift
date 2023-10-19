@@ -43,6 +43,11 @@ class UserViewController: UIViewController, LocationSelectionDelegate {
                     barButtonSystemItem: .save, target: self, action: #selector(saveUser))
             }
         }
+        
+        //Disable editing of text fields
+        userCountry.isEnabled = false
+        userState.isEnabled = false
+        userCity.isEnabled = false
     }
     
     
@@ -51,10 +56,24 @@ class UserViewController: UIViewController, LocationSelectionDelegate {
     }
     
     @IBAction func userState(_ sender: Any) {
-        openLocationViewController("state")
+        // Check if a country has been selected
+        if userCountry.text?.isEmpty == false {
+            openLocationViewController("state")
+        } else {
+            Validation.showAlert(on: self, with: "Country Not Selected", message: "Please select a country before selecting a state.")
+        }
     }
     @IBAction func userCity(_ sender: Any) {
-        openLocationViewController("city")
+        if userCountry.text?.isEmpty == true {
+                // If country is not selected, shows an alert to select the country and state
+                Validation.showAlert(on: self, with: "Country/State Not Selected", message: "Please select a country and a state before selecting a city.")
+            } else if userState.text?.isEmpty == true {
+                // If country is selected but state is not selected, shows an alert to select state
+                Validation.showAlert(on: self, with: "State Not Selected", message: "Please select a state before selecting a city.")
+            } else {
+                // If both country and state are selected, allowa the user to select the city
+                openLocationViewController("city")
+            }
     }
     
     func openLocationViewController(_ selectedTextfield: String) {

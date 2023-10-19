@@ -34,6 +34,8 @@
 		A2D9FCC02ADFEFB500A29361 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D9FCBA2ADFEFB500A29361 /* User+CoreDataProperties.swift */; };
 		A2D9FCC22AE004F500A29361 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D9FCC12AE004F500A29361 /* Validation.swift */; };
 		A2D9FCCA2AE021D400A29361 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D9FCC92AE021D400A29361 /* DataManager.swift */; };
+		A2D9FCCF2AE0BFE900A29361 /* FlightTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D9FCCE2AE0BFE900A29361 /* FlightTableViewCell.swift */; };
+		A2D9FCD12AE0C07300A29361 /* FlightTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D9FCD02AE0C07300A29361 /* FlightTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +68,8 @@
 		A2D9FCBA2ADFEFB500A29361 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		A2D9FCC12AE004F500A29361 /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
 		A2D9FCC92AE021D400A29361 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		A2D9FCCE2AE0BFE900A29361 /* FlightTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightTableViewCell.swift; sourceTree = "<group>"; };
+		A2D9FCD02AE0C07300A29361 /* FlightTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,7 +106,6 @@
 				A2D9FC0A2ADF5EDB00A29361 /* Model */,
 				A2D9FC072ADEF83700A29361 /* ValidationManager */,
 				A217DC262AD4A7D20069A55B /* DataModel */,
-				A28C29F02AD70D8E00D5B028 /* Location */,
 				A217DC282AD4A80A0069A55B /* User */,
 				A24AD7F72AD89F4000CAFC30 /* Flights */,
 				A24AD7F62AD89F1700CAFC30 /* Tickets */,
@@ -129,6 +132,7 @@
 		A217DC282AD4A80A0069A55B /* User */ = {
 			isa = PBXGroup;
 			children = (
+				A28C29F02AD70D8E00D5B028 /* CountryPicker */,
 				A217DC132AD4A00F0069A55B /* UserViewController.swift */,
 				A2D9FC052ADE9FB800A29361 /* UserListViewController.swift */,
 				A2D9FC012ADE942E00A29361 /* UserTableViewCell.swift */,
@@ -148,6 +152,7 @@
 		A24AD7F72AD89F4000CAFC30 /* Flights */ = {
 			isa = PBXGroup;
 			children = (
+				A2D9FCCB2AE0BEEA00A29361 /* FlightLocation */,
 				A24AD7FC2AD89FA000CAFC30 /* FlightsViewController.swift */,
 				A2942D6F2ADC6C280086D170 /* SeatsViewController.swift */,
 				A2A5955A2ADCDF9B002BB550 /* CollectionViewCell.swift */,
@@ -156,13 +161,13 @@
 			path = Flights;
 			sourceTree = "<group>";
 		};
-		A28C29F02AD70D8E00D5B028 /* Location */ = {
+		A28C29F02AD70D8E00D5B028 /* CountryPicker */ = {
 			isa = PBXGroup;
 			children = (
 				A28C29F32AD710A700D5B028 /* LocationViewController.swift */,
 				A28C29F52AD7641C00D5B028 /* TableViewCell.swift */,
 			);
-			path = Location;
+			path = CountryPicker;
 			sourceTree = "<group>";
 		};
 		A2D9FC072ADEF83700A29361 /* ValidationManager */ = {
@@ -192,6 +197,15 @@
 				A2D9FCC92AE021D400A29361 /* DataManager.swift */,
 			);
 			path = DataManager;
+			sourceTree = "<group>";
+		};
+		A2D9FCCB2AE0BEEA00A29361 /* FlightLocation */ = {
+			isa = PBXGroup;
+			children = (
+				A2D9FCCE2AE0BFE900A29361 /* FlightTableViewCell.swift */,
+				A2D9FCD02AE0C07300A29361 /* FlightTableViewController.swift */,
+			);
+			path = FlightLocation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,6 +281,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A2D9FC062ADE9FB800A29361 /* UserListViewController.swift in Sources */,
+				A2D9FCD12AE0C07300A29361 /* FlightTableViewController.swift in Sources */,
 				A2D9FCBB2ADFEFB500A29361 /* Ticket+CoreDataClass.swift in Sources */,
 				A2D9FCC22AE004F500A29361 /* Validation.swift in Sources */,
 				A24AD7FD2AD89FA000CAFC30 /* FlightsViewController.swift in Sources */,
@@ -279,6 +294,7 @@
 				A28C29F42AD710A700D5B028 /* LocationViewController.swift in Sources */,
 				A2D9FC842ADF87A700A29361 /* Flight.swift in Sources */,
 				A2D9FCBD2ADFEFB500A29361 /* Flight+CoreDataClass.swift in Sources */,
+				A2D9FCCF2AE0BFE900A29361 /* FlightTableViewCell.swift in Sources */,
 				A2D9FCBC2ADFEFB500A29361 /* Ticket+CoreDataProperties.swift in Sources */,
 				A2942D702ADC6C280086D170 /* SeatsViewController.swift in Sources */,
 				A24AD7FB2AD89F8E00CAFC30 /* TicketDetailsViewController.swift in Sources */,
