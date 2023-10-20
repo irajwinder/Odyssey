@@ -57,7 +57,7 @@ class DataManager: NSObject {
     
     
     //Save the flight to Core Data
-    func saveFlight(flightNumber: String, numberOfSeats: String, price: String, sourceCity: String, destinationCity: String, departureDate: Date, returnDate: Date) {
+    func saveFlight(flightNumber: String, numberOfSeats: String, price: String, sourceCity: String, destinationCity: String, departureDate: Date, returnDate: String) {
         // Obtains a reference to the AppDelegate
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
             return
@@ -79,8 +79,7 @@ class DataManager: NSObject {
         let departureDateString = Validation.convertDateToString(date: departureDate, format: "MM/dd/yyyy")
         newFlight.departureDate = departureDateString
 
-        let returnDateString = Validation.convertDateToString(date: returnDate, format: "MM/dd/yyyy")
-        newFlight.returnDate = returnDateString
+        newFlight.returnDate = returnDate
         
         do {
             // Attempting to save the changes made to the managed context

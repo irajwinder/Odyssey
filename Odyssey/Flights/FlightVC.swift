@@ -135,46 +135,31 @@ class FlightVC: UIViewController, CitySelectionDelegate {
                 return
             }
         }
-        
-        // Obtains a reference to the AppDelegate
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
-            return
-        }
-        // Accessing the managed context from the persistent container
-        let managedContext = appDelegate.persistentContainer.viewContext
-        
-        //Create a newUser Object
-        let newFlight = Flight(context: managedContext)
-        
-        // Set the values for various attributes of the Flight entity
-        newFlight.flightNumber = self.flightNumber.text
-        newFlight.seatNumber = self.numberOfSeats.text
-        newFlight.isBooked = false
-        newFlight.ticketPrice = self.price.text
-        newFlight.source = self.sourceCity.text
-        newFlight.destination = self.destinationCity.text
-        
-        let departureDateString = Validation.convertDateToString(date: self.departureDate.date, format: "MM/dd/yyyy")
-        newFlight.departureDate = departureDateString
-
-        if currentPageType == .roundtrip {
-            let returnDateString = Validation.convertDateToString(date: self.returnDate.date, format: "MM/dd/yyyy")
-            newFlight.returnDate = returnDateString
-        } else {
-            newFlight.returnDate = "No return Flight"
-        }
+        //Convert date to string
+        let returnDateString = Validation.convertDateToString(date: self.returnDate.date, format: "MM/dd/yyyy")
         
         //save flight data using datamanagerInstance
-        datamanagerInstance.saveFlight(
-            flightNumber: self.flightNumber.text ?? "",
-            numberOfSeats: self.numberOfSeats.text ?? "",
-            price: self.price.text ?? "",
-            sourceCity: self.sourceCity.text ?? "",
-            destinationCity: self.destinationCity.text ?? "",
-            departureDate: self.departureDate.date,
-            returnDate: self.returnDate.date
-        )
-    
+        if currentPageType == .oneway {
+            datamanagerInstance.saveFlight(
+                flightNumber: self.flightNumber.text ?? "",
+                numberOfSeats: self.numberOfSeats.text ?? "",
+                price: self.price.text ?? "",
+                sourceCity: self.sourceCity.text ?? "",
+                destinationCity: self.destinationCity.text ?? "",
+                departureDate: self.departureDate.date,
+                returnDate: "No return flight"
+            )
+        } else {
+            datamanagerInstance.saveFlight(
+                flightNumber: self.flightNumber.text ?? "",
+                numberOfSeats: self.numberOfSeats.text ?? "",
+                price: self.price.text ?? "",
+                sourceCity: self.sourceCity.text ?? "",
+                destinationCity: self.destinationCity.text ?? "",
+                departureDate: self.departureDate.date,
+                returnDate: returnDateString
+            )
+        }
         // Instantiate the FlightListVC from the storyboard
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         if let flightListVC = storyboard.instantiateViewController(withIdentifier: "FlightListVC") as? FlightListVC {
