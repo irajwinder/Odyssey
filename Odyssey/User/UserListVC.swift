@@ -1,5 +1,5 @@
 //
-//  UserListViewController.swift
+//  UserListVC.swift
 //  Odyssey
 //
 //  Created by Rajwinder Singh on 10/17/23.
@@ -8,17 +8,21 @@
 import UIKit
 import CoreData
 
-class UserListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+protocol SelectUserDelegate: AnyObject {
+    func didSelectUser(_ userName: String)
+}
+
+class UserListVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
   
     var users: [User] = [] // Store the fetched users
     
     @IBOutlet weak var usersTableView: UITableView!
     
+    weak var delegate: SelectUserDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = "UserList"
-        
-        
+        navigationItem.title = "User List"
         
         fetchUsers()
         usersTableView.delegate = self
@@ -73,7 +77,7 @@ class UserListViewController: UIViewController, UITableViewDelegate, UITableView
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell =  tableView.dequeueReusableCell(withIdentifier: "UserCell", for: indexPath) as! UserTableViewCell
+        let cell =  tableView.dequeueReusableCell(withIdentifier: "UserCell", for: indexPath) as! UserListTableViewCell
         
         let user = users[indexPath.row]
         if let userName = user.value(forKeyPath: "userName") as? String {
@@ -90,8 +94,16 @@ class UserListViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //print(indexPath.row)
-        performSegue(withIdentifier: "UserToTicketReview", sender: nil)
-
+        var selectedUser = users[indexPath.row].userName
+        
+        // Calls the delegate method to pass the selected data back to ViewController
+        if let user = selectedUser {
+            delegate?.didSelectUser(user)
+            
+        }
+        
+        // Navigate back to the previous screen
+        navigationController?.popViewController(animated: true)
     }
+    
 }

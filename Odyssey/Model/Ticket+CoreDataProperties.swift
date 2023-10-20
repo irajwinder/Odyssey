@@ -16,9 +16,7 @@ extension Ticket {
         return NSFetchRequest<Ticket>(entityName: "Ticket")
     }
 
-    @NSManaged public var ticketNumber: Int64
     @NSManaged public var ticketPrice: Int64
-    @NSManaged public var flight: Flight?
     @NSManaged public var user: NSSet?
 
 }

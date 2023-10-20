@@ -1,5 +1,5 @@
 //
-//  LocationViewController.swift
+//  CountryListVC.swift
 //  Odyssey
 //
 //  Created by Rajwinder Singh on 10/11/23.
@@ -14,7 +14,7 @@ protocol LocationSelectionDelegate: AnyObject {
     
 }
 
-class LocationViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
+class CountryListVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
 
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var countryTableView: UITableView!
@@ -137,7 +137,7 @@ class LocationViewController: UIViewController, UITableViewDelegate, UITableView
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CountryCell", for: indexPath) as! TableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CountryCell", for: indexPath) as! CountryListTableViewCell
         var data: String?
 
         if !searchBar.text!.isEmpty {

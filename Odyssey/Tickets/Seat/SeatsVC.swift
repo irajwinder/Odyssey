@@ -1,5 +1,5 @@
 //
-//  SeatsViewController.swift
+//  SeatsVC.swift
 //  Odyssey
 //
 //  Created by Rajwinder Singh on 10/15/23.
@@ -7,9 +7,15 @@
 
 import UIKit
 
-class SeatsViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+protocol SelectSeatDelegate: AnyObject {
+    func didSelectSeat(_ seatNumber: String)
+}
+
+class SeatsVC: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
     @IBOutlet weak var collectionView: UICollectionView!
+    
+    weak var delegate: SelectSeatDelegate?
     
     var flightData: [String: Any]?
     
@@ -85,8 +91,8 @@ class SeatsViewController: UIViewController, UICollectionViewDataSource, UIColle
         
         // Check the current view controller's identifier
         if let currentIdentifier = restorationIdentifier {
-            if currentIdentifier == "SeatsViewController" {
-                // If the current view controller is "SeatsViewController"
+            if currentIdentifier == "SeatsVC" {
+                // If the current view controller is "SeatsVC"
                 self.navigationItem.rightBarButtonItem = UIBarButtonItem(
                     barButtonSystemItem: .save, target: self, action: #selector(saveButton))
             }
@@ -105,7 +111,7 @@ class SeatsViewController: UIViewController, UICollectionViewDataSource, UIColle
         }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SeatCell", for: indexPath) as! CollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SeatCell", for: indexPath) as! SeatsCollectionViewCell
         let seat = seats[indexPath.item]
         
         cell.seatLabel.text = seat.seatNumber
@@ -131,6 +137,12 @@ class SeatsViewController: UIViewController, UICollectionViewDataSource, UIColle
                 self.bookedSeats.insert(selectedSeat.seatNumber)
                 // Reload the collection view to reflect the updated data
                 self.collectionView.reloadData()
+                
+                // Pass the selected seat information to the delegate
+                self.delegate?.didSelectSeat(selectedSeat.seatNumber)
+                
+                // Navigate back to the previous screen
+                self.navigationController?.popViewController(animated: true)
                 print("Seat \(selectedSeat.seatNumber) booked.")
             }))
             alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))

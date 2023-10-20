@@ -1,5 +1,5 @@
 //
-//  FlightTableViewController.swift
+//  CitiesTableVC.swift
 //  Odyssey
 //
 //  Created by Rajwinder Singh on 10/18/23.
@@ -13,7 +13,7 @@ protocol CitySelectionDelegate: AnyObject {
     func didSelectDestinationCity(_ destination: String)
 }
 
-class FlightTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
+class CitiesTableVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
     
     @IBOutlet weak var citySearchBar: UISearchBar!
     @IBOutlet weak var flightTableView: UITableView!
@@ -105,7 +105,7 @@ class FlightTableViewController: UIViewController, UITableViewDelegate, UITableV
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CityCell", for: indexPath) as! FlightTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CityCell", for: indexPath) as! CitiesTableViewCell
         var data: String?
 
         if !citySearchBar.text!.isEmpty {

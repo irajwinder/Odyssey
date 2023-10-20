@@ -50,12 +50,18 @@ struct Validation {
         return true
     }
     
-    static func isValidNumber(_ number: Int?) -> Bool {
-        if let number = number, number > 0 {
-            return true
-        } else {
+    static func isValidFlight(_ flightNumber: String?) -> Bool {
+        guard let flightNumber = flightNumber, !flightNumber.isEmpty else {
             return false
         }
+        return true
+    }
+    
+    static func isValidSeat(_ number: Int?) -> Bool {
+        guard let number = number, number > 0 else {
+            return false
+        }
+        return true
     }
     
     static func isValidDepartureDate(_ date: Date) -> Bool {
@@ -64,6 +70,12 @@ struct Validation {
     
     static func isValidReturnDate(_ returnDate: Date, departureDate: Date) -> Bool {
         return returnDate > departureDate
+    }
+    
+    static func convertDateToString(date: Date, format: String) -> String {
+        let dateFormatter = DateFormatter() // Convert Date to String using DateFormatter
+        dateFormatter.dateFormat = format // Set date format
+        return dateFormatter.string(from: date)
     }
     
     static func showAlert(on viewController: UIViewController, with title: String, message: String) {

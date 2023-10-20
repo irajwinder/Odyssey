@@ -16,30 +16,14 @@ extension Flight {
         return NSFetchRequest<Flight>(entityName: "Flight")
     }
 
-    @NSManaged public var departureDate: String?
     @NSManaged public var destination: String?
-    @NSManaged public var flightNumber: Int64
-    @NSManaged public var isBooked: Bool
-    @NSManaged public var seatNumber: String?
+    @NSManaged public var flightNumber: String?
     @NSManaged public var source: String?
-    @NSManaged public var ticket: NSSet?
-
-}
-
-// MARK: Generated accessors for ticket
-extension Flight {
-
-    @objc(addTicketObject:)
-    @NSManaged public func addToTicket(_ value: Ticket)
-
-    @objc(removeTicketObject:)
-    @NSManaged public func removeFromTicket(_ value: Ticket)
-
-    @objc(addTicket:)
-    @NSManaged public func addToTicket(_ values: NSSet)
-
-    @objc(removeTicket:)
-    @NSManaged public func removeFromTicket(_ values: NSSet)
+    @NSManaged public var departureDate: String?
+    @NSManaged public var returnDate: String?
+    @NSManaged public var seatNumber: String?
+    @NSManaged public var isBooked: Bool
+    @NSManaged public var ticketPrice: String?
 
 }
 

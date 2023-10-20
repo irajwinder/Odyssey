@@ -1,5 +1,5 @@
 //
-//  TableViewCell.swift
+//  CountryListTableViewCell.swift
 //  Odyssey
 //
 //  Created by Rajwinder Singh on 10/11/23.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TableViewCell: UITableViewCell {
+class CountryListTableViewCell: UITableViewCell {
 
     @IBOutlet weak var countriesName: UILabel!
     

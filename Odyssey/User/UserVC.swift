@@ -1,5 +1,5 @@
 //
-//  UserViewController.swift
+//  UserVC.swift
 //  Odyssey
 //
 //  Created by Rajwinder Singh on 10/9/23.
@@ -8,7 +8,7 @@
 import UIKit
 import CoreData
 
-class UserViewController: UIViewController, LocationSelectionDelegate {
+class UserVC: UIViewController, LocationSelectionDelegate {
     
     func didSelectCountry(_ country: String) {
         //Updates the text fields
@@ -37,8 +37,8 @@ class UserViewController: UIViewController, LocationSelectionDelegate {
         
         // Check the current view controller's identifier
         if let currentIdentifier = restorationIdentifier {
-            if currentIdentifier == "UserViewController" {
-                // If the current view controller is "SignUpForm"
+            if currentIdentifier == "UserVC" {
+                // If the current view controller is "UserVC"
                 self.navigationItem.rightBarButtonItem = UIBarButtonItem(
                     barButtonSystemItem: .save, target: self, action: #selector(saveUser))
             }
@@ -49,7 +49,6 @@ class UserViewController: UIViewController, LocationSelectionDelegate {
         userState.isEnabled = false
         userCity.isEnabled = false
     }
-    
     
     @IBAction func userCountry(_ sender: Any) {
         openLocationViewController("country")
@@ -63,6 +62,7 @@ class UserViewController: UIViewController, LocationSelectionDelegate {
             Validation.showAlert(on: self, with: "Country Not Selected", message: "Please select a country before selecting a state.")
         }
     }
+    
     @IBAction func userCity(_ sender: Any) {
         if userCountry.text?.isEmpty == true {
                 // If country is not selected, shows an alert to select the country and state
@@ -78,7 +78,7 @@ class UserViewController: UIViewController, LocationSelectionDelegate {
     
     func openLocationViewController(_ selectedTextfield: String) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        if let locationVC = storyboard.instantiateViewController(withIdentifier: "LocationViewController") as? LocationViewController {
+        if let locationVC = storyboard.instantiateViewController(withIdentifier: "CountryListVC") as? CountryListVC {
             locationVC.selectedTextfield = selectedTextfield
             locationVC.selectedCountry = userCountry.text
             locationVC.selectedState = userState.text
@@ -125,14 +125,13 @@ class UserViewController: UIViewController, LocationSelectionDelegate {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
             return
         }
-        
         // Accessing the managed context from the persistent container
         let managedContext = appDelegate.persistentContainer.viewContext
 
         //Create a newUser Object
         let newUser = User(context: managedContext)
         
-        // Set the values for various attributes of the user entity
+        // Set the values for various attributes of the User entity
         newUser.userName = self.userName.text
         newUser.userEmail = self.userEmail.text
         
@@ -150,10 +149,10 @@ class UserViewController: UIViewController, LocationSelectionDelegate {
             try managedContext.save()
             print("User data saved successfully.")
             
-            // Instantiate the UserListViewController from the storyboard
+            // Instantiate the UserListVC from the storyboard
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            if let userListVC = storyboard.instantiateViewController(withIdentifier: "UserListViewController") as? UserListViewController {
-                // Push the UserListViewController onto the navigation stack
+            if let userListVC = storyboard.instantiateViewController(withIdentifier: "UserListVC") as? UserListVC {
+                // Push the UserListVC onto the navigation stack
                 self.navigationController?.pushViewController(userListVC, animated: true)
             }
         } catch let error as NSError {
