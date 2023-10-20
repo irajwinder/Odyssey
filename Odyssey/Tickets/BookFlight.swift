@@ -100,7 +100,6 @@ class BookFlight: UIViewController, SelectUserDelegate, SelectFlightDelegate, Se
             self.navigationController?.pushViewController(ticketReviewVC, animated: true)
         }
         
-        
     }
     func generateTicketNumber() -> String {
         let formatter = DateFormatter()

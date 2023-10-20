@@ -164,20 +164,22 @@ class FlightVC: UIViewController, CitySelectionDelegate {
             newFlight.returnDate = "No return Flight"
         }
         
-        do {
-            // Attempting to save the changes made to the managed context
-            try managedContext.save()
-            print("Flight data saved successfully.")
-            
-            // Instantiate the FlightListVC from the storyboard
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            if let flightListVC = storyboard.instantiateViewController(withIdentifier: "FlightListVC") as? FlightListVC {
-                // Push the FlightListVC onto the navigation stack
-                self.navigationController?.pushViewController(flightListVC, animated: true)
-            }
-        } catch let error as NSError {
-            // Inform the user that an error occurred while saving the data.
-            print("Could not save. \(error), \(error.userInfo)")
+        //save flight data using datamanagerInstance
+        datamanagerInstance.saveFlight(
+            flightNumber: self.flightNumber.text ?? "",
+            numberOfSeats: self.numberOfSeats.text ?? "",
+            price: self.price.text ?? "",
+            sourceCity: self.sourceCity.text ?? "",
+            destinationCity: self.destinationCity.text ?? "",
+            departureDate: self.departureDate.date,
+            returnDate: self.returnDate.date
+        )
+    
+        // Instantiate the FlightListVC from the storyboard
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if let flightListVC = storyboard.instantiateViewController(withIdentifier: "FlightListVC") as? FlightListVC {
+            // Push the FlightListVC onto the navigation stack
+            self.navigationController?.pushViewController(flightListVC, animated: true)
         }
     }
 }

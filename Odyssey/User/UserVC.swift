@@ -121,43 +121,21 @@ class UserVC: UIViewController, LocationSelectionDelegate {
             return
         }
         
-        // Obtains a reference to the AppDelegate
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
-            return
-        }
-        // Accessing the managed context from the persistent container
-        let managedContext = appDelegate.persistentContainer.viewContext
+        //save user data using datamanagerInstance
+        datamanagerInstance.saveUser(
+            userName: self.userName.text ?? "",
+            userEmail: self.userEmail.text ?? "",
+            userDOB: self.userDOB.date,
+            userCountry: self.userCountry.text ?? "",
+            userState: self.userState.text ?? "",
+            userCity: self.userCity.text ?? ""
+        )
 
-        //Create a newUser Object
-        let newUser = User(context: managedContext)
-        
-        // Set the values for various attributes of the User entity
-        newUser.userName = self.userName.text
-        newUser.userEmail = self.userEmail.text
-        
-        let dateFormatter = DateFormatter() // Convert Date to String using DateFormatter
-        dateFormatter.dateFormat = "MM/dd/yyyy" // Setdate format
-        let dateString = dateFormatter.string(from: self.userDOB.date)
-        newUser.userDOB = dateString
-        
-        newUser.userCountry = self.userCountry.text
-        newUser.userState = self.userState.text
-        newUser.userCity = self.userCity.text
-
-        do {
-            // Attempting to save the changes made to the managed context
-            try managedContext.save()
-            print("User data saved successfully.")
-            
-            // Instantiate the UserListVC from the storyboard
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            if let userListVC = storyboard.instantiateViewController(withIdentifier: "UserListVC") as? UserListVC {
-                // Push the UserListVC onto the navigation stack
-                self.navigationController?.pushViewController(userListVC, animated: true)
-            }
-        } catch let error as NSError {
-            // Inform the user that an error occurred while saving the data.
-            print("Could not save. \(error), \(error.userInfo)")
+        // Instantiate the UserListVC from the storyboard
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if let userListVC = storyboard.instantiateViewController(withIdentifier: "UserListVC") as? UserListVC {
+            // Push the UserListVC onto the navigation stack
+            self.navigationController?.pushViewController(userListVC, animated: true)
         }
     }
 
