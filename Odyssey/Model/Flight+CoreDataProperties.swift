@@ -2,7 +2,7 @@
 //  Flight+CoreDataProperties.swift
 //  Odyssey
 //
-//  Created by Rajwinder Singh on 10/19/23.
+//  Created by Rajwinder Singh on 10/20/23.
 //
 //
 
@@ -24,6 +24,24 @@ extension Flight {
     @NSManaged public var seatNumber: String?
     @NSManaged public var isBooked: Bool
     @NSManaged public var ticketPrice: String?
+    @NSManaged public var ticket: NSSet?
+
+}
+
+// MARK: Generated accessors for ticket
+extension Flight {
+
+    @objc(addTicketObject:)
+    @NSManaged public func addToTicket(_ value: Ticket)
+
+    @objc(removeTicketObject:)
+    @NSManaged public func removeFromTicket(_ value: Ticket)
+
+    @objc(addTicket:)
+    @NSManaged public func addToTicket(_ values: NSSet)
+
+    @objc(removeTicket:)
+    @NSManaged public func removeFromTicket(_ values: NSSet)
 
 }
 

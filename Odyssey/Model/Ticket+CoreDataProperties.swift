@@ -2,7 +2,7 @@
 //  Ticket+CoreDataProperties.swift
 //  Odyssey
 //
-//  Created by Rajwinder Singh on 10/19/23.
+//  Created by Rajwinder Singh on 10/20/23.
 //
 //
 
@@ -18,6 +18,7 @@ extension Ticket {
 
     @NSManaged public var ticketPrice: Int64
     @NSManaged public var user: NSSet?
+    @NSManaged public var flight: Flight?
 
 }
 
