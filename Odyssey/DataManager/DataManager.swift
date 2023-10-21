@@ -70,7 +70,7 @@ class DataManager: NSObject {
         
         // Set the values for various attributes of the Flight entity
         newFlight.flightNumber = flightNumber
-        newFlight.seatNumber = numberOfSeats
+        newFlight.totalSeats = numberOfSeats
         newFlight.isBooked = false
         newFlight.ticketPrice = price
         newFlight.source = sourceCity
@@ -85,6 +85,32 @@ class DataManager: NSObject {
             // Attempting to save the changes made to the managed context
             try managedContext.save()
             print("Flight data saved successfully.")
+        } catch let error as NSError {
+            // Informs the user that an error occurred while saving the data.
+            print("Could not save. \(error), \(error.userInfo)")
+        }
+    }
+    
+    //Save the ticket to Core Data
+    func saveTicket(ticketNumber: String, userID: String, flightNumber: String, seatNumber: String) {
+        // Obtains a reference to the AppDelegate
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return
+        }
+        // Accessing the managed context from the persistent container
+        let managedContext = appDelegate.persistentContainer.viewContext
+        
+        //Create a newTicket Object
+        let newTicket = Ticket(context: managedContext)
+        newTicket.ticketNumber = ticketNumber
+        newTicket.userID = userID
+        newTicket.flightNumber = flightNumber
+        newTicket.seatNumber = seatNumber
+        
+        do {
+            // Attempting to save the changes made to the managed context
+            try managedContext.save()
+            print("Ticket data saved successfully.")
         } catch let error as NSError {
             // Informs the user that an error occurred while saving the data.
             print("Could not save. \(error), \(error.userInfo)")

@@ -20,6 +20,8 @@ class UserListVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     weak var delegate: SelectUserDelegate?
     
+    var isComingFromCreateUser = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "User List"
@@ -94,16 +96,20 @@ class UserListVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        var selectedUser = users[indexPath.row].userName
+        let selectedUser = users[indexPath.row].userName
         
         // Calls the delegate method to pass the selected data back to ViewController
         if let user = selectedUser {
             delegate?.didSelectUser(user)
             
         }
+        if isComingFromCreateUser {
+            performSegue(withIdentifier: "UserListToEditUser", sender: nil)
+        } else {
+            // Navigate back to the previous screen
+            navigationController?.popViewController(animated: true)
+        }
         
-        // Navigate back to the previous screen
-        navigationController?.popViewController(animated: true)
     }
     
 }

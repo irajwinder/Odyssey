@@ -15,14 +15,18 @@
 		A217DC1C2AD4A0110069A55B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A217DC1B2AD4A0110069A55B /* Assets.xcassets */; };
 		A217DC1F2AD4A0110069A55B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A217DC1D2AD4A0110069A55B /* LaunchScreen.storyboard */; };
 		A217DC2A2AD4A8500069A55B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A217DC292AD4A8500069A55B /* User.swift */; };
+		A24208B82AE43084003B5753 /* EditUserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24208B72AE43084003B5753 /* EditUserVC.swift */; };
+		A24208BA2AE430B6003B5753 /* EditFlightVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24208B92AE430B6003B5753 /* EditFlightVC.swift */; };
 		A24AD7FB2AD89F8E00CAFC30 /* BookFlight.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24AD7FA2AD89F8E00CAFC30 /* BookFlight.swift */; };
 		A24AD7FD2AD89FA000CAFC30 /* FlightVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24AD7FC2AD89FA000CAFC30 /* FlightVC.swift */; };
-		A260ADF52AE2CB80000CEB11 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A260ADEF2AE2CB80000CEB11 /* User+CoreDataClass.swift */; };
-		A260ADF62AE2CB80000CEB11 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A260ADF02AE2CB80000CEB11 /* User+CoreDataProperties.swift */; };
-		A260ADF72AE2CB80000CEB11 /* Flight+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A260ADF12AE2CB80000CEB11 /* Flight+CoreDataClass.swift */; };
-		A260ADF82AE2CB80000CEB11 /* Flight+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A260ADF22AE2CB80000CEB11 /* Flight+CoreDataProperties.swift */; };
-		A260ADF92AE2CB80000CEB11 /* Ticket+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A260ADF32AE2CB80000CEB11 /* Ticket+CoreDataClass.swift */; };
-		A260ADFA2AE2CB80000CEB11 /* Ticket+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A260ADF42AE2CB80000CEB11 /* Ticket+CoreDataProperties.swift */; };
+		A27F8B062AE40A3500AAF2DE /* TicketsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27F8B052AE40A3500AAF2DE /* TicketsTableViewCell.swift */; };
+		A27F8B082AE40A8B00AAF2DE /* TicketsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27F8B072AE40A8B00AAF2DE /* TicketsVC.swift */; };
+		A27F8B0F2AE40B5D00AAF2DE /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27F8B092AE40B5D00AAF2DE /* User+CoreDataClass.swift */; };
+		A27F8B102AE40B5D00AAF2DE /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27F8B0A2AE40B5D00AAF2DE /* User+CoreDataProperties.swift */; };
+		A27F8B112AE40B5D00AAF2DE /* Ticket+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27F8B0B2AE40B5D00AAF2DE /* Ticket+CoreDataClass.swift */; };
+		A27F8B122AE40B5D00AAF2DE /* Ticket+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27F8B0C2AE40B5D00AAF2DE /* Ticket+CoreDataProperties.swift */; };
+		A27F8B132AE40B5D00AAF2DE /* Flight+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27F8B0D2AE40B5D00AAF2DE /* Flight+CoreDataClass.swift */; };
+		A27F8B142AE40B5D00AAF2DE /* Flight+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27F8B0E2AE40B5D00AAF2DE /* Flight+CoreDataProperties.swift */; };
 		A28C29F42AD710A700D5B028 /* CountryListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28C29F32AD710A700D5B028 /* CountryListVC.swift */; };
 		A28C29F62AD7641C00D5B028 /* CountryListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28C29F52AD7641C00D5B028 /* CountryListTableViewCell.swift */; };
 		A28C40D12AD8986200BD2ABF /* Countries.plist in Resources */ = {isa = PBXBuildFile; fileRef = A28C40D02AD8986200BD2ABF /* Countries.plist */; };
@@ -51,14 +55,18 @@
 		A217DC1E2AD4A0110069A55B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A217DC202AD4A0110069A55B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A217DC292AD4A8500069A55B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		A24208B72AE43084003B5753 /* EditUserVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUserVC.swift; sourceTree = "<group>"; };
+		A24208B92AE430B6003B5753 /* EditFlightVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditFlightVC.swift; sourceTree = "<group>"; };
 		A24AD7FA2AD89F8E00CAFC30 /* BookFlight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookFlight.swift; sourceTree = "<group>"; };
 		A24AD7FC2AD89FA000CAFC30 /* FlightVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightVC.swift; sourceTree = "<group>"; };
-		A260ADEF2AE2CB80000CEB11 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
-		A260ADF02AE2CB80000CEB11 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		A260ADF12AE2CB80000CEB11 /* Flight+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Flight+CoreDataClass.swift"; sourceTree = "<group>"; };
-		A260ADF22AE2CB80000CEB11 /* Flight+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Flight+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		A260ADF32AE2CB80000CEB11 /* Ticket+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ticket+CoreDataClass.swift"; sourceTree = "<group>"; };
-		A260ADF42AE2CB80000CEB11 /* Ticket+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ticket+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		A27F8B052AE40A3500AAF2DE /* TicketsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketsTableViewCell.swift; sourceTree = "<group>"; };
+		A27F8B072AE40A8B00AAF2DE /* TicketsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketsVC.swift; sourceTree = "<group>"; };
+		A27F8B092AE40B5D00AAF2DE /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
+		A27F8B0A2AE40B5D00AAF2DE /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		A27F8B0B2AE40B5D00AAF2DE /* Ticket+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ticket+CoreDataClass.swift"; sourceTree = "<group>"; };
+		A27F8B0C2AE40B5D00AAF2DE /* Ticket+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ticket+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		A27F8B0D2AE40B5D00AAF2DE /* Flight+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Flight+CoreDataClass.swift"; sourceTree = "<group>"; };
+		A27F8B0E2AE40B5D00AAF2DE /* Flight+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Flight+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		A28C29F32AD710A700D5B028 /* CountryListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListVC.swift; sourceTree = "<group>"; };
 		A28C29F52AD7641C00D5B028 /* CountryListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListTableViewCell.swift; sourceTree = "<group>"; };
 		A28C40D02AD8986200BD2ABF /* Countries.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Countries.plist; sourceTree = "<group>"; };
@@ -141,6 +149,7 @@
 				A217DC132AD4A00F0069A55B /* UserVC.swift */,
 				A2D9FC012ADE942E00A29361 /* UserListTableViewCell.swift */,
 				A2D9FC052ADE9FB800A29361 /* UserListVC.swift */,
+				A24208B72AE43084003B5753 /* EditUserVC.swift */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -148,9 +157,11 @@
 		A24AD7F62AD89F1700CAFC30 /* Tickets */ = {
 			isa = PBXGroup;
 			children = (
+				A27F8B052AE40A3500AAF2DE /* TicketsTableViewCell.swift */,
+				A27F8B072AE40A8B00AAF2DE /* TicketsVC.swift */,
 				A24AD7FA2AD89F8E00CAFC30 /* BookFlight.swift */,
-				A2942D6D2ADC67420086D170 /* TicketReviewVC.swift */,
 				A2D9FCE22AE19B2800A29361 /* Seat */,
+				A2942D6D2ADC67420086D170 /* TicketReviewVC.swift */,
 			);
 			path = Tickets;
 			sourceTree = "<group>";
@@ -162,6 +173,7 @@
 				A24AD7FC2AD89FA000CAFC30 /* FlightVC.swift */,
 				A2D9FCE32AE19BF400A29361 /* FlightListTableViewCell.swift */,
 				A2D9FCE02AE19B0E00A29361 /* FlightListVC.swift */,
+				A24208B92AE430B6003B5753 /* EditFlightVC.swift */,
 			);
 			path = Flights;
 			sourceTree = "<group>";
@@ -186,12 +198,12 @@
 		A2D9FC0A2ADF5EDB00A29361 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				A260ADEF2AE2CB80000CEB11 /* User+CoreDataClass.swift */,
-				A260ADF02AE2CB80000CEB11 /* User+CoreDataProperties.swift */,
-				A260ADF12AE2CB80000CEB11 /* Flight+CoreDataClass.swift */,
-				A260ADF22AE2CB80000CEB11 /* Flight+CoreDataProperties.swift */,
-				A260ADF32AE2CB80000CEB11 /* Ticket+CoreDataClass.swift */,
-				A260ADF42AE2CB80000CEB11 /* Ticket+CoreDataProperties.swift */,
+				A27F8B092AE40B5D00AAF2DE /* User+CoreDataClass.swift */,
+				A27F8B0A2AE40B5D00AAF2DE /* User+CoreDataProperties.swift */,
+				A27F8B0B2AE40B5D00AAF2DE /* Ticket+CoreDataClass.swift */,
+				A27F8B0C2AE40B5D00AAF2DE /* Ticket+CoreDataProperties.swift */,
+				A27F8B0D2AE40B5D00AAF2DE /* Flight+CoreDataClass.swift */,
+				A27F8B0E2AE40B5D00AAF2DE /* Flight+CoreDataProperties.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -305,30 +317,34 @@
 				A2D9FC062ADE9FB800A29361 /* UserListVC.swift in Sources */,
 				A2D9FCD12AE0C07300A29361 /* CitiesTableVC.swift in Sources */,
 				A2D9FCC22AE004F500A29361 /* Validation.swift in Sources */,
+				A24208BA2AE430B6003B5753 /* EditFlightVC.swift in Sources */,
 				A24AD7FD2AD89FA000CAFC30 /* FlightVC.swift in Sources */,
 				A217DC1A2AD4A00F0069A55B /* Odyssey.xcdatamodeld in Sources */,
 				A2D9FCCA2AE021D400A29361 /* DataManager.swift in Sources */,
 				A217DC142AD4A00F0069A55B /* UserVC.swift in Sources */,
-				A260ADF82AE2CB80000CEB11 /* Flight+CoreDataProperties.swift in Sources */,
 				A2D9FC022ADE942E00A29361 /* UserListTableViewCell.swift in Sources */,
-				A260ADFA2AE2CB80000CEB11 /* Ticket+CoreDataProperties.swift in Sources */,
-				A260ADF52AE2CB80000CEB11 /* User+CoreDataClass.swift in Sources */,
+				A27F8B102AE40B5D00AAF2DE /* User+CoreDataProperties.swift in Sources */,
+				A27F8B122AE40B5D00AAF2DE /* Ticket+CoreDataProperties.swift in Sources */,
 				A217DC102AD4A00F0069A55B /* AppDelegate.swift in Sources */,
 				A28C29F42AD710A700D5B028 /* CountryListVC.swift in Sources */,
 				A2D9FC842ADF87A700A29361 /* Flight.swift in Sources */,
 				A2D9FCE42AE19BF400A29361 /* FlightListTableViewCell.swift in Sources */,
 				A2D9FCCF2AE0BFE900A29361 /* CitiesTableViewCell.swift in Sources */,
+				A27F8B132AE40B5D00AAF2DE /* Flight+CoreDataClass.swift in Sources */,
 				A2942D702ADC6C280086D170 /* SeatsVC.swift in Sources */,
+				A27F8B0F2AE40B5D00AAF2DE /* User+CoreDataClass.swift in Sources */,
 				A24AD7FB2AD89F8E00CAFC30 /* BookFlight.swift in Sources */,
 				A2942D6E2ADC67420086D170 /* TicketReviewVC.swift in Sources */,
+				A27F8B082AE40A8B00AAF2DE /* TicketsVC.swift in Sources */,
 				A2D9FCE12AE19B0E00A29361 /* FlightListVC.swift in Sources */,
+				A27F8B142AE40B5D00AAF2DE /* Flight+CoreDataProperties.swift in Sources */,
 				A2A5955B2ADCDF9B002BB550 /* SeatsCollectionViewCell.swift in Sources */,
-				A260ADF62AE2CB80000CEB11 /* User+CoreDataProperties.swift in Sources */,
-				A260ADF92AE2CB80000CEB11 /* Ticket+CoreDataClass.swift in Sources */,
+				A27F8B112AE40B5D00AAF2DE /* Ticket+CoreDataClass.swift in Sources */,
+				A24208B82AE43084003B5753 /* EditUserVC.swift in Sources */,
 				A217DC2A2AD4A8500069A55B /* User.swift in Sources */,
+				A27F8B062AE40A3500AAF2DE /* TicketsTableViewCell.swift in Sources */,
 				A28C29F62AD7641C00D5B028 /* CountryListTableViewCell.swift in Sources */,
 				A217DC122AD4A00F0069A55B /* SceneDelegate.swift in Sources */,
-				A260ADF72AE2CB80000CEB11 /* Flight+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

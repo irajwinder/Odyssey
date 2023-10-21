@@ -19,6 +19,8 @@ class FlightListVC: UIViewController, UITableViewDelegate, UITableViewDataSource
     
     weak var delegate: SelectFlightDelegate?
 
+    var isComingFromCreateFlight = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "Flight List"
@@ -82,7 +84,7 @@ class FlightListVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         if let flightName = flight.value(forKeyPath: "flightNumber") as? String {
             cell.flightLabel.text = flightName
         }
-        if let flightSeat = flight.value(forKeyPath: "seatNumber") as? String {
+        if let flightSeat = flight.value(forKeyPath: "totalSeats") as? String {
             cell.seatsLabel.text = flightSeat
         }
         if let flightSource = flight.value(forKeyPath: "source") as? String {
@@ -117,8 +119,12 @@ class FlightListVC: UIViewController, UITableViewDelegate, UITableViewDataSource
             
         }
         
-        // Navigate back to the previous screen
-        navigationController?.popViewController(animated: true)
+        if isComingFromCreateFlight {
+            performSegue(withIdentifier: "FlightListToEditFlight", sender: nil)
+        } else {
+            // Navigate back to the previous screen
+            navigationController?.popViewController(animated: true)
+        }
     }
 
 }

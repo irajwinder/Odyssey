@@ -135,6 +135,7 @@ class UserVC: UIViewController, LocationSelectionDelegate {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         if let userListVC = storyboard.instantiateViewController(withIdentifier: "UserListVC") as? UserListVC {
             // Push the UserListVC onto the navigation stack
+            userListVC.isComingFromCreateUser = true
             self.navigationController?.pushViewController(userListVC, animated: true)
         }
     }

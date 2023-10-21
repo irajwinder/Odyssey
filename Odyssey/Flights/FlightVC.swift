@@ -163,6 +163,7 @@ class FlightVC: UIViewController, CitySelectionDelegate {
         // Instantiate the FlightListVC from the storyboard
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         if let flightListVC = storyboard.instantiateViewController(withIdentifier: "FlightListVC") as? FlightListVC {
+            flightListVC.isComingFromCreateFlight = true
             // Push the FlightListVC onto the navigation stack
             self.navigationController?.pushViewController(flightListVC, animated: true)
         }

@@ -91,16 +91,21 @@ class BookFlight: UIViewController, SelectUserDelegate, SelectFlightDelegate, Se
         let ticketNumber = generateTicketNumber()
         print(ticketNumber)
         
+        //Save a newTicket
+        datamanagerInstance.saveTicket(
+            ticketNumber: ticketNumber,
+            userID: selectUserText.text ?? "",
+            flightNumber: selectFlightText.text ?? "",
+            seatNumber: selectSeatText.text ?? ""
+        )
+        
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        if let ticketReviewVC = storyboard.instantiateViewController(withIdentifier: "TicketReviewVC") as? TicketReviewVC {
-            ticketReviewVC.selectedUserName = userName
-            ticketReviewVC.selectedFlightNumber = userFlight
-            ticketReviewVC.selectedSeatNumber = userSeat
-            ticketReviewVC.generatedTicketNumber = ticketNumber
-            self.navigationController?.pushViewController(ticketReviewVC, animated: true)
+        if let TicketsVC = storyboard.instantiateViewController(withIdentifier: "TicketsVC") as? TicketsVC {
+            self.navigationController?.pushViewController(TicketsVC, animated: true)
         }
         
     }
+    
     func generateTicketNumber() -> String {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyyMMddHHmmss"
