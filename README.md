@@ -1,7 +1,7 @@
 # Odyssey - Flight Ticket Booking 
 
 ## Description
-Odyssey is a offline flight ticket booking app built in Swift, utilizing CoreData as its database. This application allows ticket clerk to perform various tasks such as adding, updating, and deleting user information, adding, updating, and deleting flights, and booking and managing tickets for the users.
+Odyssey is a offline flight ticket booking app built using Swift and CoreData. This application allows ticket clerk to perform various tasks such as adding, updating, and deleting user information, adding, updating, and deleting flights, and booking and managing tickets for users.
 
 ## Table of Contents
 
