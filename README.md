@@ -1,4 +1,4 @@
-# Odyssey - Flight Ticket Booking App
+# Odyssey - Offline Flight Ticket Booking
 
 Odyssey is a flight ticket booking app that allows ticket clerk to manage user and flight information, as well as facilitate ticket booking and management. It is built using the Swift programming language and utilizes Core Data for data storage.
 
