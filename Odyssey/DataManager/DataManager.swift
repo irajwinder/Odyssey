@@ -76,14 +76,13 @@ class DataManager: NSObject {
         do {
             // Attempting to save the changes made to the managed context
             try managedContext.save()
-            print("User data saved successfully.")
+            print("User data updated successfully.")
         } catch let error as NSError {
             // Informs the user that an error occurred while saving the data.
             print("Could not save. \(error), \(error.userInfo)")
         }
     }
 
-    
     //Save the flight to Core Data
     func saveFlight(flightNumber: String, numberOfSeats: String, price: String, sourceCity: String, destinationCity: String, departureDate: Date, returnDate: String) {
         // Obtains a reference to the AppDelegate

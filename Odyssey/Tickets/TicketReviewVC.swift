@@ -89,8 +89,42 @@ class TicketReviewVC: UIViewController {
     }
     
     @objc func printButton() {
-        //Save and Print ticket
-        
+        //Print ticket
+        createPDF()
     }
     
+    func createPDF() {
+        // Get the screen size of the device
+        let screenSize = UIScreen.main.bounds.size
+
+        // Create a PDF renderer with the screen size
+        let pdfRenderer = UIGraphicsPDFRenderer(bounds: CGRect(origin: .zero, size: screenSize))
+
+        let data = pdfRenderer.pdfData { context in
+            context.beginPage()
+
+            // Calculate the scale factor to fit the content on the page
+            let scaleFactor = min(screenSize.width / view.bounds.width, screenSize.height / view.bounds.height)
+
+            // Apply the scale transformation
+            context.cgContext.scaleBy(x: scaleFactor, y: scaleFactor)
+
+            // Render the content to fit within the screen dimensions
+            view.layer.render(in: context.cgContext)
+        }
+
+        // Save the PDF file to the documents directory
+        let documentsPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
+        let filePath = "\(documentsPath)/ticket.pdf"
+        do {
+            try data.write(to: URL(fileURLWithPath: filePath))
+            print("PDF successfully saved at: \(filePath)")
+        } catch {
+            print("Error: \(error.localizedDescription)")
+        }
+    }
+
+
+
+
 }
