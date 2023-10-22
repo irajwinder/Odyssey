@@ -123,8 +123,4 @@ class TicketReviewVC: UIViewController {
             print("Error: \(error.localizedDescription)")
         }
     }
-
-
-
-
 }

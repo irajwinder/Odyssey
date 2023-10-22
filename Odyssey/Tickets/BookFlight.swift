@@ -27,7 +27,7 @@ class BookFlight: UIViewController, SelectUserDelegate, SelectFlightDelegate, Se
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = "Book Flight"
+        navigationItem.title = "Book Ticket"
         
         // Check the current view controller's identifier
         if let currentIdentifier = restorationIdentifier {

@@ -1439,9 +1439,6 @@
                                             <segment title="One-way"/>
                                             <segment title="Roundtrip"/>
                                         </segments>
-                                        <connections>
-                                            <action selector="segmantControlChanged:" destination="tEz-rE-aPf" eventType="valueChanged" id="llD-6e-m3X"/>
-                                        </connections>
                                     </segmentedControl>
                                 </subviews>
                             </stackView>
@@ -1517,10 +1514,6 @@
                                                         <rect key="frame" x="175" y="0.0" width="175" height="50"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Select city"/>
-                                                        <connections>
-                                                            <action selector="selectSourceCity:" destination="tEz-rE-aPf" eventType="touchUpInside" id="Mz5-M0-9TU"/>
-                                                            <action selector="userCity:" destination="m85-F1-3vc" eventType="touchUpInside" id="Ld8-9T-hHV"/>
-                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -1547,10 +1540,6 @@
                                                         <rect key="frame" x="175" y="0.0" width="175" height="50"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Select city"/>
-                                                        <connections>
-                                                            <action selector="selectDestinationCity:" destination="tEz-rE-aPf" eventType="touchUpInside" id="Luu-Lo-pLG"/>
-                                                            <action selector="userCity:" destination="m85-F1-3vc" eventType="touchUpInside" id="cWr-t2-kEA"/>
-                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -1599,17 +1588,6 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="yO5-BR-6bD"/>
-                    <connections>
-                        <outlet property="departureDate" destination="ieE-fP-p0C" id="HaL-Jl-Hzh"/>
-                        <outlet property="destinationCity" destination="ijW-gg-gxm" id="D6V-au-OvG"/>
-                        <outlet property="flightNumber" destination="LYM-VG-Cjt" id="ss8-RA-4U7"/>
-                        <outlet property="numberOfSeats" destination="pKv-er-sBA" id="Tgo-Yx-Gcg"/>
-                        <outlet property="price" destination="6qC-46-VAH" id="Igg-4l-p5s"/>
-                        <outlet property="returnDate" destination="hbb-Xj-B9a" id="X6C-Zw-KxH"/>
-                        <outlet property="returnDateLabel" destination="Uwq-mv-xgR" id="uzo-7z-nTf"/>
-                        <outlet property="segmantControl" destination="Nml-Q7-sit" id="KxN-rQ-Goc"/>
-                        <outlet property="sourceCity" destination="OHe-Tx-Rj2" id="fSb-xP-YUL"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6gB-Lf-XjI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
