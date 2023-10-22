@@ -1330,6 +1330,9 @@
                                                         <rect key="frame" x="175" y="0.0" width="175" height="41.666666666666664"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Select Country"/>
+                                                        <connections>
+                                                            <action selector="editUserCountry:" destination="URB-E8-lHh" eventType="touchUpInside" id="dhu-vW-0CV"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -1356,6 +1359,9 @@
                                                         <rect key="frame" x="175" y="0.0" width="175" height="42"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Select State"/>
+                                                        <connections>
+                                                            <action selector="editUserState:" destination="URB-E8-lHh" eventType="touchUpInside" id="NoN-IZ-btO"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -1382,6 +1388,9 @@
                                                         <rect key="frame" x="175" y="0.0" width="175" height="41.666666666666664"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Select city"/>
+                                                        <connections>
+                                                            <action selector="editUserCity:" destination="URB-E8-lHh" eventType="touchUpInside" id="cyO-BD-8vo"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>

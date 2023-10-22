@@ -55,6 +55,34 @@ class DataManager: NSObject {
         }
     }
     
+    func updateUser(user: User, editUserName: String, editUserEmail: String, editUserDOB: Date, editUserCountry: String, editUserState: String, editUserCity: String) {
+        // Obtains a reference to the AppDelegate
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return
+        }
+        // Accessing the managed context from the persistent container
+        let managedContext = appDelegate.persistentContainer.viewContext
+
+        // Update the user data
+        user.userName = editUserName
+        user.userEmail = editUserEmail
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MM/dd/yyyy"
+        user.userDOB = dateFormatter.string(from: editUserDOB)
+        user.userCountry = editUserCountry
+        user.userState = editUserState
+        user.userCity = editUserCity
+
+        do {
+            // Attempting to save the changes made to the managed context
+            try managedContext.save()
+            print("User data saved successfully.")
+        } catch let error as NSError {
+            // Informs the user that an error occurred while saving the data.
+            print("Could not save. \(error), \(error.userInfo)")
+        }
+    }
+
     
     //Save the flight to Core Data
     func saveFlight(flightNumber: String, numberOfSeats: String, price: String, sourceCity: String, destinationCity: String, departureDate: Date, returnDate: String) {

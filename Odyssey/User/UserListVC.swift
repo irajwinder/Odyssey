@@ -109,7 +109,21 @@ class UserListVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             // Navigate back to the previous screen
             navigationController?.popViewController(animated: true)
         }
-        
     }
     
+    //Pass user data
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "UserListToEditUser" {
+            if let indexPath = usersTableView.indexPathForSelectedRow {
+                // Get the selected user
+                let selectedUser = users[indexPath.row]
+                
+                // Pass the selected user to the destination view controller
+                if let destinationVC = segue.destination as? EditUserVC {
+                    destinationVC.user = selectedUser
+                }
+            }
+        }
+    }
+
 }
