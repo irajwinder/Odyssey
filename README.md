@@ -6,7 +6,7 @@ Odyssey is a offline flight ticket booking app built in Swift, utilizing CoreDat
 ## Table of Contents
 
 - [Features](#features)
-- [Technologies Used](#Technologies Used)
+- [Technologies Used](#TechnologiesUsed)
 - [Installation](#Installation)
 - [Usage](#usage)
 
