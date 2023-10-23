@@ -59,7 +59,6 @@ class SeatsVC: UIViewController, UICollectionViewDataSource, UICollectionViewDel
             }
         }
 
-        
         collectionView.dataSource = self
         collectionView.delegate = self
     }
