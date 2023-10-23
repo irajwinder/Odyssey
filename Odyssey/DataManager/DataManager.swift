@@ -105,13 +105,41 @@ class DataManager: NSObject {
         
         let departureDateString = Validation.convertDateToString(date: departureDate, format: "MM/dd/yyyy")
         newFlight.departureDate = departureDateString
-
         newFlight.returnDate = returnDate
         
         do {
             // Attempting to save the changes made to the managed context
             try managedContext.save()
             print("Flight data saved successfully.")
+        } catch let error as NSError {
+            // Informs the user that an error occurred while saving the data.
+            print("Could not save. \(error), \(error.userInfo)")
+        }
+    }
+    
+    func updateFlight(flight: Flight, editFlightNumber: String, editNumberOfSeats: String, editPrice: String, editSourceCity: String, editDestinationCity: String, editDepartureDate: Date, editReturnDate: String) {
+        // Obtains a reference to the AppDelegate
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return
+        }
+        // Accessing the managed context from the persistent container
+        let managedContext = appDelegate.persistentContainer.viewContext
+
+        // Update the flight data
+        flight.flightNumber = editFlightNumber
+        flight.totalSeats = editNumberOfSeats
+        flight.ticketPrice = editPrice
+        flight.source = editSourceCity
+        flight.destination = editDestinationCity
+        
+        let departureDateString = Validation.convertDateToString(date: editDepartureDate, format: "MM/dd/yyyy")
+        flight.departureDate = departureDateString
+        flight.returnDate = editReturnDate
+
+        do {
+            // Attempting to save the changes made to the managed context
+            try managedContext.save()
+            print("Flight data updated successfully.")
         } catch let error as NSError {
             // Informs the user that an error occurred while saving the data.
             print("Could not save. \(error), \(error.userInfo)")

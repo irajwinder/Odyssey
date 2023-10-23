@@ -32,7 +32,6 @@ class FlightVC: UIViewController, CitySelectionDelegate {
         case oneway
         case roundtrip
     }
-    
     private var currentPageType: PageType = .oneway {
         didSet {
             setupViewsFor(pagetype: currentPageType)

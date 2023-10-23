@@ -178,7 +178,4 @@ class EditUserVC: UIViewController, LocationSelectionDelegate {
         )
         navigationController?.popViewController(animated: true)
     }
-
-    
-    
 }

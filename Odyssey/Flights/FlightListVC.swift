@@ -126,5 +126,20 @@ class FlightListVC: UIViewController, UITableViewDelegate, UITableViewDataSource
             navigationController?.popViewController(animated: true)
         }
     }
-
+    
+    //Pass user data
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "FlightListToEditFlight" {
+            if let indexPath = flightListTableView.indexPathForSelectedRow {
+                // Get the selected user
+                let selectedFlight = flights[indexPath.row]
+                
+                // Pass the selected user to the destination view controller
+                if let destinationVC = segue.destination as? EditFlightVC {
+                    destinationVC.flight = selectedFlight
+                }
+            }
+        }
+    }
+    
 }

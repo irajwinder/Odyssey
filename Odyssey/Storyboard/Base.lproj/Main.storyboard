@@ -1439,6 +1439,9 @@
                                             <segment title="One-way"/>
                                             <segment title="Roundtrip"/>
                                         </segments>
+                                        <connections>
+                                            <action selector="segmantControlChanged:" destination="tEz-rE-aPf" eventType="valueChanged" id="Dad-Tb-NOX"/>
+                                        </connections>
                                     </segmentedControl>
                                 </subviews>
                             </stackView>
@@ -1514,6 +1517,9 @@
                                                         <rect key="frame" x="175" y="0.0" width="175" height="50"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Select city"/>
+                                                        <connections>
+                                                            <action selector="editSourceCity:" destination="tEz-rE-aPf" eventType="touchUpInside" id="ouh-xT-0cQ"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -1540,6 +1546,9 @@
                                                         <rect key="frame" x="175" y="0.0" width="175" height="50"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Select city"/>
+                                                        <connections>
+                                                            <action selector="editDestinationCity:" destination="tEz-rE-aPf" eventType="touchUpInside" id="nNG-Ey-pa8"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -1588,6 +1597,17 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="yO5-BR-6bD"/>
+                    <connections>
+                        <outlet property="editDepartureDate" destination="ieE-fP-p0C" id="JWV-nI-XGF"/>
+                        <outlet property="editDestination" destination="ijW-gg-gxm" id="Rji-0I-iKY"/>
+                        <outlet property="editFlightNumber" destination="LYM-VG-Cjt" id="fhh-bd-nua"/>
+                        <outlet property="editNumberOfSeats" destination="pKv-er-sBA" id="YEA-Md-b5F"/>
+                        <outlet property="editPrice" destination="6qC-46-VAH" id="0ff-bN-2OB"/>
+                        <outlet property="editReturnDate" destination="hbb-Xj-B9a" id="YQ1-Wm-mKT"/>
+                        <outlet property="editReturnDateLabel" destination="Uwq-mv-xgR" id="S0M-1A-Faf"/>
+                        <outlet property="editSegmentControl" destination="Nml-Q7-sit" id="1gl-MW-XEX"/>
+                        <outlet property="editSource" destination="OHe-Tx-Rj2" id="IRF-N2-W6c"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6gB-Lf-XjI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
