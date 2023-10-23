@@ -171,6 +171,50 @@ class DataManager: NSObject {
             print("Could not save. \(error), \(error.userInfo)")
         }
     }
+    
+    func fetchNumberOfSeatsPerFlight(flightNumber: String) -> Flight? {
+        // Obtains a reference to the AppDelegate
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return nil
+        }
+        // Accessing the managed context from the persistent container
+        let managedContext = appDelegate.persistentContainer.viewContext
+        
+        let fetchRequest: NSFetchRequest<Flight> = Flight.fetchRequest()
+        fetchRequest.predicate = NSPredicate(format: "flightNumber == %@", flightNumber)
+        
+        do {
+            let results = try managedContext.fetch(fetchRequest)
+            return results.first
+        } catch let error as NSError {
+            print("Could not fetch flight data. \(error), \(error.userInfo)")
+            return nil
+        }
+    }
+    
+    func fetchBookedSeatsForFlight(flightNumber: String) -> Set<String>? {
+        // Obtains a reference to the AppDelegate
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return nil
+        }
+        // Accessing the managed context from the persistent container
+        let managedContext = appDelegate.persistentContainer.viewContext
+
+        let fetchRequest: NSFetchRequest<Ticket> = Ticket.fetchRequest()
+        fetchRequest.predicate = NSPredicate(format: "flightNumber == %@", flightNumber)
+
+        do {
+            let results = try managedContext.fetch(fetchRequest)
+            var bookedSeats = Set<String>()
+            for ticket in results {
+                bookedSeats.insert(ticket.seatNumber ?? "")
+            }
+            return bookedSeats
+        } catch let error as NSError {
+            print("Could not fetch booked seats for the flight. \(error), \(error.userInfo)")
+            return nil
+        }
+    }
 
 }
 

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 protocol SelectSeatDelegate: AnyObject {
     func didSelectSeat(_ seatNumber: String)
@@ -17,72 +18,9 @@ class SeatsVC: UIViewController, UICollectionViewDataSource, UICollectionViewDel
     
     weak var delegate: SelectSeatDelegate?
     
-    var flightData: [String: Any]?
-    
-    // Seats array with 50 static seats
-    var seats: [Seat] = [
-        Seat(seatNumber: "A1", isBooked: false),
-        Seat(seatNumber: "A2", isBooked: false),
-        Seat(seatNumber: "A3", isBooked: false),
-        Seat(seatNumber: "A4", isBooked: false),
-        Seat(seatNumber: "A5", isBooked: false),
-        Seat(seatNumber: "A6", isBooked: false),
-        Seat(seatNumber: "A7", isBooked: false),
-        Seat(seatNumber: "A8", isBooked: false),
-        Seat(seatNumber: "A9", isBooked: false),
-        Seat(seatNumber: "A10", isBooked: false),
-        Seat(seatNumber: "B1", isBooked: false),
-        Seat(seatNumber: "B2", isBooked: false),
-        Seat(seatNumber: "B3", isBooked: false),
-        Seat(seatNumber: "B4", isBooked: false),
-        Seat(seatNumber: "B5", isBooked: false),
-        Seat(seatNumber: "B6", isBooked: false),
-        Seat(seatNumber: "B7", isBooked: false),
-        Seat(seatNumber: "B8", isBooked: false),
-        Seat(seatNumber: "B9", isBooked: false),
-        Seat(seatNumber: "B10", isBooked: false),
-        Seat(seatNumber: "C1", isBooked: false),
-        Seat(seatNumber: "C2", isBooked: false),
-        Seat(seatNumber: "C3", isBooked: false),
-        Seat(seatNumber: "C4", isBooked: false),
-        Seat(seatNumber: "C5", isBooked: false),
-        Seat(seatNumber: "C6", isBooked: false),
-        Seat(seatNumber: "C7", isBooked: false),
-        Seat(seatNumber: "C8", isBooked: false),
-        Seat(seatNumber: "C9", isBooked: false),
-        Seat(seatNumber: "C10", isBooked: false),
-        Seat(seatNumber: "D1", isBooked: false),
-        Seat(seatNumber: "D2", isBooked: false),
-        Seat(seatNumber: "D3", isBooked: false),
-        Seat(seatNumber: "D4", isBooked: false),
-        Seat(seatNumber: "D5", isBooked: false),
-        Seat(seatNumber: "D6", isBooked: false),
-        Seat(seatNumber: "D7", isBooked: false),
-        Seat(seatNumber: "D8", isBooked: false),
-        Seat(seatNumber: "D9", isBooked: false),
-        Seat(seatNumber: "D10", isBooked: false),
-        Seat(seatNumber: "E1", isBooked: false),
-        Seat(seatNumber: "E2", isBooked: false),
-        Seat(seatNumber: "E3", isBooked: false),
-        Seat(seatNumber: "E4", isBooked: false),
-        Seat(seatNumber: "E5", isBooked: false),
-        Seat(seatNumber: "E6", isBooked: false),
-        Seat(seatNumber: "E7", isBooked: false),
-        Seat(seatNumber: "E8", isBooked: false),
-        Seat(seatNumber: "E9", isBooked: false),
-        Seat(seatNumber: "E10", isBooked: false),
-        Seat(seatNumber: "F1", isBooked: false),
-        Seat(seatNumber: "F2", isBooked: false),
-        Seat(seatNumber: "F3", isBooked: false),
-        Seat(seatNumber: "F4", isBooked: false),
-        Seat(seatNumber: "F5", isBooked: false),
-        Seat(seatNumber: "F6", isBooked: false),
-        Seat(seatNumber: "F7", isBooked: false),
-        Seat(seatNumber: "F8", isBooked: false),
-        Seat(seatNumber: "F9", isBooked: false),
-        Seat(seatNumber: "F10", isBooked: false)
-    ]
-
+    var flightNumber: String?
+    var currentFlight: Flight?
+    var seats: [Seat] = [] // Seats array
     var bookedSeats: Set<String> = Set()
 
     override func viewDidLoad() {
@@ -97,6 +35,30 @@ class SeatsVC: UIViewController, UICollectionViewDataSource, UICollectionViewDel
                     barButtonSystemItem: .save, target: self, action: #selector(saveButton))
             }
         }
+        
+        // Fetch the flight entity from Core Data
+        guard let flightNumber = self.flightNumber else {
+            return
+        }
+
+        //shows number of seats as per flight
+        if let flight = datamanagerInstance.fetchNumberOfSeatsPerFlight(flightNumber: flightNumber) {
+            currentFlight = flight
+
+            if let numberOfSeats = Int(flight.totalSeats!) {
+                for index in 1...numberOfSeats {
+                    seats.append(Seat(seatNumber: "Seat \(index)", isBooked: false))
+                }
+            }
+        }
+        
+        // Fetch the list of booked seats for the current flight
+        if let flightNumber = self.flightNumber {
+            if let bookedSeatsForFlight = datamanagerInstance.fetchBookedSeatsForFlight(flightNumber: flightNumber) {
+                self.bookedSeats = bookedSeatsForFlight
+            }
+        }
+
         
         collectionView.dataSource = self
         collectionView.delegate = self
@@ -115,7 +77,7 @@ class SeatsVC: UIViewController, UICollectionViewDataSource, UICollectionViewDel
         let seat = seats[indexPath.item]
         
         cell.seatLabel.text = seat.seatNumber
-        cell.backgroundColor = seat.isBooked ? .red : .green
+        cell.backgroundColor = bookedSeats.contains(seat.seatNumber) ? .red : .green
         return cell
     }
     

@@ -65,11 +65,11 @@ class BookFlight: UIViewController, SelectUserDelegate, SelectFlightDelegate, Se
     @IBAction func selectSeat(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         if let flightListVC = storyboard.instantiateViewController(withIdentifier: "SeatsVC") as? SeatsVC {
+            flightListVC.flightNumber = self.selectFlightText.text
             flightListVC.delegate = self
             self.navigationController?.pushViewController(flightListVC, animated: true)
         }
     }
-    
     
     @objc func saveButton() {
         //Validate before saving
