@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol EditFlightDelegate: AnyObject {
+    func didUpdateFlight()
+}
+
 class EditFlightVC: UIViewController, CitySelectionDelegate {
     func didSelectSourceCity(_ source: String) {
         //Updates the text fields
@@ -31,6 +35,7 @@ class EditFlightVC: UIViewController, CitySelectionDelegate {
     
     var flight: Flight?
     var isEditingEnabled = false
+    weak var delegate: EditFlightDelegate?
     
     private enum PageType {
         case oneway
@@ -206,7 +211,8 @@ class EditFlightVC: UIViewController, CitySelectionDelegate {
             editDepartureDate: self.editDepartureDate.date,
             editReturnDate: returnDateString
         )
+        // Call delegate method
+        delegate?.didUpdateFlight()
         navigationController?.popViewController(animated: true)
-        
     }
 }

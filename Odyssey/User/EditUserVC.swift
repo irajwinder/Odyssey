@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol EditUserDelegate: AnyObject {
+    func didUpdateUser()
+}
+
 class EditUserVC: UIViewController, LocationSelectionDelegate {
     
     func didSelectCountry(_ country: String) {
@@ -29,6 +33,7 @@ class EditUserVC: UIViewController, LocationSelectionDelegate {
     
     var user: User?
     var isEditingEnabled = false
+    weak var delegate: EditUserDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -176,6 +181,8 @@ class EditUserVC: UIViewController, LocationSelectionDelegate {
             editUserState: editUserState.text ?? "",
             editUserCity: editUserCity.text ?? ""
         )
+        // Call delegate method
+        delegate?.didUpdateUser()
         navigationController?.popViewController(animated: true)
     }
 }

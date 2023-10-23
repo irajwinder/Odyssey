@@ -12,7 +12,11 @@ protocol SelectUserDelegate: AnyObject {
     func didSelectUser(_ userName: String)
 }
 
-class UserListVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class UserListVC: UIViewController, UITableViewDelegate, UITableViewDataSource, EditUserDelegate {
+    func didUpdateUser() {
+        // Reload table view data
+        self.usersTableView.reloadData()
+    }
   
     var users: [User] = [] // Store the fetched users
     
@@ -121,9 +125,9 @@ class UserListVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
                 // Pass the selected user to the destination view controller
                 if let destinationVC = segue.destination as? EditUserVC {
                     destinationVC.user = selectedUser
+                    destinationVC.delegate = self
                 }
             }
         }
     }
-
 }

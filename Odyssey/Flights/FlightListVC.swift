@@ -11,7 +11,11 @@ protocol SelectFlightDelegate: AnyObject {
     func didSelectFlight(_ flightNumber: String)
 }
 
-class FlightListVC: UIViewController, UITableViewDelegate, UITableViewDataSource  {
+class FlightListVC: UIViewController, UITableViewDelegate, UITableViewDataSource, EditFlightDelegate {
+    func didUpdateFlight() {
+        // Reload table view data
+        self.flightListTableView.reloadData()
+    }
     
     var flights: [Flight] = [] // Store the fetched flights
     
@@ -137,9 +141,9 @@ class FlightListVC: UIViewController, UITableViewDelegate, UITableViewDataSource
                 // Pass the selected user to the destination view controller
                 if let destinationVC = segue.destination as? EditFlightVC {
                     destinationVC.flight = selectedFlight
+                    destinationVC.delegate = self
                 }
             }
         }
     }
-    
 }
